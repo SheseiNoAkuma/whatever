@@ -1,0 +1,24 @@
+{
+	"id": "c6fa0d90-97fc-4297-82e5-5af1258516c2",
+	"values": [
+		{
+			"key": "product",
+			"value": "SEPA",
+			"enabled": true
+		},
+		{
+			"key": "provider",
+			"value": "CBI-05696",
+			"enabled": true
+		},
+		{
+			"key": "tpp",
+			"value": "03069",
+			"enabled": true
+		}
+	],
+	"name": "PSD2 Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2020-03-27T16:56:28.435Z",
+	"_postman_exported_using": "Postman/7.21.1"
+}

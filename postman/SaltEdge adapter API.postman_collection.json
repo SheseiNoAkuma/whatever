@@ -1,0 +1,1115 @@
+{
+	"info": {
+		"_postman_id": "7616dde9-60c9-46c7-8ce3-6c34dff177ff",
+		"name": "SaltEdge adapter API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "0.0 Others",
+			"item": [
+				{
+					"name": "client oauth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{baseurl}}:8085/saltedge-adapter/api/v1/oauth2_callback?code=codeX&state=stateY",
+							"protocol": "http",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "8085",
+							"path": [
+								"saltedge-adapter",
+								"api",
+								"v1",
+								"oauth2_callback"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "codeX"
+								},
+								{
+									"key": "state",
+									"value": "stateY"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show connection",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "App-id",
+								"value": "{{tpp}}",
+								"type": "text"
+							},
+							{
+								"key": "x-request-id",
+								"value": "{{$guid}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-type",
+								"value": "application/json;charset=UTF-8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{baseurl}}:{{port.se}}/saltedge-adapter/api/v1/connections/{{connection}}",
+							"protocol": "http",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port.se}}",
+							"path": [
+								"saltedge-adapter",
+								"api",
+								"v1",
+								"connections",
+								"{{connection}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "01. create user",
+			"item": [
+				{
+					"name": "create user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7e3494a9-22f0-4e92-8d09-b00df0e67da5",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "4635b30b-6467-4eab-9287-2cf5116bf31a",
+								"exec": [
+									"pm.collectionVariables.clear();",
+									"",
+									"var user = Math.random().toString(36).substring(2, 15)",
+									"console.log(\"for this run I will use the user : \" + user);",
+									"pm.collectionVariables.set(\"user\", user);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-request-id",
+								"type": "text",
+								"value": "{{$guid}}"
+							},
+							{
+								"key": "App-id",
+								"type": "text",
+								"value": "{{tpp}}"
+							},
+							{
+								"key": "Content-type",
+								"type": "text",
+								"value": "application/json;charset=UTF-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": {\r\n    \"identifier\": \"{{user}}\"\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "http://{{baseurl}}:{{port.se}}/saltedge-adapter/api/v1/customers",
+							"protocol": "http",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port.se}}",
+							"path": [
+								"saltedge-adapter",
+								"api",
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create user OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "x-request-id",
+										"type": "text",
+										"value": "{{$guid}}"
+									},
+									{
+										"key": "App-id",
+										"type": "text",
+										"value": "{{tpp}}"
+									},
+									{
+										"key": "Content-type",
+										"type": "text",
+										"value": "application/json;charset=UTF-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": {\r\n    \"identifier\": \"qwerty\"\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "http://{{baseurl}}:{{port}}/saltedge-adapter/api/v1/customers",
+									"protocol": "http",
+									"host": [
+										"{{baseurl}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"saltedge-adapter",
+										"api",
+										"v1",
+										"customers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "openresty/1.15.8.1"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Mar 2020 09:30:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"qwerty\",\n        \"identifier\": \"qwerty\",\n        \"secret\": null\n    }\n}"
+						},
+						{
+							"name": "utente extra-fetch",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "x-request-id",
+										"type": "text",
+										"value": "{{$guid}}"
+									},
+									{
+										"key": "App-id",
+										"type": "text",
+										"value": "{{tpp}}"
+									},
+									{
+										"key": "Content-type",
+										"type": "text",
+										"value": "application/json;charset=UTF-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": {\r\n    \"identifier\": \"{{user}}\", \r\n    \"domain\": \"SL\"\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "http://{{baseurl}}:{{port.se}}/saltedge-adapter/api/v1/customers",
+									"protocol": "http",
+									"host": [
+										"{{baseurl}}"
+									],
+									"port": "{{port.se}}",
+									"path": [
+										"saltedge-adapter",
+										"api",
+										"v1",
+										"customers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Mar 2020 12:59:40 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"haynlkoiprp\",\n        \"identifier\": \"haynlkoiprp\",\n        \"secret\": null\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "2.0 consent one time",
+			"item": [
+				{
+					"name": "create-oauth-connection",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "56f3eb96-e862-4d4f-b0b8-e33b7f4ea0d2",
+								"exec": [
+									"var response = JSON.parse(responseBody);",
+									"pm.collectionVariables.set(\"connection\", response.data.connection_id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "App-id",
+								"type": "text",
+								"value": "{{tpp}}"
+							},
+							{
+								"key": "x-request-id",
+								"type": "text",
+								"value": "{{$guid}}"
+							},
+							{
+								"key": "Content-type",
+								"type": "text",
+								"value": "application/json;charset=UTF-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": {\r\n    \"customer_id\": \"{{user}}\",\r\n    \"provider_code\": \"{{provider}}\",\r\n    \"consent\": {\r\n      \"from_date\": \"2019-01-01\",\r\n      \"scopes\": [\r\n        \"account_details\",\r\n        \"transactions_details\"\r\n      ],\r\n      \"connection_type\": \"oneshot\",\r\n      \"account_nature\": \"both\"\r\n    },\r\n    \"attempt\": {\r\n      \"return_to\": \"https://www.google.com\",\r\n      \"from_date\": \"2019-01-01\",\r\n      \"fetch_scopes\": [\r\n        \"accounts\",\r\n        \"transactions\"\r\n      ]\r\n    }\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "http://{{baseurl}}:{{port.se}}/saltedge-adapter/api/v1/oauth_providers/create",
+							"protocol": "http",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port.se}}",
+							"path": [
+								"saltedge-adapter",
+								"api",
+								"v1",
+								"oauth_providers",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-other-sca-connection",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "App-id",
+								"type": "text",
+								"value": "{{tpp}}"
+							},
+							{
+								"key": "x-request-id",
+								"type": "text",
+								"value": "{{$guid}}"
+							},
+							{
+								"key": "Content-type",
+								"type": "text",
+								"value": "application/json;charset=UTF-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": {\r\n    \"customer_id\": \"{{user}}\",\r\n    \"provider_code\": \"{{provider}}\",\r\n    \"consent\": {\r\n      \"from_date\": \"2019-01-01\",\r\n      \"scopes\": [\r\n        \"account_details\",\r\n        \"transactions_details\"\r\n      ],\r\n      \"connection_type\": \"oneshot\",\r\n      \"account_nature\": \"both\"\r\n    },\r\n    \"attempt\": {\r\n      \"return_to\": \"https://www.google.com\",\r\n      \"from_date\": \"2019-01-01\",\r\n      \"fetch_scopes\": [\r\n        \"accounts\",\r\n        \"transactions\"\r\n      ]\r\n    }, \r\n    \"credentials\": {\r\n\t        \"USERNAME\": \"psd2.test\",\r\n\t        \"PASSWORD\": \"111111111111111\"\r\n\t    }\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "http://{{baseurl}}:{{port}}/saltedge-adapter/api/v1/connections",
+							"protocol": "http",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"saltedge-adapter",
+								"api",
+								"v1",
+								"connections"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reconnect-onetime-other-sca-oauth",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "App-id",
+								"type": "text",
+								"value": "{{tpp}}"
+							},
+							{
+								"key": "x-request-id",
+								"type": "text",
+								"value": "{{$guid}}"
+							},
+							{
+								"key": "Content-type",
+								"type": "text",
+								"value": "application/json;charset=UTF-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": {\r\n    \"customer_id\": \"{{user}}\",\r\n    \"country_code\": \"IT\",\r\n    \"consent\": {\r\n      \"scopes\": [\r\n        \"account_details\",\r\n        \"transactions_details\"\r\n      ],\r\n      \"connection_type\": \"oneshot\", \r\n      \"account_nature\": \"both\"\r\n    },\r\n    \"attempt\": {\r\n      \"return_to\": \"http://www.google.com\",\r\n      \"fetch_scopes\": [\r\n        \"accounts\",\r\n        \"transactions\"\r\n      ]\r\n    },\r\n    \"credentials\": {\r\n\t        \"USERNAME\": \"psd2.test\",\r\n\t        \"PASSWORD\": \"111111111111111\"\r\n\t    }\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "http://{{baseurl}}:{{port}}/saltedge-adapter/api/v1/connections/{{connection}}/reconnect",
+							"protocol": "http",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"saltedge-adapter",
+								"api",
+								"v1",
+								"connections",
+								"{{connection}}",
+								"reconnect"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "10e0a14b-e9e1-4bce-ab27-af7f4dbacb53",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "ca2fade6-1c04-422b-a431-5d960ae530e9",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "3.0 Account list",
+			"item": [
+				{
+					"name": "Accounts for connection",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2bcaed19-8205-4a49-a4c7-c9110f471982",
+								"exec": [
+									"var response = JSON.parse(responseBody);",
+									"",
+									"var accountBody = [];",
+									"",
+									"var i = 0;",
+									"response.data.forEach(function(account) {",
+									"    var id = account.id;",
+									"    var template = {",
+									"        \"account_id\": id,",
+									"        \"accountAccess\": [",
+									"          \"balances\",",
+									"          \"transactions\"",
+									"        ]",
+									"    };",
+									"    accountBody[i] = template;",
+									"    i++;",
+									"});",
+									"",
+									"pm.collectionVariables.set(\"consent-account-body\", JSON.stringify(accountBody));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "App-id",
+								"value": "{{tpp}}",
+								"type": "text"
+							},
+							{
+								"key": "x-request-id",
+								"value": "{{$guid}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-type",
+								"value": "application/json;charset=UTF-8",
+								"type": "text"
+							},
+							{
+								"key": "psu-ip-address",
+								"value": "127.0.0.1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{baseurl}}:{{port.se}}/saltedge-adapter/api/v1/accounts?connection_id={{connection}}&nature_type=both&phase=enrollment",
+							"protocol": "http",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port.se}}",
+							"path": [
+								"saltedge-adapter",
+								"api",
+								"v1",
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "connection_id",
+									"value": "{{connection}}"
+								},
+								{
+									"key": "nature_type",
+									"value": "both"
+								},
+								{
+									"key": "phase",
+									"value": "enrollment"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "4.0 consent recurrent",
+			"item": [
+				{
+					"name": "reconnect-recurrent-oauth",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "App-id",
+								"type": "text",
+								"value": "{{tpp}}"
+							},
+							{
+								"key": "x-request-id",
+								"type": "text",
+								"value": "{{$guid}}"
+							},
+							{
+								"key": "Content-type",
+								"type": "text",
+								"value": "application/json;charset=UTF-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": {\r\n    \"customer_id\": \"{{user}}\",\r\n    \"connection_id\": \"{{connection}}\",\r\n    \"country_code\": \"IT\",\r\n    \"consent\": {\r\n      \"scopes\": [\r\n        \"account_details\",\r\n        \"transactions_details\"\r\n      ],\r\n      \"connection_type\": \"recurrent\"\r\n   \r\n    },\r\n    \"attempt\": {\r\n      \"return_to\": \"http://www.google.com\",\r\n      \"fetch_scopes\": [\r\n        \"accounts\",\r\n        \"transactions\"\r\n      ]\r\n    },\r\n    \"accounts\": {{consent-account-body}}\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "http://{{baseurl}}:{{port.se}}/saltedge-adapter/api/v1/oauth_providers/reconnect",
+							"protocol": "http",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port.se}}",
+							"path": [
+								"saltedge-adapter",
+								"api",
+								"v1",
+								"oauth_providers",
+								"reconnect"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CBI-00000 Consent Onetime",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "App-id",
+										"type": "text",
+										"value": "{{tpp}}"
+									},
+									{
+										"key": "x-request-id",
+										"type": "text",
+										"value": "{{$guid}}"
+									},
+									{
+										"key": "Content-type",
+										"type": "text",
+										"value": "application/json;charset=UTF-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": {\r\n    \"customer_id\": \"{{user}}\",\r\n    \"connection_id\": \"{{connection}}\",\r\n    \"country_code\": \"IT\",\r\n    \"consent\": {\r\n      \"scopes\": [\r\n        \"account_details\",\r\n        \"transactions_details\"\r\n      ],\r\n      \"connection_type\": \"oneshot\",\r\n      \"account_nature\": \"both\"\r\n   \r\n    },\r\n    \"attempt\": {\r\n      \"return_to\": \"http://www.google.com\",\r\n      \"fetch_scopes\": [\r\n        \"accounts\",\r\n        \"transactions\"\r\n      ]\r\n    },\r\n    \"accounts\": {{consent-account-body}}\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "http://{{baseurl}}:{{port.se}}/saltedge-adapter/api/v1/oauth_providers/reconnect",
+									"protocol": "http",
+									"host": [
+										"{{baseurl}}"
+									],
+									"port": "{{port.se}}",
+									"path": [
+										"saltedge-adapter",
+										"api",
+										"v1",
+										"oauth_providers",
+										"reconnect"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Apr 2020 08:01:12 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"attempt_id\": null,\n        \"connection_id\": \"d838b570-5c7a-41ca-9d97-8fd8a6cd913f\",\n        \"expires_at\": null,\n        \"redirect_url\": \"https://www.google.com\",\n        \"token\": null,\n        \"consent_on_specified_accounts\": true,\n        \"account_nature\": \"both\"\n    }\n}"
+						},
+						{
+							"name": "CBI-00000 - Consent Recurrent ",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "App-id",
+										"type": "text",
+										"value": "{{tpp}}"
+									},
+									{
+										"key": "x-request-id",
+										"type": "text",
+										"value": "{{$guid}}"
+									},
+									{
+										"key": "Content-type",
+										"type": "text",
+										"value": "application/json;charset=UTF-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": {\r\n    \"customer_id\": \"{{user}}\",\r\n    \"connection_id\": \"{{connection}}\",\r\n    \"country_code\": \"IT\",\r\n    \"consent\": {\r\n      \"scopes\": [\r\n        \"account_details\",\r\n        \"transactions_details\"\r\n      ],\r\n      \"connection_type\": \"recurrent\"\r\n   \r\n    },\r\n    \"attempt\": {\r\n      \"return_to\": \"http://www.google.com\",\r\n      \"fetch_scopes\": [\r\n        \"accounts\",\r\n        \"transactions\"\r\n      ]\r\n    },\r\n    \"accounts\": {{consent-account-body}}\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "http://{{baseurl}}:{{port.se}}/saltedge-adapter/api/v1/oauth_providers/reconnect",
+									"protocol": "http",
+									"host": [
+										"{{baseurl}}"
+									],
+									"port": "{{port.se}}",
+									"path": [
+										"saltedge-adapter",
+										"api",
+										"v1",
+										"oauth_providers",
+										"reconnect"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Apr 2020 07:58:24 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"attempt_id\": null,\n        \"connection_id\": \"d838b570-5c7a-41ca-9d97-8fd8a6cd913f\",\n        \"expires_at\": null,\n        \"redirect_url\": \"https://www.google.com\",\n        \"token\": null,\n        \"consent_on_specified_accounts\": true,\n        \"account_nature\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "reconnect-recurrent-other-sca-oauth",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "App-id",
+								"type": "text",
+								"value": "{{tpp}}"
+							},
+							{
+								"key": "x-request-id",
+								"type": "text",
+								"value": "{{$guid}}"
+							},
+							{
+								"key": "Content-type",
+								"type": "text",
+								"value": "application/json;charset=UTF-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": {\r\n    \"customer_id\": \"{{user}}\",\r\n    \"country_code\": \"IT\",\r\n    \"consent\": {\r\n      \"scopes\": [\r\n        \"account_details\",\r\n        \"transactions_details\"\r\n      ],\r\n      \"connection_type\": \"recurrent\", \r\n      \"account_nature\": \"account\"\r\n    },\r\n    \"attempt\": {\r\n      \"return_to\": \"http://www.google.com\",\r\n      \"fetch_scopes\": [\r\n        \"accounts\",\r\n        \"transactions\"\r\n      ]\r\n    },\r\n    \"credentials\": {\r\n\t        \"USERNAME\": \"psd2.test\",\r\n\t        \"PASSWORD\": \"111111111111111\"\r\n\t    },\r\n    \"accounts\": [\r\n      {\r\n        \"account_id\": \"1\",\r\n        \"accountAccess\": [\r\n          \"balances\",\r\n          \"transactions\"\r\n        ]\r\n      },\r\n      {\r\n        \"account_id\": \"2\",\r\n        \"accountAccess\": [\r\n          \"balances\",\r\n          \"transactions\"\r\n        ]\r\n      }\r\n    ]\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "http://{{baseurl}}:{{port}}/saltedge-adapter/api/v1/connections/{{connection}}/reconnect",
+							"protocol": "http",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"saltedge-adapter",
+								"api",
+								"v1",
+								"connections",
+								"{{connection}}",
+								"reconnect"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "5.0 refresh",
+			"item": [
+				{
+					"name": "refresh",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "App-id",
+								"value": "{{tpp}}",
+								"type": "text"
+							},
+							{
+								"key": "x-request-id",
+								"value": "{{$guid}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-type",
+								"value": "application/json;charset=UTF-8",
+								"type": "text"
+							},
+							{
+								"key": "psu-ip-address",
+								"value": "127.0.0.1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": {\r\n    \"attempt\": {\r\n      \"fetch_scopes\": [\r\n        \"accounts\",\r\n        \"transactions\"\r\n      ]\r\n    }\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "http://{{baseurl}}:{{port.se}}/saltedge-adapter/api/v1/connections/{{connection}}/refresh",
+							"protocol": "http",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port.se}}",
+							"path": [
+								"saltedge-adapter",
+								"api",
+								"v1",
+								"connections",
+								"{{connection}}",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "6.0 get transactions",
+			"item": [
+				{
+					"name": "transactions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "App-id",
+								"value": "{{tpp}}",
+								"type": "text"
+							},
+							{
+								"key": "x-request-id",
+								"value": "{{$guid}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-type",
+								"value": "application/json;charset=UTF-8",
+								"type": "text"
+							},
+							{
+								"key": "psu-ip-address",
+								"value": "127.0.0.1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{baseurl}}:{{port.se}}/saltedge-adapter/api/v1/transactions?connection_id={{connection}}",
+							"protocol": "http",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port.se}}",
+							"path": [
+								"saltedge-adapter",
+								"api",
+								"v1",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "connection_id",
+									"value": "{{connection}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "accessToken",
+				"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI3Q0lFY0ZHZS1yRW1uWWgtTUQ3LXRXQUZlYllZQjRmVUZOU3ByZ1hFa3NFIn0.eyJqdGkiOiI2MjFjOGY1Yy0wZTM1LTQ0NGItOTIwYi1jYmYzZWUzMDQzOWEiLCJleHAiOjE1ODU3NDA5NjAsIm5iZiI6MCwiaWF0IjoxNTg1NzM4MjYwLCJpc3MiOiJodHRwOi8vc3ZpLXRwcC1pbnRlc2Euc3ZpLXNpc3BhZy5rOHMuZGV2LmludC5tYXN0ZXIubGFuL2F1dGgvcmVhbG1zL2RlbW8iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiMzY0YTE5MDAtM2M5Zi00Y2VmLWFhZTgtMjE2ODBmMDkwYjE0IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZGVtb2FwcCIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6IjA1YzM2NTQ1LTBiOWEtNGFiOS1hNGYwLTQ1ZTlhZGM3YTBlMiIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImRlbW9hcHAiOnsicm9sZXMiOlsidW1hX3Byb3RlY3Rpb24iXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJjbGllbnRJZCI6ImRlbW9hcHAiLCJjbGllbnRIb3N0IjoiMTAuMi4xMjkuMTQxIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJzY29wZSI6IlRQUEVuYWJsZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZGVtb2FwcCIsImNsaWVudEFkZHJlc3MiOiIxMC4yLjEyOS4xNDEiLCJlbWFpbCI6InNlcnZpY2UtYWNjb3VudC1kZW1vYXBwQHBsYWNlaG9sZGVyLm9yZyJ9.I7iheqYFpnCcto_yrX2ivL_djsJcJPiyKDw5gOx-sQ7DtsQ4EHXVTzET94abe7FhQzlZSL2gjBX9FymJChW1cAgXFwPZ-tbsBSCgzHHoGb9c8-YRtM3EH7Qa4u5PZZXdal7Fz2s-ir5eyfej4hyhhT7AqJEYS97hN8A5eXZTuVsooGhtuRMt9DHo6AK-Fvs1ImIuEbozmgMNgXQZUTXxY1XHljIv-IyehqW2HE_KhzimxcNaeEWjegFKh2aHFYnicp61lAyB4aeEmSgs3PZsTFsSWEVktuYFVYYhkvTX7qMCnxA8f3KYeG5ou71L1kA_rPcfl_yC4S4iDn-5IkOq_Q",
+				"type": "string"
+			},
+			{
+				"key": "tokenType",
+				"value": "bearer",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "afc95c3b-b101-4e7a-9ba1-8088cdced489",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5d39c393-4266-42f2-80ae-87765995b1d2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "fdbb53b7-47bf-4cf4-b0f1-dd05abbb1162",
+			"key": "user",
+			"value": "h5dv343lhyb",
+			"type": "string"
+		},
+		{
+			"id": "3ac58a58-1235-4c0b-8d63-99bddcd36d3c",
+			"key": "connection",
+			"value": "5fc529be-0fd4-46ee-bac0-1efa844c669b",
+			"type": "string"
+		},
+		{
+			"id": "183e7a19-72ad-491a-b67f-4cac5f49e729",
+			"key": "consent-account-body",
+			"value": "[{\"account_id\":\"61\",\"accountAccess\":[\"balances\",\"transactions\"]},{\"account_id\":\"62\",\"accountAccess\":[\"balances\",\"transactions\"]},{\"account_id\":\"63\",\"accountAccess\":[\"balances\",\"transactions\"]}]",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
