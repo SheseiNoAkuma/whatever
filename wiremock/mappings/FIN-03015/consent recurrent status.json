@@ -1,0 +1,37 @@
+{
+  "name" : "FINECO stato di un consenso ricorrente",
+  "request" : {
+    "urlPattern" : "/fin/consents/recurrent-(.*)",
+    "method" : "GET",
+	"headers" : {
+      
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody" : {
+          "access":    {
+             "accounts": [      {
+                "iban": "IT07M0301503200000000242635",
+                "currency": "EUR"
+             }],
+             "balances": [      {
+                "iban": "IT07M0301503200000000242635",
+                "currency": "EUR"
+             }],
+             "transactions": [{"iban": "IT07M0301503200000000242635"}]
+          },
+          "recurringIndicator": true,
+          "validUntil": "{{now offset='1 days' format='yyyy-MM-dd'}}",
+          "frequencyPerDay": 4,
+          "lastActionDate": "{{now format='yyyy-MM-dd'}}",
+          "consentStatus": "valid"
+       },
+	  "transformers": ["response-template"],
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "Tue, 14 Jan 2020 10:43:41 GMT"
+    }
+  },
+  "persistent" : true
+}

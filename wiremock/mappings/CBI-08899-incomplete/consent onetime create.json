@@ -1,0 +1,42 @@
+{
+  "name" : "richiesta di un consenso onetime",
+  "request" : {
+    "url" : "/cbi/consents",
+    "method" : "POST",
+	"headers" : {
+      "aspsp-code" : {
+        "equalTo" : "08899"
+      }
+    },
+     "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?($.recurringIndicator=='false')]"
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody": {
+				   "consentStatus": "received",
+				   "consentId": "onetime-{{randomValue type='UUID'}}",
+				   "scaMethods":    [
+							{
+						 "authenticationMethodId": "1.0",
+						 "authenticationType": "PUSH_OTP"
+					  },
+							{
+						 "authenticationMethodId": "2.0",
+						 "authenticationType": "CHIP_OTP"
+					  }
+				   ],
+				   "_links":    {
+					  "selectAuthenticationMethod": {"href": "/consents/d72aa235-aeb0-4b05-8d74-b4344ff08a08"},
+					  "self": {"href": "/consents/d72aa235-aeb0-4b05-8d74-b4344ff08a08"}
+				   }
+				},
+	"transformers": ["response-template"],
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "Sat, 16 Nov 2019 09:49:34 GMT"
+    }
+  },
+  "persistent" : true
+}

@@ -1,0 +1,2408 @@
+{
+  "name" : "FINECO transactions for account 848e76ff-7225-479e-b04f-0e6531c459b6",
+  "request" : {
+    "urlPattern" : "/fin/accounts/848e76ff-7225-479e-b04f-0e6531c459b6/transactions(.*)",
+    "method" : "GET",
+	"headers" : {
+      
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody" : {
+		"account": {
+			"iban": "IT07M0301503200000000242635"
+		},
+		"transactions" : {
+			"booked" : [ {
+				"transactionId" : "MjAyMDAxMTNfMjEwMjY5NTI3Ng==",
+				"bookingDate" : "2020-01-13",
+				"valueDate" : "2020-01-10",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-5.65"
+				},
+				"remittanceInformationUnstructured" : "Esselunga Losanna      Milano        It Carta N. ***** 589                      Data Operazione 10/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMTNfMjEwMjY5NTI4Mg==",
+				"bookingDate" : "2020-01-13",
+				"valueDate" : "2020-01-10",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 10/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMTNfMjEwMjY5NTI3MA==",
+				"bookingDate" : "2020-01-13",
+				"valueDate" : "2020-01-09",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-5.43"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 09/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMTBfMjEwMTQ5NjcxNg==",
+				"bookingDate" : "2020-01-10",
+				"valueDate" : "2020-01-10",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-244.19"
+				},
+				"remittanceInformationUnstructured" : "Estratto Conto Al  31/12/19             Carta Di Credito Di Finecobank          Posizione N? 4030********2585",
+				"proprietaryBankTransactionCode" : "145-Utilizzo carta di credito"
+			  }, {
+				"transactionId" : "MjAyMDAxMTBfMjEwMTEzMjIxNQ==",
+				"bookingDate" : "2020-01-10",
+				"valueDate" : "2020-01-08",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-5.43"
+				},
+				"remittanceInformationUnstructured" : "Intesa San Paolo Cm066 Milano        It Carta N. ***** 589                      Data Operazione 08/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDlfMjEwMDUyNjQ3MA==",
+				"bookingDate" : "2020-01-09",
+				"valueDate" : "2020-01-07",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-5.43"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 07/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDlfMjEwMDUyNjQ1Nw==",
+				"bookingDate" : "2020-01-09",
+				"valueDate" : "2020-01-06",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.95"
+				},
+				"remittanceInformationUnstructured" : "Starbucks Coffee       Lyon          Fr Carta N. ***** 589                      Data Operazione 06/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDlfMjEwMDUyNjQ2Mw==",
+				"bookingDate" : "2020-01-09",
+				"valueDate" : "2020-01-06",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-1.30"
+				},
+				"remittanceInformationUnstructured" : "Lpa Republique 731     Lyon 02       Fr Carta N. ***** 589                      Data Operazione 06/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDhfMjEwMDAyMDE0NQ==",
+				"bookingDate" : "2020-01-08",
+				"valueDate" : "2020-01-08",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "+371.68"
+				},
+				"creditorName" : "S***",
+				"debtorName" : "ACCENTURE TECHNOLOGY SOLU",
+				"remittanceInformationUnstructured" : "Data accredito: 08/01/2020 Banca ordinante: BAMLI DAC MILAN Causale: 0007482722 2019-12-31",
+				"remittanceInformationStructured" : "0007482722 2019-12-31",
+				"proprietaryBankTransactionCode" : "I48-Bonifico SEPA Italia"
+			  }, {
+				"transactionId" : "MjAyMDAxMDhfMjA5OTc2ODc3OQ==",
+				"bookingDate" : "2020-01-08",
+				"valueDate" : "2020-01-06",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-9.35"
+				},
+				"remittanceInformationUnstructured" : "Paypal *remotemyapp    35314369001   Pl Carta N. ***** 589                      Data Operazione 06/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDhfMjA5OTc2ODc4NQ==",
+				"bookingDate" : "2020-01-08",
+				"valueDate" : "2020-01-06",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-10.80"
+				},
+				"remittanceInformationUnstructured" : "Autogrill 0034         Rondissone    It Carta N. ***** 589                      Data Operazione 06/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDhfMjA5OTc2ODc3Mg==",
+				"bookingDate" : "2020-01-08",
+				"valueDate" : "2020-01-05",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-5.20"
+				},
+				"remittanceInformationUnstructured" : "Relais Lisses          Corbeil Esson Fr Carta N. ***** 589                      Data Operazione 05/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDdfMjA5ODA2NzA3Mg==",
+				"bookingDate" : "2020-01-07",
+				"valueDate" : "2020-01-05",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-14.46"
+				},
+				"remittanceInformationUnstructured" : "Meininger Hotel Lyon S France        Fr Carta N. ***** 589                      Data Operazione 05/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDdfMjA5ODA2NzEwOA==",
+				"bookingDate" : "2020-01-07",
+				"valueDate" : "2020-01-05",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-9.55"
+				},
+				"remittanceInformationUnstructured" : "Mc Do                  Lyon 2eme     Fr Carta N. ***** 589                      Data Operazione 05/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDdfMjA5ODA2NjkxNQ==",
+				"bookingDate" : "2020-01-07",
+				"valueDate" : "2020-01-04",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-30.76"
+				},
+				"remittanceInformationUnstructured" : "Tesco Pfs 2696         Hove          Gb Carta N. ***** 589                      Data Operazione 04/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDdfMjA5ODA2Njk1MQ==",
+				"bookingDate" : "2020-01-07",
+				"valueDate" : "2020-01-04",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-11.19"
+				},
+				"remittanceInformationUnstructured" : "P & O Ferries Ltd      Po Burg Retai Gb Carta N. ***** 589                      Data Operazione 04/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDdfMjA5ODA2Njk5MQ==",
+				"bookingDate" : "2020-01-07",
+				"valueDate" : "2020-01-04",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-15.00"
+				},
+				"remittanceInformationUnstructured" : "Jo&joe Gentilly        Gentilly      Fr Carta N. ***** 589                      Data Operazione 04/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDdfMjA5ODA2NzAzMA==",
+				"bookingDate" : "2020-01-07",
+				"valueDate" : "2020-01-04",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.00"
+				},
+				"remittanceInformationUnstructured" : "Jo&joe Gentilly        Gentilly      Fr Carta N. ***** 589                      Data Operazione 04/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDdfMjA5ODA2Njc4OA==",
+				"bookingDate" : "2020-01-07",
+				"valueDate" : "2020-01-03",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-11.19"
+				},
+				"remittanceInformationUnstructured" : "Manchester Hall        M'ster M3 3   Gb Carta N. ***** 589                      Data Operazione 03/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDdfMjA5ODA2NjgzMA==",
+				"bookingDate" : "2020-01-07",
+				"valueDate" : "2020-01-03",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-9.95"
+				},
+				"remittanceInformationUnstructured" : "Brighton Marine Palace Brighton      Gb Carta N. ***** 589                      Data Operazione 03/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDdfMjA5ODA2Njg3NQ==",
+				"bookingDate" : "2020-01-07",
+				"valueDate" : "2020-01-03",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-50.41"
+				},
+				"remittanceInformationUnstructured" : "Bp Moto Knutsford Sout Knutsford Che Gb Carta N. ***** 589                      Data Operazione 03/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDdfMjA5ODA2NjYwNA==",
+				"bookingDate" : "2020-01-07",
+				"valueDate" : "2020-01-02",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-5.84"
+				},
+				"remittanceInformationUnstructured" : "Starbucks              Edinburgh     Gb Carta N. ***** 589                      Data Operazione 02/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDdfMjA5ODA2NjY0MQ==",
+				"bookingDate" : "2020-01-07",
+				"valueDate" : "2020-01-02",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-94.59"
+				},
+				"remittanceInformationUnstructured" : "Great Scot             E'burgh Eh2   Gb Carta N. ***** 589                      Data Operazione 02/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDdfMjA5ODA2NjY4Mw==",
+				"bookingDate" : "2020-01-07",
+				"valueDate" : "2020-01-02",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-36.68"
+				},
+				"remittanceInformationUnstructured" : "Ncp Limited            Castle Terrac Gb Carta N. ***** 589                      Data Operazione 02/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDdfMjA5ODA2NjcxNw==",
+				"bookingDate" : "2020-01-07",
+				"valueDate" : "2020-01-02",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-4.14"
+				},
+				"remittanceInformationUnstructured" : "Hard Rock Cafe Manches Manchester    Gb Carta N. ***** 589                      Data Operazione 02/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDdfMjA5ODA2Njc1NA==",
+				"bookingDate" : "2020-01-07",
+				"valueDate" : "2020-01-02",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-9.46"
+				},
+				"remittanceInformationUnstructured" : "Mcdonalds              Kendal        Gb Carta N. ***** 589                      Data Operazione 02/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDNfMjA5NTA4MjA3MA==",
+				"bookingDate" : "2020-01-03",
+				"valueDate" : "2020-01-01",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-12.19"
+				},
+				"remittanceInformationUnstructured" : "Paypal *adobesystem    35314369001   Ie Carta N. ***** 589                      Data Operazione 01/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDNfMjA5NTA4MjA3OA==",
+				"bookingDate" : "2020-01-03",
+				"valueDate" : "2020-01-01",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-4.14"
+				},
+				"remittanceInformationUnstructured" : "Ncp Ltd                Glasgow       Gb Carta N. ***** 589                      Data Operazione 01/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDNfMjA5NTA4MjA4Nw==",
+				"bookingDate" : "2020-01-03",
+				"valueDate" : "2020-01-01",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-36.68"
+				},
+				"remittanceInformationUnstructured" : "Ncp Limited            Castle Terrac Gb Carta N. ***** 589                      Data Operazione 01/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDNfMjA5NTA4MjA5NQ==",
+				"bookingDate" : "2020-01-03",
+				"valueDate" : "2020-01-01",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.07"
+				},
+				"remittanceInformationUnstructured" : "Mcdonalds              Glasgow       Gb Carta N. ***** 589                      Data Operazione 01/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDNfMjA5NTA4MjEwNQ==",
+				"bookingDate" : "2020-01-03",
+				"valueDate" : "2020-01-01",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-48.57"
+				},
+				"remittanceInformationUnstructured" : "Hard Rock Cafe Edinbur Edinburgh     Gb Carta N. ***** 589                      Data Operazione 01/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDNfMjA5NTA4MjExNA==",
+				"bookingDate" : "2020-01-03",
+				"valueDate" : "2020-01-01",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-25.44"
+				},
+				"remittanceInformationUnstructured" : "Hard Rock Cafe Edinbur Edinburgh     Gb Carta N. ***** 589                      Data Operazione 01/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDNfMjA5NTA4MjEyNQ==",
+				"bookingDate" : "2020-01-03",
+				"valueDate" : "2020-01-01",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-12.42"
+				},
+				"remittanceInformationUnstructured" : "Iz *hula One Ltd.      Edinburgh     Gb Carta N. ***** 589                      Data Operazione 01/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDNfMjA5NTA4MjEzNA==",
+				"bookingDate" : "2020-01-03",
+				"valueDate" : "2020-01-01",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-25.44"
+				},
+				"remittanceInformationUnstructured" : "Hard Rock Cafe Glasgow Glasgow       Gb Carta N. ***** 589                      Data Operazione 01/01/20",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDJfMjA5Mzc5NTI5Ng==",
+				"bookingDate" : "2020-01-02",
+				"valueDate" : "2019-12-31",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-164.45"
+				},
+				"remittanceInformationUnstructured" : "Kick Ass Hostels Grass Edinburgh     Gb Carta N. ***** 589                      Data Operazione 31/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDJfMjA5Mzc5NTMwMg==",
+				"bookingDate" : "2020-01-02",
+				"valueDate" : "2019-12-31",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-42.91"
+				},
+				"remittanceInformationUnstructured" : "Lindisfarne Services   Berwick On Tw Gb Carta N. ***** 589                      Data Operazione 31/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDJfMjA5Mzc5NTMwOA==",
+				"bookingDate" : "2020-01-02",
+				"valueDate" : "2019-12-31",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-57.51"
+				},
+				"remittanceInformationUnstructured" : "Booking.com            Amsterdam     Nl Carta N. ***** 589                      Data Operazione 31/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDJfMjA5Mzc5NTMxNA==",
+				"bookingDate" : "2020-01-02",
+				"valueDate" : "2019-12-31",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-5.92"
+				},
+				"remittanceInformationUnstructured" : "Iz *underbelly         London        Gb Carta N. ***** 589                      Data Operazione 31/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDJfMjA5Mzc5NTMxOQ==",
+				"bookingDate" : "2020-01-02",
+				"valueDate" : "2019-12-31",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.51"
+				},
+				"remittanceInformationUnstructured" : "Iz *underbelly         London        Gb Carta N. ***** 589                      Data Operazione 31/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDJfMjA5Mzc5NTMyNQ==",
+				"bookingDate" : "2020-01-02",
+				"valueDate" : "2019-12-31",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-29.23"
+				},
+				"remittanceInformationUnstructured" : "Last Drop              Edinburgh     Gb Carta N. ***** 589                      Data Operazione 31/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDJfMjA5Mzc5NTI2Ng==",
+				"bookingDate" : "2020-01-02",
+				"valueDate" : "2019-12-30",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-23.97"
+				},
+				"remittanceInformationUnstructured" : "The Punter Pub         Cambridge     Gb Carta N. ***** 589                      Data Operazione 30/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDJfMjA5Mzc5NTI3Mg==",
+				"bookingDate" : "2020-01-02",
+				"valueDate" : "2019-12-30",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-12.98"
+				},
+				"remittanceInformationUnstructured" : "Astor York             York          Gb Carta N. ***** 589                      Data Operazione 30/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDJfMjA5Mzc5NTI3OA==",
+				"bookingDate" : "2020-01-02",
+				"valueDate" : "2019-12-30",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-4.58"
+				},
+				"remittanceInformationUnstructured" : "Astor York             York          Gb Carta N. ***** 589                      Data Operazione 30/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDJfMjA5Mzc5NTI4NA==",
+				"bookingDate" : "2020-01-02",
+				"valueDate" : "2019-12-30",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-5.64"
+				},
+				"remittanceInformationUnstructured" : "Caffe Nero Hull St Ste Hull          Gb Carta N. ***** 589                      Data Operazione 30/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDJfMjA5Mzc5NTI5MA==",
+				"bookingDate" : "2020-01-02",
+				"valueDate" : "2019-12-30",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-34.86"
+				},
+				"remittanceInformationUnstructured" : "Kates Cabin Service St Peterborough  Gb Carta N. ***** 589                      Data Operazione 30/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDJfMjA5Mzc5NTI2MA==",
+				"bookingDate" : "2020-01-02",
+				"valueDate" : "2019-12-29",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-27.08"
+				},
+				"remittanceInformationUnstructured" : "The Wellington         London Wc2 05 Gb Carta N. ***** 589                      Data Operazione 29/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAyMDAxMDJfMjA5Mzc5NTI1Ng==",
+				"bookingDate" : "2020-01-02",
+				"valueDate" : "2019-12-29",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-58.74"
+				},
+				"remittanceInformationUnstructured" : "Nationwide /W0460y     London        Gb Carta N. ***** 589                      Data Operazione 29/12/19",
+				"proprietaryBankTransactionCode" : "W91-Pr.FinecoCard ATM extra Gruppo"
+			  }, {
+				"transactionId" : "MjAxOTEyMzFfMjA5MzA4OTc1OQ==",
+				"bookingDate" : "2019-12-31",
+				"valueDate" : "2019-12-31",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-60.00"
+				},
+				"remittanceInformationUnstructured" : "Alleanza Assicurazioni S.p.a. Addebito Sdd Fattura A Vs Carico                  Da It330010000010908160012 Mand 7012540000000601736441 Per P",
+				"proprietaryBankTransactionCode" : "D41-SEPA Direct Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMzFfMjA5MzA4OTc2OQ==",
+				"bookingDate" : "2019-12-31",
+				"valueDate" : "2019-12-31",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-157.52"
+				},
+				"remittanceInformationUnstructured" : "Telepass Pay Addebito Sdd Fattura A Vs Carico                                   Da It02ee20000014070851002 Mand Cgbur40000000180502423 Per D",
+				"proprietaryBankTransactionCode" : "D41-SEPA Direct Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMzFfMjA5Mjc0MjE2NA==",
+				"bookingDate" : "2019-12-31",
+				"valueDate" : "2019-12-29",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-4.24"
+				},
+				"remittanceInformationUnstructured" : "Hotel Royal Centre (9  Bruxelles     Be Carta N. ***** 589                      Data Operazione 29/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMzFfMjA5Mjc0MjE5NQ==",
+				"bookingDate" : "2019-12-31",
+				"valueDate" : "2019-12-29",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-18.00"
+				},
+				"remittanceInformationUnstructured" : "Besix Park             Brussel       Be Carta N. ***** 589                      Data Operazione 29/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMzFfMjA5Mjc0MjIyMQ==",
+				"bookingDate" : "2019-12-31",
+				"valueDate" : "2019-12-29",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-2.59"
+				},
+				"remittanceInformationUnstructured" : "M&s Simply Food - Ssp  Waterloo Stat Gb Carta N. ***** 589                      Data Operazione 29/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMzFfMjA5Mjc0MjI1Mg==",
+				"bookingDate" : "2019-12-31",
+				"valueDate" : "2019-12-29",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-48.13"
+				},
+				"remittanceInformationUnstructured" : "Hard Rock Cafe London  London        Gb Carta N. ***** 589                      Data Operazione 29/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMzFfMjA5Mjc0MjAzMg==",
+				"bookingDate" : "2019-12-31",
+				"valueDate" : "2019-12-28",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-24.00"
+				},
+				"remittanceInformationUnstructured" : "Pagilux                Et1136 Luxemb Lu Carta N. ***** 589                      Data Operazione 28/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMzFfMjA5Mjc0MjA2OA==",
+				"bookingDate" : "2019-12-31",
+				"valueDate" : "2019-12-28",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-103.15"
+				},
+				"remittanceInformationUnstructured" : "Le Kleber Hotel        Strasbourg    Fr Carta N. ***** 589                      Data Operazione 28/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMzFfMjA5Mjc0MjEwNA==",
+				"bookingDate" : "2019-12-31",
+				"valueDate" : "2019-12-28",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-94.05"
+				},
+				"remittanceInformationUnstructured" : "Direct Ferries Limited London Ec4y 8 Gb Carta N. ***** 589                      Data Operazione 28/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMzFfMjA5Mjc0MjEzNA==",
+				"bookingDate" : "2019-12-31",
+				"valueDate" : "2019-12-28",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-12.80"
+				},
+				"remittanceInformationUnstructured" : "Indigo          249823 Stras0670001/ Fr Carta N. ***** 589                      Data Operazione 28/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMzFfMjA5Mjc0MjAwMA==",
+				"bookingDate" : "2019-12-31",
+				"valueDate" : "2019-12-27",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-11.95"
+				},
+				"remittanceInformationUnstructured" : "Kfc Homme De Fer       Strasbourg    Fr Carta N. ***** 589                      Data Operazione 27/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMzBfMjA5MTc1NTg3Nw==",
+				"bookingDate" : "2019-12-30",
+				"valueDate" : "2019-12-27",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-10.30"
+				},
+				"remittanceInformationUnstructured" : "Agip Ts Dimmerschachen Schattdorf    Ch Carta N. ***** 589                      Data Operazione 27/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMzBfMjA5MTc1NTg4NA==",
+				"bookingDate" : "2019-12-30",
+				"valueDate" : "2019-12-27",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-8.28"
+				},
+				"remittanceInformationUnstructured" : "Parkhaus Hauptbahnhof  Zurich        Ch Carta N. ***** 589                      Data Operazione 27/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMzBfMjA5MTc1NTg4OA==",
+				"bookingDate" : "2019-12-30",
+				"valueDate" : "2019-12-27",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-7.27"
+				},
+				"remittanceInformationUnstructured" : "Starbucks 032180       Zurich        Ch Carta N. ***** 589                      Data Operazione 27/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMzBfMjA5MTc1NTg5NA==",
+				"bookingDate" : "2019-12-30",
+				"valueDate" : "2019-12-27",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-50.00"
+				},
+				"remittanceInformationUnstructured" : "Paypal *vodafoneita    35314369001   It Carta N. ***** 589                      Data Operazione 27/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMjhfMjA5MTQ2NzE4Ng==",
+				"bookingDate" : "2019-12-28",
+				"valueDate" : "2019-12-27",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-42.00"
+				},
+				"remittanceInformationUnstructured" : "Pag. Del 27/12/19 Ora 12:43 Presso: Punto Grill Services .   Ads Brogeda Val Di Fr.   Como   22100     Co Ita Carta N? *****458 Nessuna Comm",
+				"proprietaryBankTransactionCode" : "043-PagoBancomat POS"
+			  }, {
+				"transactionId" : "MjAxOTEyMjdfMjA5MDYxMzc2Mw==",
+				"bookingDate" : "2019-12-27",
+				"valueDate" : "2019-12-27",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "+30.00"
+				},
+				"creditorName" : "Simone Velon",
+				"debtorName" : "PALMESE MANUEL",
+				"remittanceInformationUnstructured" : "Data accredito: 27/12/2019 Banca ordinante: UNICREDIT SPA Causale: Quota notte in appartamento Airbnb",
+				"remittanceInformationStructured" : "Quota notte in appartamento Airbnb",
+				"proprietaryBankTransactionCode" : "I48-Bonifico SEPA Italia"
+			  }, {
+				"transactionId" : "MjAxOTEyMjdfMjA5MDgxNDk2Nw==",
+				"bookingDate" : "2019-12-27",
+				"valueDate" : "2019-12-27",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "+1791.72"
+				},
+				"remittanceInformationUnstructured" : "Ord: Accenture Technology Solutions Srl Ben: V**** Dt-Ord: 27/12/2019 Banca Ord: Ubi Banca Scpa Info-Cli: Emolumenti Dicembre 2019",
+				"proprietaryBankTransactionCode" : "027-Stipendio"
+			  }, {
+				"transactionId" : "MjAxOTEyMjdfMjA4OTk1ODc0MQ==",
+				"bookingDate" : "2019-12-27",
+				"valueDate" : "2019-12-24",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-41.45"
+				},
+				"remittanceInformationUnstructured" : "Eataly To Nizza        Torino        It Carta N. ***** 589                      Data Operazione 24/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMjdfMjA4OTk1ODc0OA==",
+				"bookingDate" : "2019-12-27",
+				"valueDate" : "2019-12-24",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-60.48"
+				},
+				"remittanceInformationUnstructured" : "Italpetr 10000         Villarboit    It Carta N. ***** 589                      Data Operazione 24/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMjdfMjA4OTk1ODcyMA==",
+				"bookingDate" : "2019-12-27",
+				"valueDate" : "2019-12-23",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-12.80"
+				},
+				"remittanceInformationUnstructured" : "Mcdonald S             Torino        It Carta N. ***** 589                      Data Operazione 23/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMjdfMjA4OTk1ODcyNw==",
+				"bookingDate" : "2019-12-27",
+				"valueDate" : "2019-12-23",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-12.00"
+				},
+				"remittanceInformationUnstructured" : "Lingotto Parking Srl   Torino        It Carta N. ***** 589                      Data Operazione 23/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMjdfMjA4OTk1ODczMw==",
+				"bookingDate" : "2019-12-27",
+				"valueDate" : "2019-12-23",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-13.00"
+				},
+				"remittanceInformationUnstructured" : "Dessi Pizzeria         Torino        It Carta N. ***** 589                      Data Operazione 23/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMjdfMjA4OTk1ODcxNA==",
+				"bookingDate" : "2019-12-27",
+				"valueDate" : "2019-12-21",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-284.13"
+				},
+				"remittanceInformationUnstructured" : "Norauto                Torino        It Carta N. ***** 589                      Data Operazione 21/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMjRfMjA4OTAxMjgwOA==",
+				"bookingDate" : "2019-12-24",
+				"valueDate" : "2019-12-22",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-105.00"
+				},
+				"remittanceInformationUnstructured" : "Salomon                Settimo Torin It Carta N. ***** 589                      Data Operazione 22/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMjRfMjA4OTAxMjc4NQ==",
+				"bookingDate" : "2019-12-24",
+				"valueDate" : "2019-12-21",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-34.00"
+				},
+				"remittanceInformationUnstructured" : "Guido Gobino Le Botteg Torino        It Carta N. ***** 589                      Data Operazione 21/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMjNfMjA4ODEwMDA3Mg==",
+				"bookingDate" : "2019-12-23",
+				"valueDate" : "2019-12-23",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-211.25"
+				},
+				"remittanceInformationUnstructured" : "American Express Services Europe Ltd Addebito Sdd Fattura A Vs Carico           Da It36axp0000005090991000 Mand E2017215068428638 Per 91000 ",
+				"proprietaryBankTransactionCode" : "D41-SEPA Direct Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMjNfMjA4ODYwNTI1OQ==",
+				"bookingDate" : "2019-12-23",
+				"valueDate" : "2019-12-23",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "+90.15"
+				},
+				"creditorName" : "S******",
+				"debtorName" : "SATISPAY EUROPE SA",
+				"remittanceInformationUnstructured" : "Data accredito: 23/12/2019 Banca ordinante: SATISPAY EUROPE SA Causale: Satispay Weekly Cash",
+				"remittanceInformationStructured" : "Satispay Weekly Cash",
+				"proprietaryBankTransactionCode" : "E48-Bonifico SEPA Estero"
+			  }, {
+				"transactionId" : "MjAxOTEyMjNfMjA4NzY3OTUzNA==",
+				"bookingDate" : "2019-12-23",
+				"valueDate" : "2019-12-21",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-4.96"
+				},
+				"remittanceInformationUnstructured" : "Sn4799000019862631     Milano        It Carta N. ***** 589                      Data Operazione 21/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMjNfMjA4NzY3OTU0MA==",
+				"bookingDate" : "2019-12-23",
+				"valueDate" : "2019-12-21",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-15.90"
+				},
+				"remittanceInformationUnstructured" : "Foodinho Srl           Milano        It Carta N. ***** 589                      Data Operazione 21/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMjNfMjA4NzY3OTUyMg==",
+				"bookingDate" : "2019-12-23",
+				"valueDate" : "2019-12-20",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 20/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMjNfMjA4NzY3OTUyOA==",
+				"bookingDate" : "2019-12-23",
+				"valueDate" : "2019-12-20",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-24.30"
+				},
+				"remittanceInformationUnstructured" : "Gabri                  Torino        It Carta N. ***** 589                      Data Operazione 20/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMjNfMjA4NzY3OTUxNg==",
+				"bookingDate" : "2019-12-23",
+				"valueDate" : "2019-12-19",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 19/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMjNfMjA4NzY3OTUxMA==",
+				"bookingDate" : "2019-12-23",
+				"valueDate" : "2019-12-18",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-17.05"
+				},
+				"remittanceInformationUnstructured" : "Carrefour Market       Torino        It Carta N. ***** 589                      Data Operazione 18/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMjBfMjA4NjcyMDkzMA==",
+				"bookingDate" : "2019-12-20",
+				"valueDate" : "2019-12-20",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "+773.36"
+				},
+				"creditorName" : "S******",
+				"debtorName" : "ACCENTURE TECHNOLOGY SOLU",
+				"remittanceInformationUnstructured" : "Data accredito: 20/12/2019 Banca ordinante: BAMLI DAC MILAN Causale: 0007422873 2019-12-15",
+				"remittanceInformationStructured" : "0007422873 2019-12-15",
+				"proprietaryBankTransactionCode" : "I48-Bonifico SEPA Italia"
+			  }, {
+				"transactionId" : "MjAxOTEyMjBfMjA4NjM1NjcxMQ==",
+				"bookingDate" : "2019-12-20",
+				"valueDate" : "2019-12-18",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 18/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMjBfMjA4NjM1NjY4Nw==",
+				"bookingDate" : "2019-12-20",
+				"valueDate" : "2019-12-17",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-8.50"
+				},
+				"remittanceInformationUnstructured" : "Zefa                   Milano        It Carta N. ***** 589                      Data Operazione 17/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMTlfMjA4NTY2NDYzMw==",
+				"bookingDate" : "2019-12-19",
+				"valueDate" : "2019-12-17",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-15.50"
+				},
+				"remittanceInformationUnstructured" : "Foodinho Srl           Milano        It Carta N. ***** 589                      Data Operazione 17/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMThfMjA4NDk2MTA0Nw==",
+				"bookingDate" : "2019-12-18",
+				"valueDate" : "2019-12-16",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-62.30"
+				},
+				"remittanceInformationUnstructured" : "Distributore Agip      Settimo Torin It Carta N. ***** 589                      Data Operazione 16/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMThfMjA4NDk2MTA2NQ==",
+				"bookingDate" : "2019-12-18",
+				"valueDate" : "2019-12-16",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-9.25"
+				},
+				"remittanceInformationUnstructured" : "Qiu Xuelei             Milano        It Carta N. ***** 589                      Data Operazione 16/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMThfMjA4NDk2MDk4NA==",
+				"bookingDate" : "2019-12-18",
+				"valueDate" : "2019-12-15",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-16.50"
+				},
+				"remittanceInformationUnstructured" : "D.m. Caffe'            Torino        It Carta N. ***** 589                      Data Operazione 15/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMThfMjA4NDk2MTAwNQ==",
+				"bookingDate" : "2019-12-18",
+				"valueDate" : "2019-12-15",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-9.00"
+				},
+				"remittanceInformationUnstructured" : "Mago Di Oz Sas         Torino        It Carta N. ***** 589                      Data Operazione 15/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMThfMjA4NDk2MTAyNQ==",
+				"bookingDate" : "2019-12-18",
+				"valueDate" : "2019-12-15",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-33.00"
+				},
+				"remittanceInformationUnstructured" : "Mago Di Oz Sas         Torino        It Carta N. ***** 589                      Data Operazione 15/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMTdfMjA4NDQzMTg1MQ==",
+				"bookingDate" : "2019-12-17",
+				"valueDate" : "2019-12-17",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-86.09"
+				},
+				"remittanceInformationUnstructured" : "Satispay Europe Sa Addebito Sdd Fattura A Vs Carico                             Da Gb07hoosddsaty000000000 Mand Sati180516115005721514 Per S",
+				"proprietaryBankTransactionCode" : "D41-SEPA Direct Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMTdfMjA4NDY3NDE4Ng==",
+				"endToEndId" : "1912171580360049480320001600IT",
+				"bookingDate" : "2019-12-17",
+				"valueDate" : "2019-12-17",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-2500.00"
+				},
+				"creditorName" : "ALLEANZA ASSICURAZIONI SPA",
+				"creditorAccount" : {
+				  "iban" : "IT74M0200812028000104958553",
+				  "currency" : "EUR"
+				},
+				"remittanceInformationUnstructured" : "Data inserimento: 17/12/2019 12:40:34 Da: INTERNET Causale: 24176549 V*****",
+				"remittanceInformationStructured" : "24176549 VELONA' SIMONE",
+				"proprietaryBankTransactionCode" : "I26-Bonifico SEPA Italia"
+			  }, {
+				"transactionId" : "MjAxOTEyMTdfMjA4NDE0NDQyNw==",
+				"bookingDate" : "2019-12-17",
+				"valueDate" : "2019-12-15",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-22.50"
+				},
+				"remittanceInformationUnstructured" : "Grado Plato Torino     Montaldo Tori It Carta N. ***** 589                      Data Operazione 15/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMTdfMjA4NDE0NDM5OQ==",
+				"bookingDate" : "2019-12-17",
+				"valueDate" : "2019-12-14",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-9.88"
+				},
+				"remittanceInformationUnstructured" : "El Pan D Na Volta Srl  Torino        It Carta N. ***** 589                      Data Operazione 14/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMTZfMjA4MjkwNDM5Nw==",
+				"bookingDate" : "2019-12-16",
+				"valueDate" : "2019-12-14",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-153.89"
+				},
+				"remittanceInformationUnstructured" : "Airbnb * Hmrc4p3fpz    069-936-6533  Gb Carta N. ***** 589                      Data Operazione 14/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMTZfMjA4MzA0OTI3OQ==",
+				"bookingDate" : "2019-12-16",
+				"valueDate" : "2019-12-14",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-120.00"
+				},
+				"remittanceInformationUnstructured" : "Prelevamento Carta N? *****        458  Data Operazione 14/12/2019 Ora 13:36    3048 Banca Del Piemonte S.p.a.          N? Atm 43 Torino (to",
+				"proprietaryBankTransactionCode" : "091-Prelievo Bancomat"
+			  }, {
+				"transactionId" : "MjAxOTEyMTZfMjA4MjkwNDM5MQ==",
+				"bookingDate" : "2019-12-16",
+				"valueDate" : "2019-12-13",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.07"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 13/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMTZfMjA4MjkwNDM4NA==",
+				"bookingDate" : "2019-12-16",
+				"valueDate" : "2019-12-12",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.07"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 12/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMTNfMjA4MTkxNjc5Ng==",
+				"bookingDate" : "2019-12-13",
+				"valueDate" : "2019-12-13",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "+5739.00"
+				},
+				"creditorName" : "V******",
+				"debtorName" : "ALLEANZA ASSICURAZIONI SPA",
+				"remittanceInformationUnstructured" : "Data accredito: 13/12/2019 Banca ordinante: UNICREDIT SPA Causale: RISCATTO-POL.023453590VELONA  SIMONE",
+				"remittanceInformationStructured" : "RISCATTO-POL.023453590VELONA  SIMONE",
+				"proprietaryBankTransactionCode" : "I48-Bonifico SEPA Italia"
+			  }, {
+				"transactionId" : "MjAxOTEyMTNfMjA4MjAwNTM4Nw==",
+				"endToEndId" : "1912131578620671480320000000IT",
+				"bookingDate" : "2019-12-13",
+				"valueDate" : "2019-12-13",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-30.00"
+				},
+				"creditorName" : "S************",
+				"creditorAccount" : {
+				  "iban" : "IT32A0306909504100000008551",
+				  "currency" : "EUR"
+				},
+				"remittanceInformationUnstructured" : "Data inserimento: 13/12/2019 15:27:22 Da: INTERNET Causale: test",
+				"remittanceInformationStructured" : "test",
+				"proprietaryBankTransactionCode" : "V26-Bonifico Istantaneo"
+			  }, {
+				"transactionId" : "MjAxOTEyMTNfMjA4MTk3OTIzMw==",
+				"bookingDate" : "2019-12-13",
+				"valueDate" : "2019-12-13",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "+1622.08"
+				},
+				"remittanceInformationUnstructured" : "Ord: Accenture Technology Solutions Srl Ben: V***************************Ord: Ubi Banca Scpa Info-Cli: Emolumenti 13ma Mensilita'",
+				"proprietaryBankTransactionCode" : "027-Stipendio"
+			  }, {
+				"transactionId" : "MjAxOTEyMTNfMjA4MTUzMjc5OA==",
+				"bookingDate" : "2019-12-13",
+				"valueDate" : "2019-12-11",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-2.30"
+				},
+				"remittanceInformationUnstructured" : "Copernico Caffe        Milano        It Carta N. ***** 589                      Data Operazione 11/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMTNfMjA4MTUzMjgyMA==",
+				"bookingDate" : "2019-12-13",
+				"valueDate" : "2019-12-11",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-5.00"
+				},
+				"remittanceInformationUnstructured" : "24 Ore Cultura         Milano        It Carta N. ***** 589                      Data Operazione 11/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMTNfMjA4MTUzMjg0NA==",
+				"bookingDate" : "2019-12-13",
+				"valueDate" : "2019-12-11",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-49.65"
+				},
+				"remittanceInformationUnstructured" : "Discar                 Moncalieri    It Carta N. ***** 589                      Data Operazione 11/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMTNfMjA4MTUzMjc3NA==",
+				"bookingDate" : "2019-12-13",
+				"valueDate" : "2019-12-10",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-12.37"
+				},
+				"remittanceInformationUnstructured" : "Supermercato Simpatia  Torino        It Carta N. ***** 589                      Data Operazione 10/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMTJfMjA4MDk1MzA1MA==",
+				"bookingDate" : "2019-12-12",
+				"valueDate" : "2019-12-10",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-30.00"
+				},
+				"remittanceInformationUnstructured" : "Paypal *vodafoneita    35314369001   It Carta N. ***** 589                      Data Operazione 10/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMTJfMjA4MDk1MzA1Ng==",
+				"bookingDate" : "2019-12-12",
+				"valueDate" : "2019-12-10",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-0.43"
+				},
+				"remittanceInformationUnstructured" : "Argenta Isp Torino 7   Torino        It Carta N. ***** 589                      Data Operazione 10/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMTFfMjA4MDIzMDc3Ng==",
+				"bookingDate" : "2019-12-11",
+				"valueDate" : "2019-12-10",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-100.00"
+				},
+				"remittanceInformationUnstructured" : "Prelevamento Carta N? *****        458  Data Operazione 10/12/2019 Ora 19:51    5034 Banco Bpm S.p.a.                   N? Atm 1314 Torino (",
+				"proprietaryBankTransactionCode" : "091-Prelievo Bancomat"
+			  }, {
+				"transactionId" : "MjAxOTEyMTFfMjA4MDEwOTA2NQ==",
+				"bookingDate" : "2019-12-11",
+				"valueDate" : "2019-12-09",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.07"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 09/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMTFfMjA4MDEwOTA4NQ==",
+				"bookingDate" : "2019-12-11",
+				"valueDate" : "2019-12-09",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-42.80"
+				},
+				"remittanceInformationUnstructured" : "Supermercato Esselunga Torino        It Carta N. ***** 589                      Data Operazione 09/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMTFfMjA4MDEwOTAzNg==",
+				"bookingDate" : "2019-12-11",
+				"valueDate" : "2019-12-08",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-7.80"
+				},
+				"remittanceInformationUnstructured" : "Mc Donald S            Milano        It Carta N. ***** 589                      Data Operazione 08/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMTFfMjA4MDEwOTA1Mg==",
+				"bookingDate" : "2019-12-11",
+				"valueDate" : "2019-12-08",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-90.00"
+				},
+				"remittanceInformationUnstructured" : "Pave                   Milano        It Carta N. ***** 589                      Data Operazione 08/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMTBfMjA3OTI4NTE2OA==",
+				"bookingDate" : "2019-12-10",
+				"valueDate" : "2019-12-10",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-79.99"
+				},
+				"remittanceInformationUnstructured" : "Estratto Conto Al  29/11/19             Carta Di Credito Di Finecobank          Posizione N? 4030********2585",
+				"proprietaryBankTransactionCode" : "145-Utilizzo carta di credito"
+			  }, {
+				"transactionId" : "MjAxOTEyMDlfMjA3ODQzNDYyMg==",
+				"bookingDate" : "2019-12-09",
+				"valueDate" : "2019-12-09",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "+14.85"
+				},
+				"creditorName" : "Simone Velona'",
+				"debtorName" : "SATISPAY EUROPE SA",
+				"remittanceInformationUnstructured" : "Data accredito: 09/12/2019 Banca ordinante: SATISPAY EUROPE SA Causale: Satispay Weekly Cash",
+				"remittanceInformationStructured" : "Satispay Weekly Cash",
+				"proprietaryBankTransactionCode" : "E48-Bonifico SEPA Estero"
+			  }, {
+				"transactionId" : "MjAxOTEyMDlfMjA3Nzg0MTI4MA==",
+				"bookingDate" : "2019-12-09",
+				"valueDate" : "2019-12-07",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-11.90"
+				},
+				"remittanceInformationUnstructured" : "Foodinho Srl           Milano        It Carta N. ***** 589                      Data Operazione 07/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDlfMjA3Nzg0MTI2OA==",
+				"bookingDate" : "2019-12-09",
+				"valueDate" : "2019-12-06",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-9.40"
+				},
+				"remittanceInformationUnstructured" : "Paypal *remotemyapp    35314369001   Pl Carta N. ***** 589                      Data Operazione 06/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDlfMjA3Nzg0MTI3NA==",
+				"bookingDate" : "2019-12-09",
+				"valueDate" : "2019-12-06",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 06/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDlfMjA3Nzg0MTI2Mg==",
+				"bookingDate" : "2019-12-09",
+				"valueDate" : "2019-12-05",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 05/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDdfMjA3NzY0MDUxMA==",
+				"bookingDate" : "2019-12-07",
+				"valueDate" : "2019-12-06",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-49.98"
+				},
+				"remittanceInformationUnstructured" : "Pag. Del 06/12/19 Ora 19:55 Presso: Distributore Torino   Lungostura Lazio 101   Torino   10156        Ita Carta N? *****458 Nessuna Commiss",
+				"proprietaryBankTransactionCode" : "043-PagoBancomat POS"
+			  }, {
+				"transactionId" : "MjAxOTEyMDZfMjA3NzE2MDc1MQ==",
+				"bookingDate" : "2019-12-06",
+				"valueDate" : "2019-12-06",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "+606.66"
+				},
+				"creditorName" : "SIMONE VELONA",
+				"debtorName" : "ACCENTURE TECHNOLOGY SOLU",
+				"remittanceInformationUnstructured" : "Data accredito: 06/12/2019 Banca ordinante: BAMLI DAC MILAN Causale: 0006892697 2019-11-30",
+				"remittanceInformationStructured" : "0006892697 2019-11-30",
+				"proprietaryBankTransactionCode" : "I48-Bonifico SEPA Italia"
+			  }, {
+				"transactionId" : "MjAxOTEyMDZfMjA3Njg0NDQzNQ==",
+				"bookingDate" : "2019-12-06",
+				"valueDate" : "2019-12-04",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-0.43"
+				},
+				"remittanceInformationUnstructured" : "Argenta Isp Torino 7   Torino        It Carta N. ***** 589                      Data Operazione 04/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDZfMjA3Njg0NDQ2NA==",
+				"bookingDate" : "2019-12-06",
+				"valueDate" : "2019-12-04",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-0.30"
+				},
+				"remittanceInformationUnstructured" : "Argenta Isp Torino 7   Torino        It Carta N. ***** 589                      Data Operazione 04/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDZfMjA3Njg0NDQ5MQ==",
+				"bookingDate" : "2019-12-06",
+				"valueDate" : "2019-12-04",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-17.78"
+				},
+				"remittanceInformationUnstructured" : "Hamerica's Foodeliciou Torino        It Carta N. ***** 589                      Data Operazione 04/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDVfMjA3NjU0Mzc5Nw==",
+				"bookingDate" : "2019-12-05",
+				"valueDate" : "2019-12-05",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "+22.50"
+				},
+				"creditorName" : "SIMONE VELONA.",
+				"debtorName" : "CAVAIANI MARCO",
+				"remittanceInformationUnstructured" : "Data accredito: 05/12/2019 Banca ordinante: BANCA MEDIOLANUM Causale: ",
+				"remittanceInformationStructured" : "",
+				"proprietaryBankTransactionCode" : "I48-Bonifico SEPA Italia"
+			  }, {
+				"transactionId" : "MjAxOTEyMDVfMjA3NjIzNTA5Nw==",
+				"bookingDate" : "2019-12-05",
+				"valueDate" : "2019-12-03",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 03/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDVfMjA3NjIzNTEwMw==",
+				"bookingDate" : "2019-12-05",
+				"valueDate" : "2019-12-03",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-115.00"
+				},
+				"remittanceInformationUnstructured" : "Past-A-Porter Di Parid Torino        It Carta N. ***** 589                      Data Operazione 03/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDRfMjA3NTg3MDY5Nw==",
+				"endToEndId" : "1912031573908541480320001600IT",
+				"bookingDate" : "2019-12-04",
+				"valueDate" : "2019-12-04",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-342.00"
+				},
+				"creditorName" : "CENTRO NAUTICO DI LEVANTE",
+				"creditorAccount" : {
+				  "iban" : "IT60D0200801122000002353269",
+				  "currency" : "EUR"
+				},
+				"remittanceInformationUnstructured" : "Data inserimento: 04/12/2019 20:39:53 Da: PHONE/VOICE P. Causale: Saldo Corsi",
+				"remittanceInformationStructured" : "Saldo Corsi",
+				"proprietaryBankTransactionCode" : "I26-Bonifico SEPA Italia"
+			  }, {
+				"transactionId" : "MjAxOTEyMDRfMjA3NDU0NzUyMg==",
+				"bookingDate" : "2019-12-04",
+				"valueDate" : "2019-12-02",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 02/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDRfMjA3NDU0NzQ3Mg==",
+				"bookingDate" : "2019-12-04",
+				"valueDate" : "2019-12-01",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-2.99"
+				},
+				"remittanceInformationUnstructured" : "Carrefour Iper         Grugliasco    It Carta N. ***** 589                      Data Operazione 01/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDRfMjA3NDU0NzQ5OQ==",
+				"bookingDate" : "2019-12-04",
+				"valueDate" : "2019-12-01",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-1.60"
+				},
+				"remittanceInformationUnstructured" : "Mc Donald S Grugliasco Grugliasco    It Carta N. ***** 589                      Data Operazione 01/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDRfMjA3NDU0NzQ1MQ==",
+				"bookingDate" : "2019-12-04",
+				"valueDate" : "2019-11-30",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-38.97"
+				},
+				"remittanceInformationUnstructured" : "Mediaworld             Torino        It Carta N. ***** 589                      Data Operazione 30/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDNfMjA3NDAwOTU1NQ==",
+				"bookingDate" : "2019-12-03",
+				"valueDate" : "2019-12-03",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-46.60"
+				},
+				"remittanceInformationUnstructured" : "Satispay Europe Sa Addebito Sdd Fattura A Vs Carico                             Da Gb07hoosddsaty000000000 Mand Sati180516115005721514 Per S",
+				"proprietaryBankTransactionCode" : "D41-SEPA Direct Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDNfMjA3MzgwMDU0NA==",
+				"bookingDate" : "2019-12-03",
+				"valueDate" : "2019-12-01",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-12.19"
+				},
+				"remittanceInformationUnstructured" : "Paypal *adobesystem    35314369001   Ie Carta N. ***** 589                      Data Operazione 01/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDNfMjA3MzgwMDU3NA==",
+				"bookingDate" : "2019-12-03",
+				"valueDate" : "2019-12-01",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-39.92"
+				},
+				"remittanceInformationUnstructured" : "Bialetti Store Srl Le  Grugliasco    It Carta N. ***** 589                      Data Operazione 01/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDNfMjA3MzgwMDYwMA==",
+				"bookingDate" : "2019-12-03",
+				"valueDate" : "2019-12-01",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-51.60"
+				},
+				"remittanceInformationUnstructured" : "Intimissimi Uomo       Grugliasco    It Carta N. ***** 589                      Data Operazione 01/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDNfMjA3MzgwMDYyMg==",
+				"bookingDate" : "2019-12-03",
+				"valueDate" : "2019-12-01",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-83.93"
+				},
+				"remittanceInformationUnstructured" : "North Sails            Grugliasco    It Carta N. ***** 589                      Data Operazione 01/12/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDJfMjA3Mjc0MzI0OQ==",
+				"bookingDate" : "2019-12-02",
+				"valueDate" : "2019-12-02",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-181.56"
+				},
+				"remittanceInformationUnstructured" : "Telepass Pay Addebito Sdd Fattura A Vs Carico                                   Da It02ee20000014070851002 Mand Cgbur40000000180502423 Per D",
+				"proprietaryBankTransactionCode" : "D41-SEPA Direct Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDJfMjA3MjI5NTg1Nw==",
+				"bookingDate" : "2019-12-02",
+				"valueDate" : "2019-11-30",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-73.00"
+				},
+				"remittanceInformationUnstructured" : "Ikea Collegno          Collegno      It Carta N. ***** 589                      Data Operazione 30/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDJfMjA3MjI5NTg2Mg==",
+				"bookingDate" : "2019-12-02",
+				"valueDate" : "2019-11-30",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-11.10"
+				},
+				"remittanceInformationUnstructured" : "Mcdonald S             Torino        It Carta N. ***** 589                      Data Operazione 30/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDJfMjA3MjM1MzAwMQ==",
+				"bookingDate" : "2019-12-02",
+				"valueDate" : "2019-11-30",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-140.00"
+				},
+				"remittanceInformationUnstructured" : "Prelevamento Carta N? *****        458  Data Operazione 30/11/2019 Ora 15:48    3069 Intesa Sanpaolo Spa                N? Atm 4176 Torino (",
+				"proprietaryBankTransactionCode" : "091-Prelievo Bancomat"
+			  }, {
+				"transactionId" : "MjAxOTEyMDJfMjA3MjI5NTg0OQ==",
+				"bookingDate" : "2019-12-02",
+				"valueDate" : "2019-11-29",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 29/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDJfMjA3MjI5NTg1Mw==",
+				"bookingDate" : "2019-12-02",
+				"valueDate" : "2019-11-29",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-22.00"
+				},
+				"remittanceInformationUnstructured" : "Past-A-Porter Di Parid Torino        It Carta N. ***** 589                      Data Operazione 29/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEyMDJfMjA3MjI5NTg0NQ==",
+				"bookingDate" : "2019-12-02",
+				"valueDate" : "2019-11-28",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 28/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMjlfMjA3MDg0NjMyNw==",
+				"bookingDate" : "2019-11-29",
+				"valueDate" : "2019-11-27",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 27/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMjhfMjA3MDE1MzIxNw==",
+				"bookingDate" : "2019-11-28",
+				"valueDate" : "2019-11-26",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-19.16"
+				},
+				"remittanceInformationUnstructured" : "Hamerica's Foodeliciou Torino        It Carta N. ***** 589                      Data Operazione 26/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMjdfMjA2OTgyNzI2Mw==",
+				"bookingDate" : "2019-11-27",
+				"valueDate" : "2019-11-27",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "+1997.84"
+				},
+				"remittanceInformationUnstructured" : "Ord: Accenture Technology Solutions Srl Ben: Velona'simone Dt-Ord: 27/11/2019 Banca Ord: Ubi Banca Scpa Info-Cli: Ats Emolumenti Novembre 20",
+				"proprietaryBankTransactionCode" : "027-Stipendio"
+			  }, {
+				"transactionId" : "MjAxOTExMjdfMjA2OTQxNTg3NQ==",
+				"bookingDate" : "2019-11-27",
+				"valueDate" : "2019-11-25",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-54.21"
+				},
+				"remittanceInformationUnstructured" : "Pv1247                 Milano        It Carta N. ***** 589                      Data Operazione 25/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMjZfMjA2ODk5OTU2OA==",
+				"bookingDate" : "2019-11-26",
+				"valueDate" : "2019-11-26",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-10.00"
+				},
+				"remittanceInformationUnstructured" : "Satispay Europe Sa Addebito Sdd Fattura A Vs Carico                             Da Gb07hoosddsaty000000000 Mand Sati180516115005721514 Per S",
+				"proprietaryBankTransactionCode" : "D41-SEPA Direct Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMjZfMjA2OTExNTg1Mw==",
+				"bookingDate" : "2019-11-26",
+				"valueDate" : "2019-11-26",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-200.00"
+				},
+				"remittanceInformationUnstructured" : "Prelievo Smart                          Data Operazione 26/11/19 15:43  02008 Unicredit Spa Atm N. 05670 Milano",
+				"proprietaryBankTransactionCode" : "PSM-Prelievo Smart"
+			  }, {
+				"transactionId" : "MjAxOTExMjZfMjA2ODc0NzA3MA==",
+				"bookingDate" : "2019-11-26",
+				"valueDate" : "2019-11-24",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-26.00"
+				},
+				"remittanceInformationUnstructured" : "Dimo                   Milano        It Carta N. ***** 589                      Data Operazione 24/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMjVfMjA2Nzc4OTY4OQ==",
+				"bookingDate" : "2019-11-25",
+				"valueDate" : "2019-11-22",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 22/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMjVfMjA2Nzc4OTY5NQ==",
+				"bookingDate" : "2019-11-25",
+				"valueDate" : "2019-11-22",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-10.00"
+				},
+				"remittanceInformationUnstructured" : "Mondo Wind             Torino        It Carta N. ***** 589                      Data Operazione 22/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMjVfMjA2Nzc4OTY3Nw==",
+				"bookingDate" : "2019-11-25",
+				"valueDate" : "2019-11-21",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 21/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMjVfMjA2Nzc4OTY4Mw==",
+				"bookingDate" : "2019-11-25",
+				"valueDate" : "2019-11-21",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-18.45"
+				},
+				"remittanceInformationUnstructured" : "Hamerica's Foodeliciou Torino        It Carta N. ***** 589                      Data Operazione 21/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMjVfMjA2Nzc4OTY3MQ==",
+				"bookingDate" : "2019-11-25",
+				"valueDate" : "2019-11-20",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-53.96"
+				},
+				"remittanceInformationUnstructured" : "Carrefour Market       Torino        It Carta N. ***** 589                      Data Operazione 20/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMjJfMjA2NzAxNjAzNQ==",
+				"bookingDate" : "2019-11-22",
+				"valueDate" : "2019-11-22",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "+600.52"
+				},
+				"creditorName" : "SIMONE VELONA",
+				"debtorName" : "ACCENTURE TECHNOLOGY SOLU",
+				"remittanceInformationUnstructured" : "Data accredito: 22/11/2019 Banca ordinante: BAMLI DAC MILAN Causale: 0007322965 2019-11-15",
+				"remittanceInformationStructured" : "0007322965 2019-11-15",
+				"proprietaryBankTransactionCode" : "I48-Bonifico SEPA Italia"
+			  }, {
+				"transactionId" : "MjAxOTExMjJfMjA2NjYwOTI2NQ==",
+				"bookingDate" : "2019-11-22",
+				"valueDate" : "2019-11-20",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.07"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 20/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMjFfMjA2NjIxMTI2OA==",
+				"bookingDate" : "2019-11-21",
+				"valueDate" : "2019-11-21",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-302.68"
+				},
+				"remittanceInformationUnstructured" : "American Express Services Europe Ltd Addebito Sdd Fattura A Vs Carico           Da It36axp0000005090991000 Mand E2017215068428638 Per 91000 ",
+				"proprietaryBankTransactionCode" : "D41-SEPA Direct Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMjFfMjA2NTk5MzE2Ng==",
+				"bookingDate" : "2019-11-21",
+				"valueDate" : "2019-11-19",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 19/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMjFfMjA2NTk5MzEzNA==",
+				"bookingDate" : "2019-11-21",
+				"valueDate" : "2019-11-18",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-39.50"
+				},
+				"remittanceInformationUnstructured" : "Carrefour Iper         Torino        It Carta N. ***** 589                      Data Operazione 18/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMjBfMjA2NTI0OTg0Nw==",
+				"bookingDate" : "2019-11-20",
+				"valueDate" : "2019-11-18",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-0.43"
+				},
+				"remittanceInformationUnstructured" : "Argenta Isp Torino 7   Torino        It Carta N. ***** 589                      Data Operazione 18/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMjBfMjA2NTI0OTg2OQ==",
+				"bookingDate" : "2019-11-20",
+				"valueDate" : "2019-11-18",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-0.48"
+				},
+				"remittanceInformationUnstructured" : "Argenta Isp Torino 33  Torino        It Carta N. ***** 589                      Data Operazione 18/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMjBfMjA2NTI0OTg4Nw==",
+				"bookingDate" : "2019-11-20",
+				"valueDate" : "2019-11-18",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-0.31"
+				},
+				"remittanceInformationUnstructured" : "Argenta Isp Torino 52  Torino        It Carta N. ***** 589                      Data Operazione 18/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMTlfMjA2NDg3NTY0Ng==",
+				"bookingDate" : "2019-11-19",
+				"valueDate" : "2019-11-19",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-25.00"
+				},
+				"remittanceInformationUnstructured" : "Satispay Europe Sa Addebito Sdd Fattura A Vs Carico                             Da Gb07hoosddsaty000000000 Mand Sati180516115005721514 Per S",
+				"proprietaryBankTransactionCode" : "D41-SEPA Direct Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMTlfMjA2NDY1MjI2Nw==",
+				"bookingDate" : "2019-11-19",
+				"valueDate" : "2019-11-17",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-32.00"
+				},
+				"remittanceInformationUnstructured" : "La Piola Di Alfredo    Torino        It Carta N. ***** 589                      Data Operazione 17/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMThfMjA2NDQxMDI4MA==",
+				"endToEndId" : "1911171565941916480320001600IT",
+				"bookingDate" : "2019-11-18",
+				"valueDate" : "2019-11-18",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-863.63"
+				},
+				"creditorName" : "ILARIA MONTEMURRO",
+				"creditorAccount" : {
+				  "iban" : "IT55T0301503200000005688825",
+				  "currency" : "EUR"
+				},
+				"remittanceInformationUnstructured" : "Data inserimento: 18/11/2019 03:15:15 Da: PHONE/VOICE P. Causale: pareggio splitwise",
+				"remittanceInformationStructured" : "pareggio splitwise",
+				"proprietaryBankTransactionCode" : "I26-Bonifico SEPA Italia"
+			  }, {
+				"transactionId" : "MjAxOTExMThfMjA2Mzc2MjI3Ng==",
+				"bookingDate" : "2019-11-18",
+				"valueDate" : "2019-11-15",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 15/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMThfMjA2Mzc2MjI4Mg==",
+				"bookingDate" : "2019-11-18",
+				"valueDate" : "2019-11-15",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-22.00"
+				},
+				"remittanceInformationUnstructured" : "Bts Sas Di Christopher Moncalieri    It Carta N. ***** 589                      Data Operazione 15/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMThfMjA2Mzc2MjI3MA==",
+				"bookingDate" : "2019-11-18",
+				"valueDate" : "2019-11-14",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 14/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMTVfMjA2MjY5Nzg3NQ==",
+				"bookingDate" : "2019-11-15",
+				"valueDate" : "2019-11-13",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 13/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMTNfMjA2MTUyNjYxMA==",
+				"bookingDate" : "2019-11-13",
+				"valueDate" : "2019-11-10",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-24.99"
+				},
+				"remittanceInformationUnstructured" : "Mediaworld             Moncalieri    It Carta N. ***** 589                      Data Operazione 10/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMTJfMjA2MTA1MDQ2Nw==",
+				"bookingDate" : "2019-11-12",
+				"valueDate" : "2019-11-12",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-50.73"
+				},
+				"remittanceInformationUnstructured" : "Satispay Europe Sa Addebito Sdd Fattura A Vs Carico                             Da Gb07hoosddsaty000000000 Mand Sati180516115005721514 Per S",
+				"proprietaryBankTransactionCode" : "D41-SEPA Direct Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMTJfMjA2MDc5NDI4NQ==",
+				"bookingDate" : "2019-11-12",
+				"valueDate" : "2019-11-10",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-93.39"
+				},
+				"remittanceInformationUnstructured" : "Decathlon 00000341     Moncalieri    It Carta N. ***** 589                      Data Operazione 10/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMTJfMjA2MDc5NDI1NA==",
+				"bookingDate" : "2019-11-12",
+				"valueDate" : "2019-11-09",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-13.00"
+				},
+				"remittanceInformationUnstructured" : "M Bun                  Torino        It Carta N. ***** 589                      Data Operazione 09/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMTFfMjA1OTI5ODYxOQ==",
+				"bookingDate" : "2019-11-11",
+				"valueDate" : "2019-11-09",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-10.85"
+				},
+				"remittanceInformationUnstructured" : "Muji Torino Via Gariba Torino        It Carta N. ***** 589                      Data Operazione 09/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMTFfMjA1OTI5ODYxNQ==",
+				"bookingDate" : "2019-11-11",
+				"valueDate" : "2019-11-08",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-84.00"
+				},
+				"remittanceInformationUnstructured" : "Barotto Srl            Torino        It Carta N. ***** 589                      Data Operazione 08/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMTFfMjA1OTI5ODYwOQ==",
+				"bookingDate" : "2019-11-11",
+				"valueDate" : "2019-11-07",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 07/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMTBfMjA1OTg1OTU4OA==",
+				"bookingDate" : "2019-11-10",
+				"valueDate" : "2019-11-10",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-16.44"
+				},
+				"remittanceInformationUnstructured" : "Estratto Conto Al  31/10/19             Carta Di Credito Di Finecobank          Posizione N? 4030********2585",
+				"proprietaryBankTransactionCode" : "145-Utilizzo carta di credito"
+			  }, {
+				"transactionId" : "MjAxOTExMDhfMjA1ODIyNDMxOQ==",
+				"bookingDate" : "2019-11-08",
+				"valueDate" : "2019-11-06",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-9.41"
+				},
+				"remittanceInformationUnstructured" : "Paypal *remotemyapp    35314369001   Pl Carta N. ***** 589                      Data Operazione 06/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMDhfMjA1ODIyNDM0MA==",
+				"bookingDate" : "2019-11-08",
+				"valueDate" : "2019-11-06",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 06/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMDhfMjA1ODIyNDI5Mw==",
+				"bookingDate" : "2019-11-08",
+				"valueDate" : "2019-11-05",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-4.78"
+				},
+				"remittanceInformationUnstructured" : "Supermercato Simpatia  Torino        It Carta N. ***** 589                      Data Operazione 05/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMDdfMjA1NzgwODMxMg==",
+				"bookingDate" : "2019-11-07",
+				"valueDate" : "2019-11-07",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "+774.20"
+				},
+				"creditorName" : "SIMONE VELONA",
+				"debtorName" : "ACCENTURE TECHNOLOGY SOLU",
+				"remittanceInformationUnstructured" : "Data accredito: 07/11/2019 Banca ordinante: BAMLI DAC MILAN Causale: 0007232969 2019-10-31",
+				"remittanceInformationStructured" : "0007232969 2019-10-31",
+				"proprietaryBankTransactionCode" : "I48-Bonifico SEPA Italia"
+			  }, {
+				"transactionId" : "MjAxOTExMDdfMjA1NzU1OTIyMQ==",
+				"bookingDate" : "2019-11-07",
+				"valueDate" : "2019-11-05",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 05/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMDdfMjA1NzU1OTE5Nw==",
+				"bookingDate" : "2019-11-07",
+				"valueDate" : "2019-11-04",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-48.51"
+				},
+				"remittanceInformationUnstructured" : "Carrefour Iper         Torino        It Carta N. ***** 589                      Data Operazione 04/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMDZfMjA1Njc4MTA4Nw==",
+				"bookingDate" : "2019-11-06",
+				"valueDate" : "2019-11-04",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-60.04"
+				},
+				"remittanceInformationUnstructured" : "Pv1247                 Milano        It Carta N. ***** 589                      Data Operazione 04/11/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMDVfMjA1NjI5OTE5MA==",
+				"bookingDate" : "2019-11-05",
+				"valueDate" : "2019-11-01",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-100.00"
+				},
+				"remittanceInformationUnstructured" : "Prelevamento Carta N? *****        458  Data Operazione 1/11/2019 Ora 09:50     6230 Credit Agricole Italia             N? Atm 4877 Parma (p",
+				"proprietaryBankTransactionCode" : "091-Prelievo Bancomat"
+			  }, {
+				"transactionId" : "MjAxOTExMDRfMjA1NDEzMzcwMg==",
+				"bookingDate" : "2019-11-04",
+				"valueDate" : "2019-10-31",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 31/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMDRfMjA1NDEzMzc0Ng==",
+				"bookingDate" : "2019-11-04",
+				"valueDate" : "2019-10-31",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-14.20"
+				},
+				"remittanceInformationUnstructured" : "Autogrill 0062         Stradella     It Carta N. ***** 589                      Data Operazione 31/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMDRfMjA1NDEzMzc4Mw==",
+				"bookingDate" : "2019-11-04",
+				"valueDate" : "2019-10-31",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-43.61"
+				},
+				"remittanceInformationUnstructured" : "Discar                 Moncalieri    It Carta N. ***** 589                      Data Operazione 31/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMDRfMjA1NDEzMzYyNQ==",
+				"bookingDate" : "2019-11-04",
+				"valueDate" : "2019-10-30",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-58.91"
+				},
+				"remittanceInformationUnstructured" : "Discar                 Moncalieri    It Carta N. ***** 589                      Data Operazione 30/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMDRfMjA1NDEzMzY2OA==",
+				"bookingDate" : "2019-11-04",
+				"valueDate" : "2019-10-30",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-10.40"
+				},
+				"remittanceInformationUnstructured" : "La Piadineria          Assago        It Carta N. ***** 589                      Data Operazione 30/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMDRfMjA1NDEzMzU0MQ==",
+				"bookingDate" : "2019-11-04",
+				"valueDate" : "2019-10-29",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-19.00"
+				},
+				"remittanceInformationUnstructured" : "Adonis Creperie Et Qui Torino        It Carta N. ***** 589                      Data Operazione 29/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMDRfMjA1NDEzMzU4NQ==",
+				"bookingDate" : "2019-11-04",
+				"valueDate" : "2019-10-29",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-9.00"
+				},
+				"remittanceInformationUnstructured" : "Self And Pizza Srl     Assago        It Carta N. ***** 589                      Data Operazione 29/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTExMDFfMjA1MzA4MTg0Ng==",
+				"bookingDate" : "2019-11-01",
+				"valueDate" : "2019-11-04",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-121.40"
+				},
+				"remittanceInformationUnstructured" : "Telepass Pay Addebito Sdd Fattura A Vs Carico                                   Da It02ee20000014070851002 Mand Cgbur40000000180502423 Per D",
+				"proprietaryBankTransactionCode" : "D41-SEPA Direct Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMzBfMjA1MTQ1NjA4OQ==",
+				"bookingDate" : "2019-10-30",
+				"valueDate" : "2019-10-28",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 28/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjlfMjA1MTAzNzY1NA==",
+				"bookingDate" : "2019-10-29",
+				"valueDate" : "2019-10-29",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-34.30"
+				},
+				"remittanceInformationUnstructured" : "Satispay Europe Sa Addebito Sdd Fattura A Vs Carico                             Da Gb07hoosddsaty000000000 Mand Sati180516115005721514 Per S",
+				"proprietaryBankTransactionCode" : "D41-SEPA Direct Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjhfMjA0OTgzODI2MQ==",
+				"bookingDate" : "2019-10-28",
+				"valueDate" : "2019-10-26",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-2.86"
+				},
+				"remittanceInformationUnstructured" : "C2g4799000018818553    Milano        It Carta N. ***** 589                      Data Operazione 26/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjhfMjA0OTgzODI2Nw==",
+				"bookingDate" : "2019-10-28",
+				"valueDate" : "2019-10-26",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-3.12"
+				},
+				"remittanceInformationUnstructured" : "C2g4799000018819663    Milano        It Carta N. ***** 589                      Data Operazione 26/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjhfMjA0OTk0NjU4Ng==",
+				"bookingDate" : "2019-10-28",
+				"valueDate" : "2019-10-26",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-150.00"
+				},
+				"remittanceInformationUnstructured" : "Prelevamento Carta N? *****        458  Data Operazione 26/10/2019 Ora 15:48    2008 Unicredit Spa                      N? Atm 5670 Milano (",
+				"proprietaryBankTransactionCode" : "041-Prelievo Bancomat Unicredit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjhfMjA0OTgzODI1Ng==",
+				"bookingDate" : "2019-10-28",
+				"valueDate" : "2019-10-25",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 25/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjhfMjA0OTgzODI0NA==",
+				"bookingDate" : "2019-10-28",
+				"valueDate" : "2019-10-24",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-26.75"
+				},
+				"remittanceInformationUnstructured" : "Hamerica's Foodeliciou Torino        It Carta N. ***** 589                      Data Operazione 24/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjhfMjA0OTgzODI1MA==",
+				"bookingDate" : "2019-10-28",
+				"valueDate" : "2019-10-24",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 24/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjVfMjA0OTEyNDA1Mw==",
+				"bookingDate" : "2019-10-25",
+				"valueDate" : "2019-10-25",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "+1762.46"
+				},
+				"remittanceInformationUnstructured" : "Ord: Accenture Technology Solutions Srl Ben: V*****'****** Dt-Ord: 25/10/2019 Banca Ord: Ubi Banca Scpa Info-Cli: Ats Emolumenti Ott 2019",
+				"proprietaryBankTransactionCode" : "027-Stipendio"
+			  }, {
+				"transactionId" : "MjAxOTEwMjRfMjA0ODQyMzU4Ng==",
+				"endToEndId" : "1910231555757495480320001600IT",
+				"bookingDate" : "2019-10-24",
+				"valueDate" : "2019-10-24",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-70.00"
+				},
+				"creditorName" : "CENTRO NAUTICO DI LEVANTE",
+				"creditorAccount" : {
+				  "iban" : "IT60D0200801122000002353269",
+				  "currency" : "EUR"
+				},
+				"remittanceInformationUnstructured" : "Data inserimento: 24/10/2019 19:26:42 Da: INTERNET Causale: GENTE DI MARE: Manovre in barca a vela PONTE+WEEKEND - Liguria - 31/10/2019",
+				"remittanceInformationStructured" : "GENTE DI MARE: Manovre in barca a vela PONTE+WEEKEND - Liguria - 31/10/2019",
+				"proprietaryBankTransactionCode" : "I26-Bonifico SEPA Italia"
+			  }, {
+				"transactionId" : "MjAxOTEwMjRfMjA0ODE0NjU2Mg==",
+				"bookingDate" : "2019-10-24",
+				"valueDate" : "2019-10-22",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-4.00"
+				},
+				"remittanceInformationUnstructured" : "Atlantic Lorenteggio   Milano        It Carta N. ***** 589                      Data Operazione 22/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjRfMjA0ODE0NjU2OQ==",
+				"bookingDate" : "2019-10-24",
+				"valueDate" : "2019-10-22",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.07"
+				},
+				"remittanceInformationUnstructured" : "Intesa San Paolo Cm066 Milano        It Carta N. ***** 589                      Data Operazione 22/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjNfMjA0NzQ4NTEwNQ==",
+				"bookingDate" : "2019-10-23",
+				"valueDate" : "2019-10-21",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 21/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjJfMjA0Njk4MTI2Mg==",
+				"bookingDate" : "2019-10-22",
+				"valueDate" : "2019-10-22",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-918.47"
+				},
+				"remittanceInformationUnstructured" : "American Express Services Europe Ltd Addebito Sdd Fattura A Vs Carico           Da It36axp0000005090991000 Mand E2017215068428638 Per 91000 ",
+				"proprietaryBankTransactionCode" : "D41-SEPA Direct Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjJfMjA0Njc1NzY0MQ==",
+				"bookingDate" : "2019-10-22",
+				"valueDate" : "2019-10-20",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-21.00"
+				},
+				"remittanceInformationUnstructured" : "Luca Snc               Torino        It Carta N. ***** 589                      Data Operazione 20/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjJfMjA0Njc1NzY1OQ==",
+				"bookingDate" : "2019-10-22",
+				"valueDate" : "2019-10-20",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-9.10"
+				},
+				"remittanceInformationUnstructured" : "Us Food Network S.r.l. Moncalieri    It Carta N. ***** 589                      Data Operazione 20/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjJfMjA0Njc1NzY3OA==",
+				"bookingDate" : "2019-10-22",
+				"valueDate" : "2019-10-20",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-24.95"
+				},
+				"remittanceInformationUnstructured" : "Carrefour Iper T       Moncalieri    It Carta N. ***** 589                      Data Operazione 20/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjJfMjA0Njc1NzY5OA==",
+				"bookingDate" : "2019-10-22",
+				"valueDate" : "2019-10-20",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-39.96"
+				},
+				"remittanceInformationUnstructured" : "Discar                 Moncalieri    It Carta N. ***** 589                      Data Operazione 20/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjJfMjA0Njc1NzcxMw==",
+				"bookingDate" : "2019-10-22",
+				"valueDate" : "2019-10-20",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-138.94"
+				},
+				"remittanceInformationUnstructured" : "Decathlon 00000341     Moncalieri    It Carta N. ***** 589                      Data Operazione 20/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjFfMjA0NjQzODYxNQ==",
+				"bookingDate" : "2019-10-21",
+				"valueDate" : "2019-10-21",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "+18.00"
+				},
+				"creditorName" : "****** V*****'",
+				"debtorName" : "SATISPAY EUROPE SA",
+				"remittanceInformationUnstructured" : "Data accredito: 21/10/2019 Banca ordinante: SATISPAY EUROPE SA Causale: Satispay Weekly Cash",
+				"remittanceInformationStructured" : "Satispay Weekly Cash",
+				"proprietaryBankTransactionCode" : "E48-Bonifico SEPA Estero"
+			  }, {
+				"transactionId" : "MjAxOTEwMjFfMjA0NjM5NjAyNw==",
+				"bookingDate" : "2019-10-21",
+				"valueDate" : "2019-10-21",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "+687.36"
+				},
+				"creditorName" : "****** V*****",
+				"debtorName" : "ACCENTURE TECHNOLOGY SOLU",
+				"remittanceInformationUnstructured" : "Data accredito: 21/10/2019 Banca ordinante: BAMLI DAC MILAN Causale: 0007162760 2019-10-15",
+				"remittanceInformationStructured" : "0007162760 2019-10-15",
+				"proprietaryBankTransactionCode" : "I48-Bonifico SEPA Italia"
+			  }, {
+				"transactionId" : "MjAxOTEwMjFfMjA0NTg3MDMwNQ==",
+				"bookingDate" : "2019-10-21",
+				"valueDate" : "2019-10-18",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 18/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjFfMjA0NTg3MDMxMg==",
+				"bookingDate" : "2019-10-21",
+				"valueDate" : "2019-10-18",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-26.00"
+				},
+				"remittanceInformationUnstructured" : "Guarino                Torino        It Carta N. ***** 589                      Data Operazione 18/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjFfMjA0NTg3MDMxNw==",
+				"bookingDate" : "2019-10-21",
+				"valueDate" : "2019-10-18",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-12.19"
+				},
+				"remittanceInformationUnstructured" : "Paypal *aruba Spa      35314369001   It Carta N. ***** 589                      Data Operazione 18/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjFfMjA0NTg3MDMyMw==",
+				"bookingDate" : "2019-10-21",
+				"valueDate" : "2019-10-18",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-2.40"
+				},
+				"remittanceInformationUnstructured" : "Lingotto Parking Srl   Torino        It Carta N. ***** 589                      Data Operazione 18/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjFfMjA0NTg3MDMyNw==",
+				"bookingDate" : "2019-10-21",
+				"valueDate" : "2019-10-18",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-19.15"
+				},
+				"remittanceInformationUnstructured" : "Rossopomodoro          Moncalieri    It Carta N. ***** 589                      Data Operazione 18/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjFfMjA0NTg3MDI5OQ==",
+				"bookingDate" : "2019-10-21",
+				"valueDate" : "2019-10-17",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-5.78"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 17/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMjFfMjA0NTg3MDI5Mw==",
+				"bookingDate" : "2019-10-21",
+				"valueDate" : "2019-10-16",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-18.29"
+				},
+				"remittanceInformationUnstructured" : "Carrefour Iper         Torino        It Carta N. ***** 589                      Data Operazione 16/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMThfMjA0NTE2NDk2Ng==",
+				"bookingDate" : "2019-10-18",
+				"valueDate" : "2019-10-16",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 16/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMThfMjA0NTE2NDk0OA==",
+				"bookingDate" : "2019-10-18",
+				"valueDate" : "2019-10-15",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-1.20"
+				},
+				"remittanceInformationUnstructured" : "Lingotto Parking Srl   Torino        It Carta N. ***** 589                      Data Operazione 15/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMTdfMjA0NDM5MTU1Mw==",
+				"bookingDate" : "2019-10-17",
+				"valueDate" : "2019-10-15",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 15/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMTdfMjA0NDM5MTUzNQ==",
+				"bookingDate" : "2019-10-17",
+				"valueDate" : "2019-10-14",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-21.50"
+				},
+				"remittanceInformationUnstructured" : "Trattoria Piazza Nizza Torino        It Carta N. ***** 589                      Data Operazione 14/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMTZfMjA0MzgxNTA5OA==",
+				"bookingDate" : "2019-10-16",
+				"valueDate" : "2019-10-14",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-6.45"
+				},
+				"remittanceInformationUnstructured" : "Banca Intesa           Moncalieri    It Carta N. ***** 589                      Data Operazione 14/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMTVfMjA0MzMzOTQwNg==",
+				"bookingDate" : "2019-10-15",
+				"valueDate" : "2019-10-15",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-15.30"
+				},
+				"remittanceInformationUnstructured" : "Satispay Europe Sa Addebito Sdd Fattura A Vs Carico                             Da Gb07hoosddsaty000000000 Mand Sati180516115005721514 Per S",
+				"proprietaryBankTransactionCode" : "D41-SEPA Direct Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMTVfMjA0MzE1MDEwMg==",
+				"bookingDate" : "2019-10-15",
+				"valueDate" : "2019-10-14",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-150.00"
+				},
+				"remittanceInformationUnstructured" : "Prelevamento Carta N? *****        458  Data Operazione: 14/10/2019 Ora: 06:01  Abi: 8000 Cod. Atm: 2733",
+				"proprietaryBankTransactionCode" : "091-Prelievo Bancomat"
+			  }, {
+				"transactionId" : "MjAxOTEwMTVfMjA0Mjg5NzY3NQ==",
+				"bookingDate" : "2019-10-15",
+				"valueDate" : "2019-10-13",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-13.00"
+				},
+				"remittanceInformationUnstructured" : "Self Service Hannibal  Monfalcone    It Carta N. ***** 589                      Data Operazione 13/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  }, {
+				"transactionId" : "MjAxOTEwMTVfMjA0Mjg5NzY2NQ==",
+				"bookingDate" : "2019-10-15",
+				"valueDate" : "2019-10-12",
+				"transactionAmount" : {
+				  "currency" : "EUR",
+				  "amount" : "-118.40"
+				},
+				"remittanceInformationUnstructured" : "Barcolana Srl          Trieste       It Carta N. ***** 589                      Data Operazione 12/10/19",
+				"proprietaryBankTransactionCode" : "W43-Pagamento Visa Debit"
+			  } ]
+			
+		  }
+	},
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "Tue, 14 Jan 2020 10:43:41 GMT"
+    }
+  },
+  "persistent" : true
+}

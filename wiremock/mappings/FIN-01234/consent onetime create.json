@@ -1,0 +1,32 @@
+{
+  "name": "FINECO richiesta di un consenso onetime",
+  "request": {
+    "url": "/fin/v1/consents",
+    "method": "POST",
+    "headers": {},
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?($.recurringIndicator=='false')]"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "consentStatus": "received",
+      "consentId": "consent-1-{{randomValue type='UUID'}}",
+      "_links": {
+        "scaRedirect": "google.com"
+      }
+    },
+    "transformers": [
+      "response-template"
+    ],
+    "headers": {
+      "aspsp-sca-approach": "REDIRECT",
+      "Content-Type": "application/json",
+      "Date": "Tue, 14 Jan 2020 10:43:41 GMT"
+    }
+  },
+  "persistent": true
+}

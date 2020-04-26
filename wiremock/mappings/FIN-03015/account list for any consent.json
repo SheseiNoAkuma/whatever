@@ -1,0 +1,29 @@
+{
+  "name" : "FINECO account list for any consent",
+  "request" : {
+    "url" : "/fin/accounts",
+    "method" : "GET",
+	"headers" : {
+      
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody" : 
+			{"accounts": [
+				{
+				"resourceId": "848e76ff-7225-479e-b04f-0e6531c459b6",
+				"iban": "IT07M0301503200000000242635",
+				"currency": "EUR",
+				"product": "Conto Principale Euro",
+				"_links": {}
+			 }
+		  ]}
+			,
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "Tue, 14 Jan 2020 10:43:41 GMT"
+    }
+  },
+  "persistent" : true
+}

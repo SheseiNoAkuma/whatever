@@ -1,0 +1,32 @@
+{
+  "name": "FINECO richiesta di un consenso onetime",
+  "request": {
+    "url": "/fin/consents",
+    "method": "POST",
+    "headers": {},
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?($.recurringIndicator=='false')]"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "consentStatus": "received",
+      "consentId": "onetime-{{randomValue type='UUID'}}",
+      "_links": {
+        "scaRedirect": "https://openbanking.finecobank.com/mocks/login.html?tppRedirs=VFBQLVJlZGlyZWN0LVByZWZlcnJlZHxodHRwczovL3RwcC5hZ2FpbnN0dGhld2luZC5uZXhpLml0L2JhY2smVFBQLU5vay1SZWRpcmVjdC1VUkl8bnVsbA%3D%3D"
+      }
+    },
+    "transformers": [
+      "response-template"
+    ],
+    "headers": {
+      "aspsp-sca-approach": "REDIRECT",
+      "Content-Type": "application/json",
+      "Date": "Tue, 14 Jan 2020 10:43:41 GMT"
+    }
+  },
+  "persistent": true
+}

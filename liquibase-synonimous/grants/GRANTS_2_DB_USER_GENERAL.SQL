@@ -1,0 +1,14 @@
+GRANT INSERT,UPDATE,DELETE,SELECT ON ${db.owner}.ROLE TO ${db.user};
+GRANT INSERT,UPDATE,DELETE,SELECT ON ${db.owner}.FILE_REPOSITORY TO ${db.user};
+GRANT INSERT,UPDATE,DELETE,SELECT ON ${db.owner}.DUPLICATION_CHECK TO ${db.user};
+GRANT INSERT,UPDATE,DELETE,SELECT ON ${db.owner}.qrtz_calendars TO ${db.user};
+GRANT INSERT,UPDATE,DELETE,SELECT ON ${db.owner}.qrtz_fired_triggers TO ${db.user};
+GRANT INSERT,UPDATE,DELETE,SELECT ON ${db.owner}.qrtz_blob_triggers TO ${db.user};
+GRANT INSERT,UPDATE,DELETE,SELECT ON ${db.owner}.qrtz_cron_triggers TO ${db.user};
+GRANT INSERT,UPDATE,DELETE,SELECT ON ${db.owner}.qrtz_simple_triggers TO ${db.user};
+GRANT INSERT,UPDATE,DELETE,SELECT ON ${db.owner}.qrtz_simprop_triggers TO ${db.user};
+GRANT INSERT,UPDATE,DELETE,SELECT ON ${db.owner}.qrtz_triggers TO ${db.user};
+GRANT INSERT,UPDATE,DELETE,SELECT ON ${db.owner}.qrtz_job_details TO ${db.user};
+GRANT INSERT,UPDATE,DELETE,SELECT ON ${db.owner}.qrtz_paused_trigger_grps TO ${db.user};
+GRANT INSERT,UPDATE,DELETE,SELECT ON ${db.owner}.qrtz_locks TO ${db.user};
+GRANT INSERT,UPDATE,DELETE,SELECT ON ${db.owner}.qrtz_scheduler_state TO ${db.user};

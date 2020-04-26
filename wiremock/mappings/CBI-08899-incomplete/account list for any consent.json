@@ -1,0 +1,44 @@
+{
+  "name" : "account list for any consent TODO questo sarebbe di CBI-00000 recuperare i veri accounts",
+  "request" : {
+    "url" : "/cbi/accounts?with_balance=false",
+    "method" : "GET",
+	"headers" : {
+      "aspsp-code" : {
+        "equalTo" : "08899"
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody" : 
+			{"accounts": [
+				{
+				  "iban": "IT77O0848283352871412938123",
+				  "currency": "EUR",
+				  "resourceId": "account1234567",
+				  "name": "your account",
+				  "_links":       {
+					 "account": {"href": "/accounts/account1234567"},
+					 "balances": {"href": "/accounts/account1234567/balances"},
+					 "transactions": {"href": "/accounts/account1234567/transactions"}
+				  }
+			   },
+				  {
+				  "iban": "IT77O0848283352871412938125",
+				  "currency": "EUR",
+				  "resourceId": "account7654321",
+				  "_links":       {
+					 "account": {"href": "/accounts/account7654321"},
+					 "balances": {"href": "/accounts/account7654321/balances"},
+					 "transactions": {"href": "/accounts/account7654321/transactions"}
+				  }
+			   }
+			]},
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "Sat, 16 Nov 2019 10:43:47 GMT"
+    }
+  },
+  "persistent" : true
+}

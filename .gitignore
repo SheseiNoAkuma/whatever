@@ -1,3 +1,4 @@
 bin/kubectl.exe
 bin/rancher.exe
 node_modules
+wiremock/wiremock-standalone-2.25.1.jar

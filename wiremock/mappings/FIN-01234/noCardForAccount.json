@@ -1,0 +1,30 @@
+{
+    "name": "FINECO empty list of cards for a specified consentID",
+    "request": {
+        "url": "/fin/v1/card-accounts",
+        "method": "GET",
+        "headers": {
+            "Consent-ID": {
+                "contains": "consent-1"
+            }
+        }
+    },
+    "response": {
+        "status": 404,
+        "statusMessage": "Not Found",
+        "headers": {
+            "X-Backside-Transport": "FAIL FAIL",
+            "Connection": "Keep-Alive"
+        },
+        "jsonBody": {
+            "_links":{},
+            "tppMessages": [
+                {
+                    "code": "RESOURCE_UNKNOWN",
+                    "category": "ERROR",
+                    "text": "Cant'find card accounts belonging to the specific consentId"
+                }
+            ]
+        }
+    }
+}

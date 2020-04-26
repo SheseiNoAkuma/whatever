@@ -1,0 +1,16 @@
+{
+  "name" : "CBI - 00000 - balances for account-5",
+  "request" : {
+    "url" : "/cbi/card-accounts/account-6/balances",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"balances\": [\n      {\n      \"balanceAmount\":       {\n         \"currency\": \"EUR\",\n         \"amount\": \"1000\"\n      },\n      \"balanceType\": \"interimAvailable\"\n   },\n      {\n      \"balanceAmount\":       {\n         \"currency\": \"EUR\",\n         \"amount\": \"1000\"\n      },\n      \"balanceType\": \"closingBooked\"\n   },\n      {\n      \"balanceAmount\":       {\n         \"currency\": \"EUR\",\n         \"amount\": \"1000\"\n      },\n      \"balanceType\": \"expected\"\n   }\n]}",
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "Sat, 16 Nov 2019 10:44:03 GMT"
+    }
+  },
+  "persistent" : true
+}

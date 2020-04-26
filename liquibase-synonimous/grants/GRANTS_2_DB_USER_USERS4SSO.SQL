@@ -1,0 +1,2 @@
+GRANT INSERT,UPDATE,DELETE,SELECT ON ${db.owner}.USERS4SSO TO ${db.user};
+GRANT SELECT ON ${db.owner}.USERS4SSO_ID_SEQ TO ${db.user};

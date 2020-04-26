@@ -1,0 +1,15 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/Cifr0WS/getSymmetricKey"
+    },
+    "response": {
+        "status": 200,
+        "jsonBody": { "status": "success", "data": "khyJ30+20DpA+SikinJymG29xcnrCNC2wMw+sJQz3u4=", "message": "" },
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}
+
+     

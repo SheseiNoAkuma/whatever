@@ -1,0 +1,41 @@
+{
+  "name" : "FINECO - balances for 848e76ff-7225-479e-b04f-0e6531c459b6",
+  "request" : {
+    "url" : "/fin/accounts/848e76ff-7225-479e-b04f-0e6531c459b6/balances",
+    "method" : "GET",
+	"headers" : {
+      
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody" : {
+				   "account":    {
+					  "iban": "IT07M0301503200000000242635",
+					  "currency": "EUR"
+				   },
+				   "balances": [
+					{
+					  "balanceAmount": {
+						"amount": "500.00",
+						"currency": "EUR"
+					  },
+					  "balanceType": "closingBooked",
+					  "referenceDate": "2017-10-25"
+					},
+					{
+					  "balanceAmount": {
+						"amount": "900.00",
+						"currency": "EUR"
+					  },
+					  "balanceType": "interimAvailable"
+					}
+				  ]
+				},
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "Tue, 14 Jan 2020 10:43:41 GMT"
+    }
+  },
+  "persistent" : true
+}

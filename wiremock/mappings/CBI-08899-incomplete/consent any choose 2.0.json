@@ -1,0 +1,55 @@
+{
+  "name" : "richiesta di qualsiasi consenso",
+  "request" : {
+    "urlPattern" : "/cbi/consents/(.*)",
+    "method" : "PUT",
+	"headers" : {
+      "aspsp-code" : {
+        "equalTo" : "08899"
+      }
+    },
+     "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?($.authenticationMethodId=='2.0')]"
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody": {
+				"psuCredentials": {
+					"aspspProductCode": "RELAX",
+					"credentialsDetails": [
+					  {
+						"credentialDetailId": "USERNAME",
+						"labelList": [
+						  {
+							"label": "username",
+							"language": "en"
+						  }
+						]
+					  }, 
+					  {
+						"credentialDetailId": "PASSWORD",
+						"isSecret": "true",
+						"labelList": [
+						  {
+							"label": "password",
+							"language": "en"
+						  }
+						]
+					  }
+					]
+			   },
+			   "_links":    {
+				  "updatePsuAuthentication": {"href": "/consents/d72aa235-aeb0-4b05-8d74-b4344ff08a08"},
+				  "self": {"href": "/consents/d72aa235-aeb0-4b05-8d74-b4344ff08a08"}
+			   },
+			   "consentStatus": "received"
+			},
+	"transformers": ["response-template"],
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "Sat, 16 Nov 2019 09:49:34 GMT"
+    }
+  },
+  "persistent" : true
+}

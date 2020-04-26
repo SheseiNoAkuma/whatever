@@ -1,0 +1,33 @@
+{
+  "name" : "richiesta di un consenso onetime",
+  "request" : {
+    "url" : "/cbi/consents",
+    "method" : "POST",
+	"headers" : {
+      "aspsp-code" : {
+        "equalTo" : "00000"
+      }
+    },
+     "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?($.recurringIndicator=='false')]"
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody": {
+				   "consentStatus": "received",
+				   "consentId": "onetime-{{randomValue type='UUID'}}",
+				   "_links":    {
+					  "scaRedirect": {"href": "https://www.google.com"},
+					  "self": {"href": "/consents/2019111710ba06ce1-2031-4396-993f-e0e"}
+				   }
+				},
+	"transformers": ["response-template"],
+    "headers" : {
+      "aspsp-sca-approach" : "REDIRECT",
+      "Content-Type" : "application/json",
+      "Date" : "Sat, 16 Nov 2019 09:49:34 GMT"
+    }
+  },
+  "persistent" : true
+}

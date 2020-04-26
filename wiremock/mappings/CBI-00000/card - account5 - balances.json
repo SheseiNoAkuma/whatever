@@ -1,0 +1,21 @@
+{
+  "name" : "CBI - 00000 - balances for account-5",
+  "request" : {
+    "url" : "/cbi/card-accounts/account-5/balances",
+    "method" : "GET",
+	"headers" : {
+      "aspsp-code" : {
+        "equalTo" : "00000"
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"cardAccounts\": [\n      {\n      \"resourceId\": \"account-5\",\n      \"maskedPan\": \"************4730\",\n      \"currency\": \"EUR\",\n      \"name\": \"your account\",\n      \"product\": \"electa\",\n      \"_links\":       {\n         \"account\": {\"href\": \"/card-accounts/account-5\"},\n         \"balances\": {\"href\": \"/card-accounts/account-5/balances\"},\n         \"transactions\": {\"href\": \"/card-accounts/account-5/transactions\"}\n      }\n   },\n      {\n      \"resourceId\": \"account-6\",\n      \"maskedPan\": \"************7960\",\n      \"currency\": \"EUR\",\n      \"product\": \"electa\",\n      \"_links\":       {\n         \"account\": {\"href\": \"/card-accounts/account-6\"},\n         \"balances\": {\"href\": \"/card-accounts/account-6/balances\"},\n         \"transactions\": {\"href\": \"/card-accounts/account-6/transactions\"}\n      }\n   }\n]}",
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "Sat, 16 Nov 2019 10:44:00 GMT"
+    }
+  },
+  "persistent" : true
+}

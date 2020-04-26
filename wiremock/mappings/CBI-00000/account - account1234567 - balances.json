@@ -1,0 +1,42 @@
+{
+  "name" : "CBI - 00000 - balances for account1234567",
+  "request" : {
+    "url" : "/cbi/accounts/account1234567/balances",
+    "method" : "GET",
+	"headers" : {
+      "aspsp-code" : {
+        "equalTo" : "00000"
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody" : {
+				   "account":    {
+					  "iban": "IT77O0848283352871412938123",
+					  "currency": "EUR"
+				   },
+				   "balances":    [
+							{
+						 "balanceAmount":          {
+							"currency": "EUR",
+							"amount": "998730.3"
+						 },
+						 "balanceType": "interimAvailable"
+					  },
+							{
+						 "balanceAmount":          {
+							"currency": "EUR",
+							"amount": "998729.3"
+						 },
+						 "balanceType": "authorised"
+					  }
+				   ]
+				},
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "Sat, 16 Nov 2019 10:43:59 GMT"
+    }
+  },
+  "persistent" : true
+}

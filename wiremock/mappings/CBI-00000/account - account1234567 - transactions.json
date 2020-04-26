@@ -1,0 +1,62 @@
+{
+  "name" : "transazioni dell account account1234567",
+  "request" : {
+    "urlPattern" : "/cbi/accounts/account1234567/transactions(.*)",
+    "method" : "GET",
+	"headers" : {
+      "aspsp-code" : {
+        "equalTo" : "00000"
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody" : {
+			"transactions": {
+			   "booked":    [
+						{
+					 "transactionId": "transaction-3",
+					 "bookingDate": "2019-05-30",
+					 "valueDate": "2019-05-30",
+					 "transactionAmount":          {
+						"currency": "EUR",
+						"amount": "45.0"
+					 },
+					 "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+					 "additionalInformation": "This are my additional info sucker :)",
+					 "_links": {"transactionDetails": {"href": "/accounts/account1234567/transactions/transaction-3"}}
+				  },
+						{
+					 "transactionId": "transaction-4",
+					 "bookingDate": "2019-05-30",
+					 "valueDate": "2019-05-30",
+					 "transactionAmount":          {
+						"currency": "EUR",
+						"amount": "40.0"
+					 },
+					 "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+					 "additionalInformation": "More additional info here we go",
+					 "_links": {"transactionDetails": {"href": "/accounts/account1234567/transactions/transaction-4"}}
+				  },
+						{
+					 "transactionId": "2d5a852e-0bcd-4e87-bb36-15d2a2ab240b",
+					 "bookingDate": "2019-06-11",
+					 "valueDate": "2019-06-11",
+					 "transactionAmount":          {
+						"currency": "EUR",
+						"amount": "-1.0"
+					 },
+					 "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+					 "additionalInformation": "Mo basta che mi sono rotto il cazzo",
+					 "_links": {"transactionDetails": {"href": "/accounts/account1234567/transactions/2d5a852e-0bcd-4e87-bb36-15d2a2ab240b"}}
+				  }
+			   ],
+			   "_links": {"account": {"href": "/accounts/account1234567"}}
+			}},
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "Sat, 16 Nov 2019 10:44:03 GMT"
+    }
+  },
+  "persistent" : true
+}
