@@ -1,6 +1,6 @@
 Param(
     #container name
-    [Parameter(ValueFromPipelineByPropertyName, HelpMessage='the parameter name default is database')][string]$container='database',
+    [Parameter(ValueFromPipelineByPropertyName, HelpMessage='the parameter name default is oracle')][string]$container='oracle',
     [Parameter(ValueFromPipelineByPropertyName, HelpMessage='also rebuild resources, $true / $false')][bool]$full=$false
     ) 
 
@@ -16,7 +16,7 @@ $initialpath=Get-Location
 #nome del container
 
 #path assoluto della folder che contiene le risorse (Dockerfile, liquibase.properties etc..) 
-$basepath='D:\docker\Create-Database'
+$basepath='D:\github\whatever\Create-Database'
 #path assoluto della folder che contiene il progetto psd2
 $psd2path='D:\git\psd2'
 #tempo di attesa per lo start di oracle all'interno del container

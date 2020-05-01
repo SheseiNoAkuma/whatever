@@ -1,0 +1,19 @@
+{
+	"id": "c6fa0d90-97fc-4297-82e5-5af1258516c2",
+	"values": [
+		{
+			"key": "provider",
+			"value": "FIN-03015|ALL|REDIRECT|99908",
+			"enabled": true
+		},
+		{
+			"key": "tpp",
+			"value": "03069",
+			"enabled": true
+		}
+	],
+	"name": "PSD2 Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2020-04-29T09:40:40.954Z",
+	"_postman_exported_using": "Postman/7.23.0"
+}
