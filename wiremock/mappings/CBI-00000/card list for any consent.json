@@ -1,46 +1,59 @@
 {
-  "name" : "card-accounts",
-  "request" : {
-    "url" : "/cbi/card-accounts",
-    "method" : "GET",
-	"headers" : {
-      "aspsp-code" : {
-        "equalTo" : "00000"
+  "name": "card-accounts",
+  "request": {
+    "url": "/cbi/ais/2.3.2/card-accounts",
+    "method": "GET",
+    "headers": {
+      "aspsp-code": {
+        "matches": ".*"
       }
     }
   },
-  "response" : {
-    "status" : 200,
-    "jsonBody" : {
-			"cardAccounts": [
-				  {
-				  "resourceId": "account-5",
-				  "maskedPan": "************4730",
-				  "currency": "EUR",
-				  "name": "your account",
-				  "product": "electa",
-				  "_links":       {
-					 "account": {"href": "/card-accounts/account-5"},
-					 "balances": {"href": "/card-accounts/account-5/balances"},
-					 "transactions": {"href": "/card-accounts/account-5/transactions"}
-				  }
-			   },
-				  {
-				  "resourceId": "account-6",
-				  "maskedPan": "************7960",
-				  "currency": "EUR",
-				  "product": "electa",
-				  "_links":       {
-					 "account": {"href": "/card-accounts/account-6"},
-					 "balances": {"href": "/card-accounts/account-6/balances"},
-					 "transactions": {"href": "/card-accounts/account-6/transactions"}
-				  }
-			   }
-			]},
-    "headers" : {
-      "Content-Type" : "application/json",
-      "Date" : "Sat, 16 Nov 2019 10:43:47 GMT"
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "cardAccounts": [
+        {
+          "resourceId": "account-5",
+          "maskedPan": "************4730",
+          "currency": "EUR",
+          "name": "your account",
+          "product": "electa",
+          "_links": {
+            "account": {
+              "href": "/card-accounts/account-5"
+            },
+            "balances": {
+              "href": "/card-accounts/account-5/balances"
+            },
+            "transactions": {
+              "href": "/card-accounts/account-5/transactions"
+            }
+          }
+        },
+        {
+          "resourceId": "account-6",
+          "maskedPan": "************7960",
+          "currency": "EUR",
+          "product": "electa",
+          "_links": {
+            "account": {
+              "href": "/card-accounts/account-6"
+            },
+            "balances": {
+              "href": "/card-accounts/account-6/balances"
+            },
+            "transactions": {
+              "href": "/card-accounts/account-6/transactions"
+            }
+          }
+        }
+      ]
+    },
+    "headers": {
+      "Content-Type": "application/json",
+      "Date": "Sat, 16 Nov 2019 10:43:47 GMT"
     }
   },
-  "persistent" : true
+  "persistent": true
 }

@@ -1,62 +1,2911 @@
 {
-  "name" : "transazioni dell account account1234567",
-  "request" : {
-    "urlPattern" : "/cbi/accounts/account1234567/transactions(.*)",
-    "method" : "GET",
-	"headers" : {
-      "aspsp-code" : {
-        "equalTo" : "00000"
+  "name": "transazioni dell account account1234567",
+  "request": {
+    "urlPattern": "/cbi/ais/2.3.2/accounts/account1234567/transactions(.*)",
+    "method": "GET",
+    "headers": {
+      "aspsp-code": {
+        "matches": ".*"
       }
     }
   },
-  "response" : {
-    "status" : 200,
-    "jsonBody" : {
-			"transactions": {
-			   "booked":    [
-						{
-					 "transactionId": "transaction-3",
-					 "bookingDate": "2019-05-30",
-					 "valueDate": "2019-05-30",
-					 "transactionAmount":          {
-						"currency": "EUR",
-						"amount": "45.0"
-					 },
-					 "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
-					 "additionalInformation": "This are my additional info sucker :)",
-					 "_links": {"transactionDetails": {"href": "/accounts/account1234567/transactions/transaction-3"}}
-				  },
-						{
-					 "transactionId": "transaction-4",
-					 "bookingDate": "2019-05-30",
-					 "valueDate": "2019-05-30",
-					 "transactionAmount":          {
-						"currency": "EUR",
-						"amount": "40.0"
-					 },
-					 "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
-					 "additionalInformation": "More additional info here we go",
-					 "_links": {"transactionDetails": {"href": "/accounts/account1234567/transactions/transaction-4"}}
-				  },
-						{
-					 "transactionId": "2d5a852e-0bcd-4e87-bb36-15d2a2ab240b",
-					 "bookingDate": "2019-06-11",
-					 "valueDate": "2019-06-11",
-					 "transactionAmount":          {
-						"currency": "EUR",
-						"amount": "-1.0"
-					 },
-					 "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
-					 "additionalInformation": "Mo basta che mi sono rotto il cazzo",
-					 "_links": {"transactionDetails": {"href": "/accounts/account1234567/transactions/2d5a852e-0bcd-4e87-bb36-15d2a2ab240b"}}
-				  }
-			   ],
-			   "_links": {"account": {"href": "/accounts/account1234567"}}
-			}},
-    "headers" : {
-      "Content-Type" : "application/json",
-      "Date" : "Sat, 16 Nov 2019 10:44:03 GMT"
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "transactions": {
+        "booked": [
+          {
+            "transactionId": "transaction-3",
+            "bookingDate": "2019-05-30",
+            "valueDate": "2019-05-30",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "45.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/transaction-3"
+              }
+            }
+          },
+          {
+            "transactionId": "transaction-4",
+            "bookingDate": "2019-05-30",
+            "valueDate": "2019-05-30",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "40.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/transaction-4"
+              }
+            }
+          },
+          {
+            "transactionId": "2d5a852e-0bcd-4e87-bb36-15d2a2ab240b",
+            "bookingDate": "2019-06-11",
+            "valueDate": "2019-06-11",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/2d5a852e-0bcd-4e87-bb36-15d2a2ab240b"
+              }
+            }
+          },
+          {
+            "transactionId": "5b3df5ce-6770-4775-b488-82f157676071",
+            "bookingDate": "2019-06-14",
+            "valueDate": "2019-06-14",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/5b3df5ce-6770-4775-b488-82f157676071"
+              }
+            }
+          },
+          {
+            "transactionId": "96c7b7aa-d645-4f3d-a564-127fc06406ad",
+            "bookingDate": "2019-06-14",
+            "valueDate": "2019-06-14",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/96c7b7aa-d645-4f3d-a564-127fc06406ad"
+              }
+            }
+          },
+          {
+            "transactionId": "f0cb8a5d-7984-46ef-a0f8-95bcf8626e9e",
+            "bookingDate": "2019-06-14",
+            "valueDate": "2019-06-14",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/f0cb8a5d-7984-46ef-a0f8-95bcf8626e9e"
+              }
+            }
+          },
+          {
+            "transactionId": "ff16bcbe-e48c-429c-91d8-1066f37417ab",
+            "bookingDate": "2019-06-14",
+            "valueDate": "2019-06-14",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/ff16bcbe-e48c-429c-91d8-1066f37417ab"
+              }
+            }
+          },
+          {
+            "transactionId": "849de264-3e9a-488a-a9c4-55f690c43bbe",
+            "bookingDate": "2019-06-20",
+            "valueDate": "2019-06-20",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/849de264-3e9a-488a-a9c4-55f690c43bbe"
+              }
+            }
+          },
+          {
+            "transactionId": "0e1525e6-d097-4052-a359-d27e8f4c39ea",
+            "bookingDate": "2019-06-20",
+            "valueDate": "2019-06-20",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/0e1525e6-d097-4052-a359-d27e8f4c39ea"
+              }
+            }
+          },
+          {
+            "transactionId": "eec22f77-b146-48f0-89b1-08a72b6161a2",
+            "bookingDate": "2019-06-20",
+            "valueDate": "2019-06-20",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/eec22f77-b146-48f0-89b1-08a72b6161a2"
+              }
+            }
+          },
+          {
+            "transactionId": "24edbbd5-a39e-41a2-8d4a-4fd9b76786d5",
+            "bookingDate": "2019-06-28",
+            "valueDate": "2019-06-28",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/24edbbd5-a39e-41a2-8d4a-4fd9b76786d5"
+              }
+            }
+          },
+          {
+            "transactionId": "a0fd66da-aad6-45ef-84fc-244bbaa9b81d",
+            "bookingDate": "2019-06-28",
+            "valueDate": "2019-06-28",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-55.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/a0fd66da-aad6-45ef-84fc-244bbaa9b81d"
+              }
+            }
+          },
+          {
+            "transactionId": "e5ea93d1-ec69-48e6-a72b-0ead1efb5a6f",
+            "bookingDate": "2019-06-28",
+            "valueDate": "2019-06-28",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/e5ea93d1-ec69-48e6-a72b-0ead1efb5a6f"
+              }
+            }
+          },
+          {
+            "transactionId": "473b2292-42c6-46e8-9842-a33449b99248",
+            "bookingDate": "2019-06-28",
+            "valueDate": "2019-06-28",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/473b2292-42c6-46e8-9842-a33449b99248"
+              }
+            }
+          },
+          {
+            "transactionId": "4070e1cb-b287-4d9a-8fd0-9302bfc887aa",
+            "bookingDate": "2019-07-01",
+            "valueDate": "2019-07-01",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/4070e1cb-b287-4d9a-8fd0-9302bfc887aa"
+              }
+            }
+          },
+          {
+            "transactionId": "b3365457-9041-4b46-833d-b1e857ad921c",
+            "bookingDate": "2019-07-01",
+            "valueDate": "2019-07-01",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/b3365457-9041-4b46-833d-b1e857ad921c"
+              }
+            }
+          },
+          {
+            "transactionId": "2a3d7bd0-c389-43da-98d7-3bb9ca82d3f0",
+            "bookingDate": "2019-07-01",
+            "valueDate": "2019-07-01",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-2.18"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/2a3d7bd0-c389-43da-98d7-3bb9ca82d3f0"
+              }
+            }
+          },
+          {
+            "transactionId": "ec930d29-8be1-499b-b51a-941215787adb",
+            "bookingDate": "2019-07-01",
+            "valueDate": "2019-07-01",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-2.18"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/ec930d29-8be1-499b-b51a-941215787adb"
+              }
+            }
+          },
+          {
+            "transactionId": "91d94480-f606-46eb-812b-160d8da9c062",
+            "bookingDate": "2019-07-01",
+            "valueDate": "2019-07-01",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/91d94480-f606-46eb-812b-160d8da9c062"
+              }
+            }
+          },
+          {
+            "transactionId": "5c36ed6e-6c50-4273-97eb-50d4ac444398",
+            "bookingDate": "2019-07-01",
+            "valueDate": "2019-07-01",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-2.18"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/5c36ed6e-6c50-4273-97eb-50d4ac444398"
+              }
+            }
+          },
+          {
+            "transactionId": "c60aee08-d1ca-4556-8616-fc0d0b530df8",
+            "bookingDate": "2019-07-02",
+            "valueDate": "2019-07-02",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-234.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/c60aee08-d1ca-4556-8616-fc0d0b530df8"
+              }
+            }
+          },
+          {
+            "transactionId": "70c4d280-2777-4216-a7e0-853c0a29dc15",
+            "bookingDate": "2019-07-02",
+            "valueDate": "2019-07-02",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/70c4d280-2777-4216-a7e0-853c0a29dc15"
+              }
+            }
+          },
+          {
+            "transactionId": "14652287-8ca7-4c37-9d91-f62abc6b164f",
+            "bookingDate": "2019-07-02",
+            "valueDate": "2019-07-02",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/14652287-8ca7-4c37-9d91-f62abc6b164f"
+              }
+            }
+          },
+          {
+            "transactionId": "55d854e4-7f96-47f7-9f0d-a55f42ccecdc",
+            "bookingDate": "2019-07-02",
+            "valueDate": "2019-07-02",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/55d854e4-7f96-47f7-9f0d-a55f42ccecdc"
+              }
+            }
+          },
+          {
+            "transactionId": "fe760159-c434-4657-a8d4-d86270cfb418",
+            "bookingDate": "2019-07-02",
+            "valueDate": "2019-07-02",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/fe760159-c434-4657-a8d4-d86270cfb418"
+              }
+            }
+          },
+          {
+            "transactionId": "1211a620-6483-4916-884e-f4288d610d48",
+            "bookingDate": "2019-07-02",
+            "valueDate": "2019-07-02",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/1211a620-6483-4916-884e-f4288d610d48"
+              }
+            }
+          },
+          {
+            "transactionId": "9b2b566b-4369-4f24-a684-51cccd1bf4fa",
+            "bookingDate": "2019-07-02",
+            "valueDate": "2019-07-02",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/9b2b566b-4369-4f24-a684-51cccd1bf4fa"
+              }
+            }
+          },
+          {
+            "transactionId": "cf877c17-0020-4641-87c1-cdad00c6ff89",
+            "bookingDate": "2019-07-02",
+            "valueDate": "2019-07-02",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/cf877c17-0020-4641-87c1-cdad00c6ff89"
+              }
+            }
+          },
+          {
+            "transactionId": "d667e665-5d21-44ba-9c92-44fb0a02c4f0",
+            "bookingDate": "2019-07-02",
+            "valueDate": "2019-07-02",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/d667e665-5d21-44ba-9c92-44fb0a02c4f0"
+              }
+            }
+          },
+          {
+            "transactionId": "2aff82b0-6ec1-4174-ac4c-d384f7728670",
+            "bookingDate": "2019-07-02",
+            "valueDate": "2019-07-02",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/2aff82b0-6ec1-4174-ac4c-d384f7728670"
+              }
+            }
+          },
+          {
+            "transactionId": "ce43a4d6-76b5-4439-adbc-40ec1e360b76",
+            "bookingDate": "2019-07-02",
+            "valueDate": "2019-07-02",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/ce43a4d6-76b5-4439-adbc-40ec1e360b76"
+              }
+            }
+          },
+          {
+            "transactionId": "82b647b6-76b9-4124-abe8-28c80754e0e0",
+            "bookingDate": "2019-07-02",
+            "valueDate": "2019-07-02",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/82b647b6-76b9-4124-abe8-28c80754e0e0"
+              }
+            }
+          },
+          {
+            "transactionId": "e0bc6734-50f5-4466-842e-7fa54111103e",
+            "bookingDate": "2019-07-04",
+            "valueDate": "2019-07-04",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/e0bc6734-50f5-4466-842e-7fa54111103e"
+              }
+            }
+          },
+          {
+            "transactionId": "c0c62cc3-bddf-4feb-96ab-097440adbcc2",
+            "bookingDate": "2019-07-04",
+            "valueDate": "2019-07-04",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/c0c62cc3-bddf-4feb-96ab-097440adbcc2"
+              }
+            }
+          },
+          {
+            "transactionId": "6a431d5f-a8f0-444f-8ba6-d9e50a2d9588",
+            "bookingDate": "2019-07-04",
+            "valueDate": "2019-07-04",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/6a431d5f-a8f0-444f-8ba6-d9e50a2d9588"
+              }
+            }
+          },
+          {
+            "transactionId": "542e5836-df8a-4aa1-8a60-5b20446d764a",
+            "bookingDate": "2019-07-04",
+            "valueDate": "2019-07-04",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/542e5836-df8a-4aa1-8a60-5b20446d764a"
+              }
+            }
+          },
+          {
+            "transactionId": "86d9df9a-4bf8-44c0-a2d5-c311be9cc3ff",
+            "bookingDate": "2019-07-04",
+            "valueDate": "2019-07-04",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/86d9df9a-4bf8-44c0-a2d5-c311be9cc3ff"
+              }
+            }
+          },
+          {
+            "transactionId": "1f3215f3-5f5c-4a44-814f-f16fb49b5373",
+            "bookingDate": "2019-07-04",
+            "valueDate": "2019-07-04",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/1f3215f3-5f5c-4a44-814f-f16fb49b5373"
+              }
+            }
+          },
+          {
+            "transactionId": "4d78db6a-3f9b-4a5e-8928-3067b2e0abed",
+            "bookingDate": "2019-07-04",
+            "valueDate": "2019-07-04",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/4d78db6a-3f9b-4a5e-8928-3067b2e0abed"
+              }
+            }
+          },
+          {
+            "transactionId": "2c420ab8-f9a6-4dab-91dd-2acf58163294",
+            "bookingDate": "2019-07-04",
+            "valueDate": "2019-07-04",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/2c420ab8-f9a6-4dab-91dd-2acf58163294"
+              }
+            }
+          },
+          {
+            "transactionId": "a4762d0b-ec21-44d3-a445-d8b1a7ec28c4",
+            "bookingDate": "2019-07-04",
+            "valueDate": "2019-07-04",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/a4762d0b-ec21-44d3-a445-d8b1a7ec28c4"
+              }
+            }
+          },
+          {
+            "transactionId": "ae7d44e5-3459-41f5-866e-541e936f9fac",
+            "bookingDate": "2019-07-04",
+            "valueDate": "2019-07-04",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/ae7d44e5-3459-41f5-866e-541e936f9fac"
+              }
+            }
+          },
+          {
+            "transactionId": "b61c98cc-7119-4d68-bd7a-fa15633d1157",
+            "bookingDate": "2019-07-04",
+            "valueDate": "2019-07-04",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/b61c98cc-7119-4d68-bd7a-fa15633d1157"
+              }
+            }
+          },
+          {
+            "transactionId": "274e0303-38d1-4e5e-8e9a-2bb4902f0ee9",
+            "bookingDate": "2019-07-04",
+            "valueDate": "2019-07-04",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/274e0303-38d1-4e5e-8e9a-2bb4902f0ee9"
+              }
+            }
+          },
+          {
+            "transactionId": "dbdd5786-bd8a-45bf-bc62-4429babb58a3",
+            "bookingDate": "2019-07-04",
+            "valueDate": "2019-07-04",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/dbdd5786-bd8a-45bf-bc62-4429babb58a3"
+              }
+            }
+          },
+          {
+            "transactionId": "54a7032f-c344-45f2-92e3-47c2f0516cea",
+            "bookingDate": "2019-07-04",
+            "valueDate": "2019-07-04",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/54a7032f-c344-45f2-92e3-47c2f0516cea"
+              }
+            }
+          },
+          {
+            "transactionId": "dc6f4b02-5c2d-47d6-8910-d5aec6f8b549",
+            "bookingDate": "2019-07-04",
+            "valueDate": "2019-07-04",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/dc6f4b02-5c2d-47d6-8910-d5aec6f8b549"
+              }
+            }
+          },
+          {
+            "transactionId": "d7c8d487-eab7-4a9a-90b0-c3326b8f1606",
+            "bookingDate": "2019-07-04",
+            "valueDate": "2019-07-04",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-55.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/d7c8d487-eab7-4a9a-90b0-c3326b8f1606"
+              }
+            }
+          },
+          {
+            "transactionId": "3dd946e5-af45-4bce-848d-9ad236f916b2",
+            "bookingDate": "2019-07-04",
+            "valueDate": "2019-07-04",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-55.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/3dd946e5-af45-4bce-848d-9ad236f916b2"
+              }
+            }
+          },
+          {
+            "transactionId": "444a622a-09f9-4851-af57-eb7ec67d547f",
+            "bookingDate": "2019-07-05",
+            "valueDate": "2019-07-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-55.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/444a622a-09f9-4851-af57-eb7ec67d547f"
+              }
+            }
+          },
+          {
+            "transactionId": "c6304550-a1d6-4405-8c3b-d98dda4268de",
+            "bookingDate": "2019-07-05",
+            "valueDate": "2019-07-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-55.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/c6304550-a1d6-4405-8c3b-d98dda4268de"
+              }
+            }
+          },
+          {
+            "transactionId": "f76e8dfe-7f3c-4f33-8535-d493f2707b75",
+            "bookingDate": "2019-07-05",
+            "valueDate": "2019-07-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-55.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/f76e8dfe-7f3c-4f33-8535-d493f2707b75"
+              }
+            }
+          },
+          {
+            "transactionId": "56de462e-89a6-4d79-9651-e92f4e17b919",
+            "bookingDate": "2019-07-05",
+            "valueDate": "2019-07-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/56de462e-89a6-4d79-9651-e92f4e17b919"
+              }
+            }
+          },
+          {
+            "transactionId": "bb465ab2-87e7-489c-beb1-17be8c3ea16d",
+            "bookingDate": "2019-07-05",
+            "valueDate": "2019-07-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/bb465ab2-87e7-489c-beb1-17be8c3ea16d"
+              }
+            }
+          },
+          {
+            "transactionId": "be907dc9-602f-47a8-a711-2d1fabc262f0",
+            "bookingDate": "2019-07-05",
+            "valueDate": "2019-07-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/be907dc9-602f-47a8-a711-2d1fabc262f0"
+              }
+            }
+          },
+          {
+            "transactionId": "5f029be4-947d-46ac-b3ae-5b2a97fab947",
+            "bookingDate": "2019-07-05",
+            "valueDate": "2019-07-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/5f029be4-947d-46ac-b3ae-5b2a97fab947"
+              }
+            }
+          },
+          {
+            "transactionId": "97b60d3f-afdc-4e70-9611-4968c26a3e2d",
+            "bookingDate": "2019-07-05",
+            "valueDate": "2019-07-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/97b60d3f-afdc-4e70-9611-4968c26a3e2d"
+              }
+            }
+          },
+          {
+            "transactionId": "f79c5d2f-d51c-4279-8243-da563fa70bcc",
+            "bookingDate": "2019-07-05",
+            "valueDate": "2019-07-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/f79c5d2f-d51c-4279-8243-da563fa70bcc"
+              }
+            }
+          },
+          {
+            "transactionId": "e1e938d4-aec6-45ea-bb37-cb0107465c92",
+            "bookingDate": "2019-07-05",
+            "valueDate": "2019-07-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/e1e938d4-aec6-45ea-bb37-cb0107465c92"
+              }
+            }
+          },
+          {
+            "transactionId": "47d7defd-62f5-46e7-ae70-4864dc62666d",
+            "bookingDate": "2019-07-09",
+            "valueDate": "2019-07-09",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/47d7defd-62f5-46e7-ae70-4864dc62666d"
+              }
+            }
+          },
+          {
+            "transactionId": "3f3a56fa-4d09-491e-8cb2-5709e509abe8",
+            "bookingDate": "2019-07-09",
+            "valueDate": "2019-07-09",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/3f3a56fa-4d09-491e-8cb2-5709e509abe8"
+              }
+            }
+          },
+          {
+            "transactionId": "fe848aa9-d2d5-4099-ba13-66d05ed586be",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/fe848aa9-d2d5-4099-ba13-66d05ed586be"
+              }
+            }
+          },
+          {
+            "transactionId": "18c25da0-f40e-4ac9-98dc-11b855b194ec",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/18c25da0-f40e-4ac9-98dc-11b855b194ec"
+              }
+            }
+          },
+          {
+            "transactionId": "6638a9c8-cdcd-47c3-ad12-6498c1e95050",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/6638a9c8-cdcd-47c3-ad12-6498c1e95050"
+              }
+            }
+          },
+          {
+            "transactionId": "231f53fc-14bb-4b77-9934-991201a6f5ec",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/231f53fc-14bb-4b77-9934-991201a6f5ec"
+              }
+            }
+          },
+          {
+            "transactionId": "1136e1c7-57d7-46db-862b-b91cef1af7de",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/1136e1c7-57d7-46db-862b-b91cef1af7de"
+              }
+            }
+          },
+          {
+            "transactionId": "005f24ea-a1c2-4226-8ad1-add63cc11db6",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/005f24ea-a1c2-4226-8ad1-add63cc11db6"
+              }
+            }
+          },
+          {
+            "transactionId": "911c7a11-b6e6-414f-9e59-ae2cbbba8585",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/911c7a11-b6e6-414f-9e59-ae2cbbba8585"
+              }
+            }
+          },
+          {
+            "transactionId": "edbccf17-6a0c-4c51-a7a0-602c848fd1fa",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/edbccf17-6a0c-4c51-a7a0-602c848fd1fa"
+              }
+            }
+          },
+          {
+            "transactionId": "a9e097a7-af84-462c-81ed-7f0d1f3c2a6b",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/a9e097a7-af84-462c-81ed-7f0d1f3c2a6b"
+              }
+            }
+          },
+          {
+            "transactionId": "abd3f3a2-b67e-4aec-b428-cb8b2b34cd6a",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/abd3f3a2-b67e-4aec-b428-cb8b2b34cd6a"
+              }
+            }
+          },
+          {
+            "transactionId": "2c45f056-df99-442f-bc83-08ad98c8fb32",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/2c45f056-df99-442f-bc83-08ad98c8fb32"
+              }
+            }
+          },
+          {
+            "transactionId": "f5bdfbae-f116-4991-b7ad-61cce3f4ab38",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/f5bdfbae-f116-4991-b7ad-61cce3f4ab38"
+              }
+            }
+          },
+          {
+            "transactionId": "b9463598-a725-48d1-853c-463eb546c833",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/b9463598-a725-48d1-853c-463eb546c833"
+              }
+            }
+          },
+          {
+            "transactionId": "218504f9-66f3-4eb6-a386-110215243f8d",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/218504f9-66f3-4eb6-a386-110215243f8d"
+              }
+            }
+          },
+          {
+            "transactionId": "ad0364c9-235d-4024-9ee0-d39c8cf56c4f",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/ad0364c9-235d-4024-9ee0-d39c8cf56c4f"
+              }
+            }
+          },
+          {
+            "transactionId": "68d7c837-44db-4ae8-b112-b9f71bb74e14",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/68d7c837-44db-4ae8-b112-b9f71bb74e14"
+              }
+            }
+          },
+          {
+            "transactionId": "313166c3-e167-4d20-8532-1b0733dc5689",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/313166c3-e167-4d20-8532-1b0733dc5689"
+              }
+            }
+          },
+          {
+            "transactionId": "f8d019ed-384d-470c-b7f5-1e3a047bcba4",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/f8d019ed-384d-470c-b7f5-1e3a047bcba4"
+              }
+            }
+          },
+          {
+            "transactionId": "0f05bbfe-740e-445e-81ae-fa6b3c8b0bde",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/0f05bbfe-740e-445e-81ae-fa6b3c8b0bde"
+              }
+            }
+          },
+          {
+            "transactionId": "6274e332-8ab8-435b-ac0f-e43893fe1550",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/6274e332-8ab8-435b-ac0f-e43893fe1550"
+              }
+            }
+          },
+          {
+            "transactionId": "d1cb42f7-7e47-4e8a-b5e3-d76e5647e25c",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/d1cb42f7-7e47-4e8a-b5e3-d76e5647e25c"
+              }
+            }
+          },
+          {
+            "transactionId": "7216abe7-2f48-41f3-b0d0-fd0fd5d7d44d",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/7216abe7-2f48-41f3-b0d0-fd0fd5d7d44d"
+              }
+            }
+          },
+          {
+            "transactionId": "d42c1415-98fe-413c-9315-9f6ae8e608ea",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/d42c1415-98fe-413c-9315-9f6ae8e608ea"
+              }
+            }
+          },
+          {
+            "transactionId": "e2cbd9a2-21f8-49b7-aba7-ab9f4ee23da3",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/e2cbd9a2-21f8-49b7-aba7-ab9f4ee23da3"
+              }
+            }
+          },
+          {
+            "transactionId": "c92566f8-e713-49e3-8442-dbd0198daf61",
+            "bookingDate": "2019-07-10",
+            "valueDate": "2019-07-10",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/c92566f8-e713-49e3-8442-dbd0198daf61"
+              }
+            }
+          },
+          {
+            "transactionId": "7a14be3e-3fe7-445c-a3f5-9b32fa0d78a3",
+            "bookingDate": "2019-07-12",
+            "valueDate": "2019-07-12",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/7a14be3e-3fe7-445c-a3f5-9b32fa0d78a3"
+              }
+            }
+          },
+          {
+            "transactionId": "6512a5b5-c96b-47bf-be0f-f2e0cb81b5e7",
+            "bookingDate": "2019-07-12",
+            "valueDate": "2019-07-12",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/6512a5b5-c96b-47bf-be0f-f2e0cb81b5e7"
+              }
+            }
+          },
+          {
+            "transactionId": "58af2db5-0c84-4fc6-9dea-7013ee28d2c9",
+            "bookingDate": "2019-07-12",
+            "valueDate": "2019-07-12",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/58af2db5-0c84-4fc6-9dea-7013ee28d2c9"
+              }
+            }
+          },
+          {
+            "transactionId": "b5479b3b-d4b6-41fc-8c16-b99ebafc75b6",
+            "bookingDate": "2019-07-15",
+            "valueDate": "2019-07-15",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/b5479b3b-d4b6-41fc-8c16-b99ebafc75b6"
+              }
+            }
+          },
+          {
+            "transactionId": "27daf280-588e-4eca-8a1d-fe39601b0dc3",
+            "bookingDate": "2019-07-15",
+            "valueDate": "2019-07-15",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/27daf280-588e-4eca-8a1d-fe39601b0dc3"
+              }
+            }
+          },
+          {
+            "transactionId": "7c5371bc-96a8-4111-8ccd-74eccbc757c1",
+            "bookingDate": "2019-07-17",
+            "valueDate": "2019-07-17",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/7c5371bc-96a8-4111-8ccd-74eccbc757c1"
+              }
+            }
+          },
+          {
+            "transactionId": "c5055e9f-79e8-475d-ad19-a5a6eb5870fe",
+            "bookingDate": "2019-07-17",
+            "valueDate": "2019-07-17",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/c5055e9f-79e8-475d-ad19-a5a6eb5870fe"
+              }
+            }
+          },
+          {
+            "transactionId": "bcde5bbd-b461-42b7-869c-7367d9464642",
+            "bookingDate": "2019-07-17",
+            "valueDate": "2019-07-17",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/bcde5bbd-b461-42b7-869c-7367d9464642"
+              }
+            }
+          },
+          {
+            "transactionId": "bc4e31de-de9f-48ec-911d-c59374be890e",
+            "bookingDate": "2019-07-17",
+            "valueDate": "2019-07-17",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/bc4e31de-de9f-48ec-911d-c59374be890e"
+              }
+            }
+          },
+          {
+            "transactionId": "5b08da1d-69ca-421c-b1dd-502d36274b68",
+            "bookingDate": "2019-07-17",
+            "valueDate": "2019-07-17",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/5b08da1d-69ca-421c-b1dd-502d36274b68"
+              }
+            }
+          },
+          {
+            "transactionId": "f23226b4-10f1-404b-9028-599d10df3d37",
+            "bookingDate": "2019-07-17",
+            "valueDate": "2019-07-17",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/f23226b4-10f1-404b-9028-599d10df3d37"
+              }
+            }
+          },
+          {
+            "transactionId": "2eef395a-ef37-46dc-92d0-adc05cbade42",
+            "bookingDate": "2019-07-17",
+            "valueDate": "2019-07-17",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/2eef395a-ef37-46dc-92d0-adc05cbade42"
+              }
+            }
+          },
+          {
+            "transactionId": "1f5fd481-54e7-40ed-a466-558b5a6764b2",
+            "bookingDate": "2019-07-17",
+            "valueDate": "2019-07-17",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/1f5fd481-54e7-40ed-a466-558b5a6764b2"
+              }
+            }
+          },
+          {
+            "transactionId": "77c342a7-3fb2-4c1e-b143-8b7a420416f5",
+            "bookingDate": "2019-07-17",
+            "valueDate": "2019-07-17",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/77c342a7-3fb2-4c1e-b143-8b7a420416f5"
+              }
+            }
+          },
+          {
+            "transactionId": "8d8d8731-a34e-4bb4-aa84-642f89a680c5",
+            "bookingDate": "2019-07-17",
+            "valueDate": "2019-07-17",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/8d8d8731-a34e-4bb4-aa84-642f89a680c5"
+              }
+            }
+          },
+          {
+            "transactionId": "e9e6cdfc-c122-4bbc-9675-f31f4ce29fbb",
+            "bookingDate": "2019-07-18",
+            "valueDate": "2019-07-18",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/e9e6cdfc-c122-4bbc-9675-f31f4ce29fbb"
+              }
+            }
+          },
+          {
+            "transactionId": "b3f595ed-abb7-4f1a-91d9-1a8277a1f584",
+            "bookingDate": "2019-07-18",
+            "valueDate": "2019-07-18",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-55.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/b3f595ed-abb7-4f1a-91d9-1a8277a1f584"
+              }
+            }
+          },
+          {
+            "transactionId": "08036678-4109-4189-a52e-6f080155e330",
+            "bookingDate": "2019-07-25",
+            "valueDate": "2019-07-25",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/08036678-4109-4189-a52e-6f080155e330"
+              }
+            }
+          },
+          {
+            "transactionId": "ed3a8cc9-fc68-43bf-82b5-44d9fe041b3b",
+            "bookingDate": "2019-07-25",
+            "valueDate": "2019-07-25",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/ed3a8cc9-fc68-43bf-82b5-44d9fe041b3b"
+              }
+            }
+          },
+          {
+            "transactionId": "566b7c16-f98f-466e-a38a-08242c799baf",
+            "bookingDate": "2019-07-25",
+            "valueDate": "2019-07-25",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/566b7c16-f98f-466e-a38a-08242c799baf"
+              }
+            }
+          },
+          {
+            "transactionId": "bd4fd7fd-b63c-4592-8e37-9491677892d1",
+            "bookingDate": "2019-07-25",
+            "valueDate": "2019-07-25",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/bd4fd7fd-b63c-4592-8e37-9491677892d1"
+              }
+            }
+          },
+          {
+            "transactionId": "1c79e869-fae0-4ae8-a649-457dcfa38e65",
+            "bookingDate": "2019-07-25",
+            "valueDate": "2019-07-25",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/1c79e869-fae0-4ae8-a649-457dcfa38e65"
+              }
+            }
+          },
+          {
+            "transactionId": "286f615f-bf57-49ba-a1bd-0adbf8a2f52d",
+            "bookingDate": "2019-07-26",
+            "valueDate": "2019-07-26",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/286f615f-bf57-49ba-a1bd-0adbf8a2f52d"
+              }
+            }
+          },
+          {
+            "transactionId": "c2dbddb3-ebd0-407c-9038-7b50d008a359",
+            "bookingDate": "2019-07-26",
+            "valueDate": "2019-07-26",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/c2dbddb3-ebd0-407c-9038-7b50d008a359"
+              }
+            }
+          },
+          {
+            "transactionId": "5feb4162-e4e0-4490-b37c-92e8217d73a9",
+            "bookingDate": "2019-07-26",
+            "valueDate": "2019-07-26",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/5feb4162-e4e0-4490-b37c-92e8217d73a9"
+              }
+            }
+          },
+          {
+            "transactionId": "a5ecc5eb-11c9-4b15-8ff1-8b842bd827db",
+            "bookingDate": "2019-07-26",
+            "valueDate": "2019-07-26",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/a5ecc5eb-11c9-4b15-8ff1-8b842bd827db"
+              }
+            }
+          },
+          {
+            "transactionId": "3f9c2e1e-4ece-4fba-b687-48277fc3c317",
+            "bookingDate": "2019-07-26",
+            "valueDate": "2019-07-26",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/3f9c2e1e-4ece-4fba-b687-48277fc3c317"
+              }
+            }
+          },
+          {
+            "transactionId": "6cb1de3b-bcc0-480b-9d6e-6da28abf4ec6",
+            "bookingDate": "2019-07-26",
+            "valueDate": "2019-07-26",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/6cb1de3b-bcc0-480b-9d6e-6da28abf4ec6"
+              }
+            }
+          },
+          {
+            "transactionId": "5f6d2475-f5a9-443f-99ad-7a2ce9b4f9dd",
+            "bookingDate": "2019-07-26",
+            "valueDate": "2019-07-26",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/5f6d2475-f5a9-443f-99ad-7a2ce9b4f9dd"
+              }
+            }
+          },
+          {
+            "transactionId": "3e95f029-c41e-478c-9eac-6fb7f7a56c3e",
+            "bookingDate": "2019-07-26",
+            "valueDate": "2019-07-26",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/3e95f029-c41e-478c-9eac-6fb7f7a56c3e"
+              }
+            }
+          },
+          {
+            "transactionId": "892bc9c1-b1cb-4f35-9dca-c0e2c8f29d4d",
+            "bookingDate": "2019-07-26",
+            "valueDate": "2019-07-26",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/892bc9c1-b1cb-4f35-9dca-c0e2c8f29d4d"
+              }
+            }
+          },
+          {
+            "transactionId": "c521ee05-77db-4ed9-be21-6bdcdbf26b20",
+            "bookingDate": "2019-07-26",
+            "valueDate": "2019-07-26",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/c521ee05-77db-4ed9-be21-6bdcdbf26b20"
+              }
+            }
+          },
+          {
+            "transactionId": "97e65aa7-1803-4f17-9793-7dab09ae620f",
+            "bookingDate": "2019-07-26",
+            "valueDate": "2019-07-26",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/97e65aa7-1803-4f17-9793-7dab09ae620f"
+              }
+            }
+          },
+          {
+            "transactionId": "88400030-8f37-4bce-b3d9-4b16c2ed2bd8",
+            "bookingDate": "2019-07-26",
+            "valueDate": "2019-07-26",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/88400030-8f37-4bce-b3d9-4b16c2ed2bd8"
+              }
+            }
+          },
+          {
+            "transactionId": "d24817b3-f791-40f3-ae9f-5ed8a4b93b10",
+            "bookingDate": "2019-07-26",
+            "valueDate": "2019-07-26",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/d24817b3-f791-40f3-ae9f-5ed8a4b93b10"
+              }
+            }
+          },
+          {
+            "transactionId": "a99d76db-ec88-49e6-b5ab-1c114f4cac6e",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/a99d76db-ec88-49e6-b5ab-1c114f4cac6e"
+              }
+            }
+          },
+          {
+            "transactionId": "75376e52-01d4-42dc-a37b-ae8738d466c4",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/75376e52-01d4-42dc-a37b-ae8738d466c4"
+              }
+            }
+          },
+          {
+            "transactionId": "5eb17600-c613-4cb4-ab7d-19c4748b0e0d",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/5eb17600-c613-4cb4-ab7d-19c4748b0e0d"
+              }
+            }
+          },
+          {
+            "transactionId": "79795e25-1467-4f0f-a34d-1a88fb1dbfb6",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/79795e25-1467-4f0f-a34d-1a88fb1dbfb6"
+              }
+            }
+          },
+          {
+            "transactionId": "6c5a26cd-4b97-450f-a149-79081ff6ce68",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/6c5a26cd-4b97-450f-a149-79081ff6ce68"
+              }
+            }
+          },
+          {
+            "transactionId": "4f3c6296-88d3-4128-8af7-5a0f3618e49b",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/4f3c6296-88d3-4128-8af7-5a0f3618e49b"
+              }
+            }
+          },
+          {
+            "transactionId": "5fdc3e00-0969-4be7-bccf-bafa57c3b340",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/5fdc3e00-0969-4be7-bccf-bafa57c3b340"
+              }
+            }
+          },
+          {
+            "transactionId": "ee624b41-f201-46f3-beeb-4f0b78a19bc9",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/ee624b41-f201-46f3-beeb-4f0b78a19bc9"
+              }
+            }
+          },
+          {
+            "transactionId": "e6f67f9c-f2f1-47eb-90d0-117c691daa2a",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/e6f67f9c-f2f1-47eb-90d0-117c691daa2a"
+              }
+            }
+          },
+          {
+            "transactionId": "7973641f-7965-498a-a7f3-3d3f4ec09492",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/7973641f-7965-498a-a7f3-3d3f4ec09492"
+              }
+            }
+          },
+          {
+            "transactionId": "c7e35de5-f733-4c0b-989e-38545b11b3fb",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/c7e35de5-f733-4c0b-989e-38545b11b3fb"
+              }
+            }
+          },
+          {
+            "transactionId": "fe7bc32e-5aac-4fb4-bc97-7090d579d1b6",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/fe7bc32e-5aac-4fb4-bc97-7090d579d1b6"
+              }
+            }
+          },
+          {
+            "transactionId": "48ccaaca-7db1-4170-80c9-614d02271f4b",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/48ccaaca-7db1-4170-80c9-614d02271f4b"
+              }
+            }
+          },
+          {
+            "transactionId": "2fa7b761-ad4f-4778-8c2f-de96aa46c269",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/2fa7b761-ad4f-4778-8c2f-de96aa46c269"
+              }
+            }
+          },
+          {
+            "transactionId": "b7e50109-577e-47e4-bf5a-f79b838c8225",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/b7e50109-577e-47e4-bf5a-f79b838c8225"
+              }
+            }
+          },
+          {
+            "transactionId": "1f6fd114-6e95-49c6-8adb-e10d191a9250",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/1f6fd114-6e95-49c6-8adb-e10d191a9250"
+              }
+            }
+          },
+          {
+            "transactionId": "be40a3de-b297-42f4-bde5-c336bb676818",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/be40a3de-b297-42f4-bde5-c336bb676818"
+              }
+            }
+          },
+          {
+            "transactionId": "052b39ff-0d66-48b0-bc8c-4489ab827ff1",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/052b39ff-0d66-48b0-bc8c-4489ab827ff1"
+              }
+            }
+          },
+          {
+            "transactionId": "5ab96eda-b5d0-4657-8b7a-a249f5ae2af5",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/5ab96eda-b5d0-4657-8b7a-a249f5ae2af5"
+              }
+            }
+          },
+          {
+            "transactionId": "150e4b31-68ed-4514-bbef-512dce04d10f",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/150e4b31-68ed-4514-bbef-512dce04d10f"
+              }
+            }
+          },
+          {
+            "transactionId": "1d55bb80-4fe5-4be8-8015-0cf7842a4797",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/1d55bb80-4fe5-4be8-8015-0cf7842a4797"
+              }
+            }
+          },
+          {
+            "transactionId": "68b98882-995a-49f5-9bc6-62cd05354e80",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/68b98882-995a-49f5-9bc6-62cd05354e80"
+              }
+            }
+          },
+          {
+            "transactionId": "7e65a857-1f57-4eb5-acc9-01e45d085660",
+            "bookingDate": "2019-07-29",
+            "valueDate": "2019-07-29",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/7e65a857-1f57-4eb5-acc9-01e45d085660"
+              }
+            }
+          },
+          {
+            "transactionId": "55435044-587c-48ee-baa6-9016a973e2f4",
+            "bookingDate": "2019-07-30",
+            "valueDate": "2019-07-30",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/55435044-587c-48ee-baa6-9016a973e2f4"
+              }
+            }
+          },
+          {
+            "transactionId": "9f715630-6a8c-445c-9df2-6cf2bf6d72e9",
+            "bookingDate": "2019-07-30",
+            "valueDate": "2019-07-30",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/9f715630-6a8c-445c-9df2-6cf2bf6d72e9"
+              }
+            }
+          },
+          {
+            "transactionId": "c1fa8c30-4670-42eb-b01d-fd63b314e539",
+            "bookingDate": "2019-07-30",
+            "valueDate": "2019-07-30",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/c1fa8c30-4670-42eb-b01d-fd63b314e539"
+              }
+            }
+          },
+          {
+            "transactionId": "12eba1ca-01a7-4320-9461-26b9b5df593b",
+            "bookingDate": "2019-07-30",
+            "valueDate": "2019-07-30",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/12eba1ca-01a7-4320-9461-26b9b5df593b"
+              }
+            }
+          },
+          {
+            "transactionId": "6f617e92-13d4-42fd-b560-82ecd4276b22",
+            "bookingDate": "2019-07-30",
+            "valueDate": "2019-07-30",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/6f617e92-13d4-42fd-b560-82ecd4276b22"
+              }
+            }
+          },
+          {
+            "transactionId": "55339720-cf9a-4b50-a348-035dcf17c9b4",
+            "bookingDate": "2019-07-30",
+            "valueDate": "2019-07-30",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/55339720-cf9a-4b50-a348-035dcf17c9b4"
+              }
+            }
+          },
+          {
+            "transactionId": "bf5719b7-4b28-4750-9e76-90418bec1eb2",
+            "bookingDate": "2019-07-30",
+            "valueDate": "2019-07-30",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/bf5719b7-4b28-4750-9e76-90418bec1eb2"
+              }
+            }
+          },
+          {
+            "transactionId": "5aae6005-a515-41d2-9b91-bbc353bb91aa",
+            "bookingDate": "2019-07-30",
+            "valueDate": "2019-07-30",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/5aae6005-a515-41d2-9b91-bbc353bb91aa"
+              }
+            }
+          },
+          {
+            "transactionId": "e099caaf-31c7-488c-ada8-4fb57a1b53ec",
+            "bookingDate": "2019-08-02",
+            "valueDate": "2019-08-02",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/e099caaf-31c7-488c-ada8-4fb57a1b53ec"
+              }
+            }
+          },
+          {
+            "transactionId": "e8573669-00e7-43e3-b350-5a81f93fd1cc",
+            "bookingDate": "2019-08-02",
+            "valueDate": "2019-08-02",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/e8573669-00e7-43e3-b350-5a81f93fd1cc"
+              }
+            }
+          },
+          {
+            "transactionId": "2dbd0b23-ab2e-4766-a0fa-a566c63ae160",
+            "bookingDate": "2019-08-02",
+            "valueDate": "2019-08-02",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/2dbd0b23-ab2e-4766-a0fa-a566c63ae160"
+              }
+            }
+          },
+          {
+            "transactionId": "13c98239-a7bf-4023-8917-255007965d13",
+            "bookingDate": "2019-08-02",
+            "valueDate": "2019-08-02",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/13c98239-a7bf-4023-8917-255007965d13"
+              }
+            }
+          },
+          {
+            "transactionId": "f2a476d1-7641-453c-8da1-0fda307329ed",
+            "bookingDate": "2019-08-02",
+            "valueDate": "2019-08-02",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/f2a476d1-7641-453c-8da1-0fda307329ed"
+              }
+            }
+          },
+          {
+            "transactionId": "a2aead1b-fd5a-4b4b-8b78-9e6487fda2e4",
+            "bookingDate": "2019-08-05",
+            "valueDate": "2019-08-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/a2aead1b-fd5a-4b4b-8b78-9e6487fda2e4"
+              }
+            }
+          },
+          {
+            "transactionId": "13d0f32a-361e-4434-a3a4-f9e3670b2874",
+            "bookingDate": "2019-08-05",
+            "valueDate": "2019-08-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/13d0f32a-361e-4434-a3a4-f9e3670b2874"
+              }
+            }
+          },
+          {
+            "transactionId": "2650b7bf-a7ab-46ed-a5d5-8dd2120ad83a",
+            "bookingDate": "2019-08-05",
+            "valueDate": "2019-08-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/2650b7bf-a7ab-46ed-a5d5-8dd2120ad83a"
+              }
+            }
+          },
+          {
+            "transactionId": "aa9649be-477c-4067-8e3c-2560cdbadb5d",
+            "bookingDate": "2019-08-05",
+            "valueDate": "2019-08-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/aa9649be-477c-4067-8e3c-2560cdbadb5d"
+              }
+            }
+          },
+          {
+            "transactionId": "fec4be15-e863-4ed4-8343-7fdce2c0d462",
+            "bookingDate": "2019-08-05",
+            "valueDate": "2019-08-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/fec4be15-e863-4ed4-8343-7fdce2c0d462"
+              }
+            }
+          },
+          {
+            "transactionId": "407aa061-175a-4aa2-95cd-34ae0dc4eb6e",
+            "bookingDate": "2019-08-05",
+            "valueDate": "2019-08-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/407aa061-175a-4aa2-95cd-34ae0dc4eb6e"
+              }
+            }
+          },
+          {
+            "transactionId": "f41eb320-f2cc-497f-90ed-9c6e81bc449f",
+            "bookingDate": "2019-08-05",
+            "valueDate": "2019-08-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/f41eb320-f2cc-497f-90ed-9c6e81bc449f"
+              }
+            }
+          },
+          {
+            "transactionId": "995caf88-2329-4f51-a3f2-db47d0df1d35",
+            "bookingDate": "2019-08-05",
+            "valueDate": "2019-08-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/995caf88-2329-4f51-a3f2-db47d0df1d35"
+              }
+            }
+          },
+          {
+            "transactionId": "b39e4bda-4e03-415e-a304-fd10824d7b0a",
+            "bookingDate": "2019-08-05",
+            "valueDate": "2019-08-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/b39e4bda-4e03-415e-a304-fd10824d7b0a"
+              }
+            }
+          },
+          {
+            "transactionId": "1af018eb-bf69-49f7-b539-9b6c93b1ec32",
+            "bookingDate": "2019-08-05",
+            "valueDate": "2019-08-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/1af018eb-bf69-49f7-b539-9b6c93b1ec32"
+              }
+            }
+          },
+          {
+            "transactionId": "e6c97857-f7fc-4f6a-bd3a-db626f26b02a",
+            "bookingDate": "2019-08-05",
+            "valueDate": "2019-08-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/e6c97857-f7fc-4f6a-bd3a-db626f26b02a"
+              }
+            }
+          },
+          {
+            "transactionId": "d64ec0ea-37f9-40b9-ae71-6c56891b8a2b",
+            "bookingDate": "2019-08-05",
+            "valueDate": "2019-08-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/d64ec0ea-37f9-40b9-ae71-6c56891b8a2b"
+              }
+            }
+          },
+          {
+            "transactionId": "2d147249-edd7-487d-b48a-20492c283da9",
+            "bookingDate": "2019-08-05",
+            "valueDate": "2019-08-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/2d147249-edd7-487d-b48a-20492c283da9"
+              }
+            }
+          },
+          {
+            "transactionId": "8c38c9e6-bdf0-4184-bae3-f2bfdf705e04",
+            "bookingDate": "2019-08-05",
+            "valueDate": "2019-08-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/8c38c9e6-bdf0-4184-bae3-f2bfdf705e04"
+              }
+            }
+          },
+          {
+            "transactionId": "33d837ad-73b0-4427-b1df-7c79a3e537f2",
+            "bookingDate": "2019-08-05",
+            "valueDate": "2019-08-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/33d837ad-73b0-4427-b1df-7c79a3e537f2"
+              }
+            }
+          },
+          {
+            "transactionId": "7b51617a-9496-4402-b936-6145868e422d",
+            "bookingDate": "2019-08-05",
+            "valueDate": "2019-08-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/7b51617a-9496-4402-b936-6145868e422d"
+              }
+            }
+          },
+          {
+            "transactionId": "348cd12d-ea1d-4454-a273-8243f9f949c2",
+            "bookingDate": "2019-08-05",
+            "valueDate": "2019-08-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/348cd12d-ea1d-4454-a273-8243f9f949c2"
+              }
+            }
+          },
+          {
+            "transactionId": "b2b4e37f-b91d-4530-bae0-9f4c766369fa",
+            "bookingDate": "2019-08-05",
+            "valueDate": "2019-08-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/b2b4e37f-b91d-4530-bae0-9f4c766369fa"
+              }
+            }
+          },
+          {
+            "transactionId": "b5f4da83-fea1-44f8-8a72-595d347778c5",
+            "bookingDate": "2019-08-05",
+            "valueDate": "2019-08-05",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/b5f4da83-fea1-44f8-8a72-595d347778c5"
+              }
+            }
+          },
+          {
+            "transactionId": "7cac943f-4b2f-47a9-b517-d2e9c44d4a98",
+            "bookingDate": "2019-08-06",
+            "valueDate": "2019-08-06",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/7cac943f-4b2f-47a9-b517-d2e9c44d4a98"
+              }
+            }
+          },
+          {
+            "transactionId": "e610d3d5-735c-4532-8bd3-2867a21890e1",
+            "bookingDate": "2019-08-06",
+            "valueDate": "2019-08-06",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/e610d3d5-735c-4532-8bd3-2867a21890e1"
+              }
+            }
+          },
+          {
+            "transactionId": "9ce50168-04a9-4cdf-8252-b5f21657dd0c",
+            "bookingDate": "2019-08-06",
+            "valueDate": "2019-08-06",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/9ce50168-04a9-4cdf-8252-b5f21657dd0c"
+              }
+            }
+          },
+          {
+            "transactionId": "4bab5df5-4b5d-4e7e-b6a3-9cc6a81f5a0b",
+            "bookingDate": "2019-08-06",
+            "valueDate": "2019-08-06",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/4bab5df5-4b5d-4e7e-b6a3-9cc6a81f5a0b"
+              }
+            }
+          },
+          {
+            "transactionId": "803461af-bbe6-4d17-85bf-8699eebc9b34",
+            "bookingDate": "2019-08-06",
+            "valueDate": "2019-08-06",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/803461af-bbe6-4d17-85bf-8699eebc9b34"
+              }
+            }
+          },
+          {
+            "transactionId": "25e11f2e-dada-40da-8e0e-b6c5166ab1a4",
+            "bookingDate": "2019-08-06",
+            "valueDate": "2019-08-06",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/25e11f2e-dada-40da-8e0e-b6c5166ab1a4"
+              }
+            }
+          },
+          {
+            "transactionId": "b51f883d-8608-4f62-8141-b6b0a3896831",
+            "bookingDate": "2019-08-06",
+            "valueDate": "2019-08-06",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/b51f883d-8608-4f62-8141-b6b0a3896831"
+              }
+            }
+          },
+          {
+            "transactionId": "c7325d83-ad78-49f1-a512-c2eb6115b8e5",
+            "bookingDate": "2019-08-06",
+            "valueDate": "2019-08-06",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/c7325d83-ad78-49f1-a512-c2eb6115b8e5"
+              }
+            }
+          },
+          {
+            "transactionId": "5dd4244f-7f59-4a39-b8f6-0050e87b4825",
+            "bookingDate": "2019-08-06",
+            "valueDate": "2019-08-06",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/5dd4244f-7f59-4a39-b8f6-0050e87b4825"
+              }
+            }
+          },
+          {
+            "transactionId": "62488527-160a-46f1-ab0b-e3ee8ff004cc",
+            "bookingDate": "2019-08-06",
+            "valueDate": "2019-08-06",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/62488527-160a-46f1-ab0b-e3ee8ff004cc"
+              }
+            }
+          },
+          {
+            "transactionId": "d9a8a056-1b71-4e63-9280-f2e184b1a544",
+            "bookingDate": "2019-08-06",
+            "valueDate": "2019-08-06",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/d9a8a056-1b71-4e63-9280-f2e184b1a544"
+              }
+            }
+          },
+          {
+            "transactionId": "ea6edd3f-3091-4f2e-8dab-d5a0f101f9d1",
+            "bookingDate": "2019-08-06",
+            "valueDate": "2019-08-06",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/ea6edd3f-3091-4f2e-8dab-d5a0f101f9d1"
+              }
+            }
+          },
+          {
+            "transactionId": "93107da8-e1ac-491e-9ca3-d19e8826b989",
+            "bookingDate": "2019-08-06",
+            "valueDate": "2019-08-06",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/93107da8-e1ac-491e-9ca3-d19e8826b989"
+              }
+            }
+          },
+          {
+            "transactionId": "17fadda2-cfe8-41d9-9656-000f4476363e",
+            "bookingDate": "2019-08-06",
+            "valueDate": "2019-08-06",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/17fadda2-cfe8-41d9-9656-000f4476363e"
+              }
+            }
+          },
+          {
+            "transactionId": "f7835be4-c6d3-442f-87fc-a570908c6a4f",
+            "bookingDate": "2019-08-06",
+            "valueDate": "2019-08-06",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/f7835be4-c6d3-442f-87fc-a570908c6a4f"
+              }
+            }
+          },
+          {
+            "transactionId": "549a0d2b-8baa-4f97-a1c6-5d314a221009",
+            "bookingDate": "2019-08-06",
+            "valueDate": "2019-08-06",
+            "transactionAmount": {
+              "currency": "EUR",
+              "amount": "-1.0"
+            },
+            "remittanceInformationUnstructured": "VOSTRADISPOSIZIONEBONIFICOURG./ISTANTANEO",
+            "_links": {
+              "transactionDetails": {
+                "href": "/accounts/account1234567/transactions/549a0d2b-8baa-4f97-a1c6-5d314a221009"
+              }
+            }
+          }
+        ],
+        "_links": {
+          "account": {
+            "href": "/accounts/account1234567"
+          }
+        }
+      }
+    },
+    "headers": {
+      "Content-Type": "application/json",
+      "Date": "Sat, 16 Nov 2019 10:44:03 GMT"
     }
   },
-  "persistent" : true
+  "persistent": true
 }

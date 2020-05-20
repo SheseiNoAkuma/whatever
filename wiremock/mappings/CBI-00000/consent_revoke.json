@@ -1,0 +1,19 @@
+{
+	"name": "CBI - revoke",
+	"request": {
+		"urlPattern": "/cbi/ais/2.3.2/consents/(.+)",
+		"method": "DELETE",
+		"headers": {
+			"aspsp-code": {
+				"matches": ".*"
+			}
+		}
+	},
+	"response": {
+		"status": 204,
+		"headers": {
+			"Date": "Sat, 16 Nov 2019 10:43:59 GMT"
+		}
+	},
+	"persistent": true
+}

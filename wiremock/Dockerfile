@@ -1,7 +1,7 @@
 # Alpine Linux with OpenJDK JRE
 FROM openjdk:8-jre-alpine
 # copy __files into image
-COPY __files /__files
+#COPY __files /__files
 # copy mappings into image
 COPY mappings /mappings
 # copy service into image

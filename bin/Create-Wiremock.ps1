@@ -4,7 +4,7 @@ $initialpath=Get-Location
 #nome del container
 $container="wiremock"
 #path assoluto della folder che contiene le risorse (Dockerfile) 
-$basepath='D:\docker\wiremock'
+$basepath='D:\github\whatever\wiremock'
 
 Set-Location $basepath
 

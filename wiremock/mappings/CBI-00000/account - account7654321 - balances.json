@@ -1,42 +1,42 @@
 {
-  "name" : "CBI - 00000 - balances for account7654321",
-  "request" : {
-    "url" : "/cbi/accounts/account7654321/balances",
-    "method" : "GET",
-	"headers" : {
-      "aspsp-code" : {
-        "equalTo" : "00000"
+  "name": "CBI - ASPSP - balances for account7654321",
+  "request": {
+    "url": "/cbi/ais/2.3.2/accounts/account7654321/balances",
+    "method": "GET",
+    "headers": {
+      "aspsp-code": {
+        "matches": ".*"
       }
     }
   },
-  "response" : {
-    "status" : 200,
-    "jsonBody" : {
-			   "account":    {
-				  "iban": "IT77O0848283352871412938125",
-				  "currency": "EUR"
-			   },
-			   "balances":    [
-						{
-					 "balanceAmount":          {
-						"currency": "EUR",
-						"amount": "2000008.2"
-					 },
-					 "balanceType": "interimAvailable"
-				  },
-						{
-					 "balanceAmount":          {
-						"currency": "EUR",
-						"amount": "2000010.4"
-					 },
-					 "balanceType": "authorised"
-				  }
-			   ]
-			},
-    "headers" : {
-      "Content-Type" : "application/json",
-      "Date" : "Sat, 16 Nov 2019 10:44:01 GMT"
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "account": {
+        "iban": "IT77O0848283352871412938125",
+        "currency": "EUR"
+      },
+      "balances": [
+        {
+          "balanceAmount": {
+            "currency": "EUR",
+            "amount": "2000008.2"
+          },
+          "balanceType": "interimAvailable"
+        },
+        {
+          "balanceAmount": {
+            "currency": "EUR",
+            "amount": "2000010.4"
+          },
+          "balanceType": "authorised"
+        }
+      ]
+    },
+    "headers": {
+      "Content-Type": "application/json",
+      "Date": "Sat, 16 Nov 2019 10:44:01 GMT"
     }
   },
-  "persistent" : true
+  "persistent": true
 }

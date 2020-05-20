@@ -16,7 +16,7 @@ $initialpath=Get-Location
 #nome del container
 
 #path assoluto della folder che contiene le risorse (Dockerfile, liquibase.properties etc..) 
-$basepath='D:\github\whatever\Create-Database'
+$basepath='D:\github\whatever\Create-Oracle'
 #path assoluto della folder che contiene il progetto psd2
 $psd2path='D:\git\psd2'
 #tempo di attesa per lo start di oracle all'interno del container

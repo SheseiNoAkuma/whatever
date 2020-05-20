@@ -1,0 +1,31 @@
+{1:F01PTSAITH0AXXX0000000000}{2:I199PTSAITH0XXXXN}{4:
+:20:{logicalname00}
+:79:Prova sepdizione {logicalname00}
+-}${1:F01PTSAITH0AXXX0000000000}{2:I199PTSAITH0XXXXN}{4:
+:20:{logicalname01}
+:79:Prova sepdizione {logicalname01}
+-}${1:F01PTSAITH0AXXX0000000000}{2:I199PTSAITH0XXXXN}{4:
+:20:{logicalname02}
+:79:Prova sepdizione {logicalname02}
+-}${1:F01PTSAITH0AXXX0000000000}{2:I199PTSAITH0XXXXN}{4:
+:20:{logicalname03}
+:79:Prova sepdizione {logicalname03}
+-}${1:F01PTSAITH0AXXX0000000000}{2:I199PTSAITH0XXXXN}{4:
+:20:{logicalname04}
+:79:Prova sepdizione {logicalname04}
+-}${1:F01PTSAITH0AXXX0000000000}{2:I199PTSAITH0XXXXN}{4:
+:20:{logicalname05}
+:79:Prova sepdizione {logicalname05}
+-}${1:F01PTSAITH0AXXX0000000000}{2:I199PTSAITH0XXXXN}{4:
+:20:{logicalname06}
+:79:Prova sepdizione {logicalname06}
+-}${1:F01PTSAITH0AXXX0000000000}{2:I199PTSAITH0XXXXN}{4:
+:20:{logicalname07}
+:79:Prova sepdizione {logicalname08}
+-}${1:F01PTSAITH0AXXX0000000000}{2:I199PTSAITH0XXXXN}{4:
+:20:{logicalname09}
+:79:Prova sepdizione {logicalname09}
+-}${1:F01PTSAITH0AXXX0000000000}{2:I199PTSAITH0XXXXN}{4:
+:20:{logicalname10}
+:79:Prova sepdizione {logicalname10}
+-}
