@@ -1,18 +1,25 @@
-$DebugPreference = "Continue"
+Param(
+    #container name
+    [Parameter(ValueFromPipelineByPropertyName, HelpMessage='also rebuild resources, $true / $false')][bool]$full=$false
+    ) 
+
 $initialpath=Get-Location
 
-#nome del container
-$container="wiremock"
-#path assoluto della folder che contiene le risorse (Dockerfile) 
-$basepath='D:\github\whatever\wiremock'
+$config=Get-Wiremock | Select-Object
 
-Set-Location $basepath
+Set-Location $config.path
+
+if ($full){
+    Write-Host  "copy stubs from $($config.source)" -ForegroundColor Yellow
+    Remove-Item $config.target -Recurse -Force -Confirm:$false -ErrorAction Ignore
+    Copy-Item $config.source $config.target -Recurse
+}
 
 docker build --tag wiremock:custom .
 
-docker rm -f $container
-docker run -p 9999:9999 -d --name $container wiremock:custom
+Remove-DockerContainer -name $config.container
+docker run -p 9999:9999 -d --name $config.container wiremock:custom
 
-Write-Debug  "container $container is ready to go on port 9999"
+Write-Host  "container $($config.container) is ready to go on port 9999" -ForegroundColor Green
 
 Set-Location $initialpath

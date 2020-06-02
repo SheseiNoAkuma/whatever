@@ -1,0 +1,1342 @@
+************************************************************************
+* Title: Project Network Gateway FIN
+* Copyright: Copyright (c) 2016
+* Company: TAS Group S.p.A.
+* Warning: This computer program and its source code is protected by
+* copyright law and international treaties. Unauthorized reproduction
+* or distribution of this code or any portion of it, may result in
+* severe civil and criminal penalties, and will be prosecuted to the
+* maximum extent possible under the law
+*
+* MQ Script file for FIN v.${project.version}
+************************************************************************
+
+
+** Define NEW Storage Class **********
+*
+* DEFINE STGCLASS(xxxx) +
+*       PSID('04') +     
+*       DESCR('New Stgclass for A2 Mqseries Object') +
+*       REPLACE 
+
+         
+************************************************************************
+* 
+*       Queue List 
+*       ------------------
+*       MSS.MESSAGE01.FROM.BOA
+*       MSS.MESSAGE01.TO.BOA
+*       MSS.MESSAGE02.FROM.BOA
+*       MSS.MESSAGE02.TO.BOA
+*       MSS.MESSAGE03.FROM.BOA
+*       MSS.MESSAGE03.TO.BOA
+*       MSS.MESSAGE04.FROM.BOA
+*       MSS.MESSAGE04.TO.BOA
+*       AG01.MP01.REQ.CLI
+*       AG01.MP01.RES.CLI
+*       AG01.MP01.REQ.SRV
+*       AG01.MP01.RES.SRV
+*       AG01.MP02.REQ.CLI
+*       AG01.MP02.RES.CLI
+*       AG01.MP02.REQ.SRV
+*       AG01.MP02.RES.SRV
+*       AG01.MP03.REQ.CLI
+*       AG01.MP03.RES.CLI
+*       AG01.MP03.REQ.SRV
+*       AG01.MP03.RES.SRV
+*       AG01.MP04.REQ.CLI
+*       AG01.MP04.RES.CLI
+*       AG01.MP04.REQ.SRV
+*       AG01.MP04.RES.SRV
+*       AG01.MP05.REQ.CLI
+*       AG01.MP05.RES.CLI
+*       AG01.MP05.REQ.SRV
+*       AG01.MP05.RES.SRV
+*       AA00.INPUT 
+*       AA00.REPLY 
+*       AA00.OUTPUT
+*       FDRV.INPUT 
+*       FDRV.OUTPUT 
+*       FDRV.REPLY
+*       MESSAGE01.FROM.RMA
+*       MESSAGE01.REPLY.TO.RMA
+*       MESSAGE01.OUTPUT.TO.RMA
+*       DLQ.MSS.MESSAGE01.FROM.BOA
+*       DLQ.MSS.MESSAGE02.FROM.BOA
+*       DLQ.MSS.MESSAGE03.FROM.BOA
+*       DLQ.MSS.MESSAGE04.FROM.BOA
+*       DLQ.AG01.MP02.REQ.SRV
+*       DLQ.AG01.MP02.RES.CLI
+*       DLQ.AG01.MP03.RES.CLI
+*       DLQ.AG01.MP04.REQ.SRV
+*       DLQ.AG01.MP04.RES.CLI
+*       DLQ.AG01.MP05.REQ.SRV
+*       DLQ.AG01.MP05.RES.CLI
+*       DLQ.AA00.OUTPUT
+*       DLQ.AA00.REPLY
+*       DLQ.FDRV.INPUT
+*       DLQ.FDRV.OUTPUT
+*       DLQ.FDRV.REPLY
+*       DLQ.MESSAGE01.FROM.RMA
+*       DLQ.MESSAGE01.REPLY.TO.RMA
+*       DLQ.MESSAGE01.OUTPUT.TO.RMA
+**********************************************************************
+
+************************************************************************ 
+* MSS Queues
+************************************************************************ 
+
+
+*
+** QUEUE FOR  DLQ.MSS.MESSAGE01.FROM.BOA
+*
+DEFINE QLOCAL('DLQ.MSS.MESSAGE01.BO.FROM.BOA') +
+         DESCR('BackoutQueue for Messages on Channel 01 From BOA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR MSS.MESSAGE01.FROM.BOA
+*
+DEFINE QLOCAL('MSS.MESSAGE01.FROM.BOA') +
+         DESCR('Message queue for channel 01 From BOA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.MSS.MESSAGE01.FROM.BOA' ) +
+         BOTHRESH(3) + 
+         HARDENBO + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR MSS.MESSAGE01.TO.BOA
+*
+DEFINE QLOCAL('MSS.MESSAGE01.TO.BOA') +
+         DESCR('Message queue for Channel 01 To BOA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR DLQ.MSS.MESSAGE02.FROM.BOA
+*
+DEFINE QLOCAL('DLQ.MSS.MESSAGE02.FROM.BOA') +
+         DESCR('BackoutQueue for Messages on Channel 02 From BOA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR MSS.MESSAGE02.FROM.BOA
+*
+DEFINE QLOCAL('MSS.MESSAGE02.FROM.BOA') +
+         DESCR('Message queue for channel 02 From BOA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.MSS.MESSAGE02.FROM.BOA' ) +
+         BOTHRESH(3) + 
+         HARDENBO + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR MSS.MESSAGE02.TO.BOA
+*
+DEFINE QLOCAL('MSS.MESSAGE02.TO.BOA') +
+         DESCR('Message queue for Channel 02 To BOA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+*
+** QUEUE FOR DLQ.MSS.MESSAGE03.FROM.BOA
+*
+DEFINE QLOCAL('DLQ.MSS.MESSAGE03.FROM.BOA') +
+         DESCR('BackoutQueue for Messages on Channel 03 From BOA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR MSS.MESSAGE03.FROM.BOA
+*
+DEFINE QLOCAL('MSS.MESSAGE03.FROM.BOA') +
+         DESCR('Message queue for channel 01 From BOA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.MSS.MESSAGE03.FROM.BOA' ) +
+         BOTHRESH(3) + 
+         HARDENBO + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR MSS.MESSAGE03.TO.BOA
+*
+DEFINE QLOCAL('MSS.MESSAGE03.TO.BOA') +
+         DESCR('Message queue for Channel 01 To BOA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+*
+** QUEUE FOR DLQ.MSS.MESSAGE04.FROM.BOA
+*
+DEFINE QLOCAL('DLQ.MSS.MESSAGE04.FROM.BOA') +
+         DESCR('BackoutQueue for Messages on Channel 04 From BOA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+*
+*
+** QUEUE FOR MSS.MESSAGE04.FROM.BOA
+*
+DEFINE QLOCAL('MSS.MESSAGE04.FROM.BOA') +
+         DESCR('Message queue for channel 04 From BOA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.MSS.MESSAGE04.FROM.BOA' ) +
+         BOTHRESH(3) + 
+         HARDENBO + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR MSS.MESSAGE04.TO.BOA
+*
+DEFINE QLOCAL('MSS.MESSAGE04.TO.BOA') +
+         DESCR('Message queue for Channel 01 To BOA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR AG01.MP01.REQ.CLI
+*
+DEFINE QLOCAL('AG01.MP01.REQ.CLI') +
+         DESCR('Message queue for message partner 1, request from client') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR AG01.MP01.RES.CLI
+*
+DEFINE QLOCAL('AG01.MP01.RES.CLI') +
+         DESCR('Message queue for message partner 1, response from client') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR AG01.MP01.REQ.SRV
+*
+DEFINE QLOCAL('AG01.MP01.REQ.SRV') +
+         DESCR('Message queue for message partner 1, request from server') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR AG01.MP01.RES.SRV
+*
+DEFINE QLOCAL('AG01.MP01.RES.SRV') +
+         DESCR('Message queue for message partner 1, response from server') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR AG01.MP02.REQ.CLI
+*
+DEFINE QLOCAL('AG01.MP02.REQ.CLI') +
+         DESCR('Message queue for message partner 2, request from client') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR DLQ.AG01.MP02.RES.CLI
+*
+DEFINE QLOCAL('DLQ.AG01.MP02.RES.CLI') +
+         DESCR('BackoutQueue queue for message partner 2, response from client') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+ 
+*
+** QUEUE FOR AG01.MP02.RES.CLI
+*
+DEFINE QLOCAL('AG01.MP02.RES.CLI') +
+         DESCR('Message queue for message partner 2, response from client') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.AG01.MP02.RES.CLI' ) +
+         BOTHRESH(3) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR DLQ.AG01.MP02.REQ.SRV
+*
+DEFINE QLOCAL('DLQ.AG01.MP02.REQ.SRV') +
+         DESCR('BackoutQueue queue for message partner 2, request from server') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR AG01.MP02.REQ.SRV
+*
+DEFINE QLOCAL('AG01.MP02.REQ.SRV') +
+         DESCR('Message queue for message partner 2, request from server') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.AG01.MP02.REQ.SRV' ) +
+         BOTHRESH(3) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR AG01.MP02.RES.SRV
+*
+DEFINE QLOCAL('AG01.MP02.RES.SRV') +
+         DESCR('Message queue for message partner 2, response from server') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR AG01.MP03.REQ.CLI
+*
+DEFINE QLOCAL('AG01.MP03.REQ.CLI') +
+         DESCR('Message queue for message partner 3, request from client') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR DLQ.AG01.MP03.RES.CLI
+*
+DEFINE QLOCAL('DLQ.AG01.MP03.RES.CLI') +
+         DESCR('BackoutQueue queue for message partner 3, response from client') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR AG01.MP03.RES.CLI
+*
+DEFINE QLOCAL('AG01.MP03.RES.CLI') +
+         DESCR('Message queue for message partner 3, response from client') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.AG01.MP03.RES.CLI' ) +
+         BOTHRESH(3) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR DLQ.AG01.MP03.REQ.SRV
+*
+DEFINE QLOCAL('DLQ.AG01.MP03.REQ.SRV') +
+         DESCR('BackoutQueue queue for message partner 3, request from server') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR AG01.MP03.REQ.SRV
+*
+DEFINE QLOCAL('AG01.MP03.REQ.SRV') +
+         DESCR('Message queue for message partner 3, request from server') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.AG01.MP03.REQ.SRV' ) +
+         BOTHRESH(3) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR AG01.MP03.RES.SRV
+*
+DEFINE QLOCAL('AG01.MP03.RES.SRV') +
+         DESCR('Message queue for message partner 3, response from server') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR AG01.MP04.REQ.CLI
+*
+DEFINE QLOCAL('AG01.MP04.REQ.CLI') +
+         DESCR('Message queue for message partner 4, request from client') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR DLQ.AG01.MP04.RES.CLI
+*
+DEFINE QLOCAL('DLQ.AG01.MP04.RES.CLI') +
+         DESCR('BackoutQueue queue for message partner 4, response from client') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR AG01.MP04.RES.CLI
+*
+DEFINE QLOCAL('AG01.MP04.RES.CLI') +
+         DESCR('Message queue for message partner 4, response from client') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.AG01.MP04.RES.CLI' ) +
+         BOTHRESH(3) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR DLQ.AG01.MP04.REQ.SRV
+*
+DEFINE QLOCAL('DLQ.AG01.MP04.REQ.SRV') +
+         DESCR('BackoutQueue queue for message partner 4, request from server') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR AG01.MP04.REQ.SRV
+*
+DEFINE QLOCAL('AG01.MP04.REQ.SRV') +
+         DESCR('Message queue for message partner 4, request from server') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.AG01.MP04.REQ.SRV' ) +
+         BOTHRESH(3) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR AG01.MP04.RES.SRV
+*
+DEFINE QLOCAL('AG01.MP04.RES.SRV') +
+         DESCR('Message queue for message partner 4, response from server') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR AG01.MP05.REQ.CLI
+*
+DEFINE QLOCAL('AG01.MP05.REQ.CLI') +
+         DESCR('Message queue for message partner 5, request from client') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+** QUEUE FOR DLQ.AG01.MP05.RES.CLI
+*
+DEFINE QLOCAL('DLQ.AG01.MP05.RES.CLI') +
+         DESCR('BackoutQueue queue for message partner 5, response from client') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR AG01.MP05.RES.CLI
+*
+DEFINE QLOCAL('AG01.MP05.RES.CLI') +
+         DESCR('Message queue for message partner 5, response from client') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.AG01.MP05.RES.CLI' ) +
+         BOTHRESH(3) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+** QUEUE FOR DLQ.AG01.MP05.REQ.SRV
+*
+DEFINE QLOCAL('DLQ.AG01.MP05.REQ.SRV') +
+         DESCR('BackoutQueue queue for message partner 5, request from server') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR AG01.MP05.REQ.SRV
+*
+DEFINE QLOCAL('AG01.MP05.REQ.SRV') +
+         DESCR('Message queue for message partner 5, request from server') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.AG01.MP05.REQ.SRV' ) +
+         BOTHRESH(3) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR AG01.MP05.RES.SRV
+*
+DEFINE QLOCAL('AG01.MP05.RES.SRV') +
+         DESCR('Message queue for message partner 5, response from server') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR AA00.INPUT
+*
+DEFINE QLOCAL('AA00.INPUT') +
+         DESCR('Message queue for message to SAA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR DLQ.AA00.REPLY
+*
+DEFINE QLOCAL('DLQ.AA00.REPLY') +
+         DESCR('Backout queue for reply message from SAA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+		 
+*
+** QUEUE FOR AA00.REPLY
+*
+DEFINE QLOCAL('AA00.REPLY') +
+         DESCR('Message queue for reply message from SAA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.AA00.REPLY' ) +
+         BOTHRESH(3) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR DLQ.AA00.OUTPUT
+*
+DEFINE QLOCAL('DLQ.AA00.OUTPUT') +
+         DESCR('Backout queue for message from SAA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR AA00.OUTPUT
+*
+DEFINE QLOCAL('AA00.OUTPUT') +
+         DESCR('Message queue for message from SAA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.AA00.OUTPUT' ) +
+         BOTHRESH(3) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR DLQ.FDRV.INPUT
+*
+DEFINE QLOCAL('DLQ.FDRV.INPUT') +
+         DESCR('Backout queue for message to FinDriver') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR FDRV.INPUT
+*
+DEFINE QLOCAL('FDRV.INPUT') +
+         DESCR('Message queue for message to FinDriver') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.FDRV.INPUT' ) +
+         BOTHRESH(3) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR DLQ.FDRV.OUTPUT
+*
+DEFINE QLOCAL('DLQ.FDRV.INPUT') +
+         DESCR('Backout queue for message from FinDriver') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR FDRV.OUTPUT
+*
+DEFINE QLOCAL('FDRV.OUTPUT') +
+         DESCR('Message queue for message from FinDriver') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.FDRV.OUTPUT' ) +
+         BOTHRESH(3) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR DLQ.FDRV.REPLY
+*
+DEFINE QLOCAL('DLQ.FDRV.REPLY') +
+         DESCR('Backout queue for reply message from FinDriver') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+*
+** QUEUE FOR FDRV.REPLY
+*
+DEFINE QLOCAL('FDRV.REPLY') +
+         DESCR('Message queue for reply message from FinDriver') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.FDRV.REPLY' ) +
+         BOTHRESH(3) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR DLQ.MESSAGE01.FROM.RMA
+*
+DEFINE QLOCAL('DLQ.MESSAGE01.FROM.RMA') +
+         DESCR('Backout qqueue for message from RMA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR MESSAGE01.FROM.RMA
+*
+DEFINE QLOCAL('MESSAGE01.FROM.RMA') +
+         DESCR('Message queue for message from RMA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.MESSAGE01.FROM.RMA' ) +
+         BOTHRESH(3) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR DLQ.MESSAGE01.REPLY.TO.RMA
+*
+DEFINE QLOCAL('DLQ.MESSAGE01.REPLY.TO.RMA') +
+         DESCR('Backout queue for message to reply to RMA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR MESSAGE01.REPLY.TO.RMA
+*
+DEFINE QLOCAL('MESSAGE01.REPLY.TO.RMA') +
+         DESCR('Message queue for message to reply to RMA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.MESSAGE01.REPLY.TO.RMA' ) +
+         BOTHRESH(3) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR DLQ.MESSAGE01.OUTPUT.TO.RMA
+*
+DEFINE QLOCAL('DLQ.MESSAGE01.OUTPUT.TO.RMA') +
+         DESCR('Backout queue for message to write to RMA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR MESSAGE01.OUTPUT.TO.RMA
+*
+DEFINE QLOCAL('MESSAGE01.OUTPUT.TO.RMA') +
+         DESCR('Message queue for message to write to RMA') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.MESSAGE01.OUTPUT.TO.RMA' ) +
+         BOTHRESH(3) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+
+************************************************************************
+* 
+*       Topic List 
+*       ------------------
+*       ConfigurationTopic
+*
+**********************************************************************
+*
+
+DEFINE TOPIC('ConfigurationTopic') +
+		 TOPICSTR('Configuration') +
+		 DEFPRTY(ASPARENT) +
+		 DEFPSIST( YES ) +
+		 DEFPRESP(ASYNC) +
+		 DESCR('Topic for upload Configuration') +
+		 DURSUB(YES) +
+		 MDURMDL('SYSTEM.ADMIN.COMMAND.QUEUE') +
+		 MNDURMDL('SYSTEM.ADMIN.COMMAND.QUEUE') +
+		 NPMSGDLV(ALLDUR) +
+		 PMSGDLV (ALLDUR) +
+		 PROXYSUB(FIRSTUSE) +
+		 PUB( ENABLED ) +
+		 PUBSCOPE(QMGR) +
+		 SUB( ENABLED ) +
+		 SUBSCOPE(QMGR) +
+		 TYPE(LOCAL) +
+         WILDCARD(PASSTHRU) +
+		 REPLACE                           
+
+
+***********************************************************************
+* Title: Project JMS Bridge
+* Copyright: Copyright (c) 2011-2012
+* Company: TAS Group S.p.A.
+* Warning: This computer program and its source code is protected by
+* copyright law and international treaties. Unauthorized reproduction
+* or distribution of this code or any portion of it, may result in
+* severe civil and criminal penalties, and will be prosecuted to the
+* maximum extent possible under the law
+*
+* MQ Script file for JMS Bridge
+************************************************************************
+
+************************************************************************
+*
+*       Queue List
+*       ------------------
+*       queue.fdrv.sendDispatcher
+*		DLQ.queue.fdrv.sendDispatcher
+*       queue.fdrv.receiveDispatcher
+*       DLQ.queue.fdrv.receiveDispatcher
+*       session.send
+*       DLQ.session.send
+*       session.receive
+*       DLQ.session.receive
+*       lt.command
+*       DLQ.lt.command
+*       lt.scheduler
+*       DLQ.lt.scheduler
+*       application.to.session
+*       DLQ.application.to.session
+*       session.to.application
+*       DLQ.session.to.application
+*
+***************************************************************************
+
+
+*
+** QUEUE FOR DLQ.queue.fdrv.sendDispatcher
+*
+DEFINE QLOCAL('DLQ.queue.fdrv.sendDispatcher') +
+         DESCR('DLQ.Queue queue.fdrv.sendDispatcher') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+		 
+*
+** QUEUE FOR queue.fdrv.sendDispatcher
+*
+DEFINE QLOCAL('queue.fdrv.sendDispatcher') +
+         DESCR('Queue queue.fdrv.sendDispatcher') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.queue.fdrv.sendDispatcher' ) +
+         BOTHRESH(2) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR DLQ.queue.fdrv.receiveDispatcherq
+*
+DEFINE QLOCAL('DLQ.queue.fdrv.receiveDispatcher') +
+         DESCR('Queue DLQ.queue.fdrv.receiveDispatcher') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR queue.fdrv.receiveDispatcher
+*
+DEFINE QLOCAL('queue.fdrv.receiveDispatcher') +
+         DESCR('Queue queue.fdrv.receiveDispatcher') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.queue.fdrv.receiveDispatcher' ) +
+         BOTHRESH(2) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR DLQ.session.send
+*
+DEFINE QLOCAL('DLQ.session.send') +
+         DESCR('Queue DLQ.session.sendq') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR session.send
+*
+DEFINE QLOCAL('session.send') +
+         DESCR('Queue session.send') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.session.send' ) +
+         BOTHRESH(2) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR DLQ.session.receive
+*
+DEFINE QLOCAL('DLQ.session.receive') +
+         DESCR('Queue DLQ.session.receive') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR session.receive
+*
+DEFINE QLOCAL('session.receive') +
+         DESCR('Queue session.receive') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.qsession.receiveq' ) +
+         BOTHRESH(2) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR DLQ.lt.command
+*
+DEFINE QLOCAL('DLQ.lt.command') +
+         DESCR('Queue DLQ.lt.command') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR lt.command
+*
+DEFINE QLOCAL('lt.command') +
+         DESCR('Queue lt.command') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.lt.command' ) +
+         BOTHRESH(2) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR DLQ.lt.scheduler
+*
+DEFINE QLOCAL('DLQ.lt.scheduler') +
+         DESCR('Queue DLQ.lt.scheduler') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+
+*
+** QUEUE FOR lt.scheduler
+*
+DEFINE QLOCAL('lt.scheduler') +
+         DESCR('Queue lt.scheduler') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.lt.scheduler' ) +
+         BOTHRESH(2) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR DLQ.application.to.session
+*
+DEFINE QLOCAL('DLQ.application.to.session') +
+         DESCR('Queue DLQ.application.to.session') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+*
+*
+** QUEUE FOR application.to.session
+*
+DEFINE QLOCAL('application.to.session') +
+         DESCR('Queue application.to.session') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.application.to.session' ) +
+         BOTHRESH(2) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR DLQ.session.to.application
+*
+DEFINE QLOCAL('DLQ.session.to.application') +
+         DESCR('Queue DLQ.session.to.application') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+
+*
+** QUEUE FOR session.to.application
+*
+DEFINE QLOCAL('session.to.application') +
+         DESCR('Queue session.to.application') +
+         REPLACE +
+         PUT( ENABLED ) +
+         DEFPSIST( YES ) +
+         GET( ENABLED ) +
+         SHARE +
+         DEFSOPT( SHARED ) +
+         MSGDLVSQ( FIFO ) +
+         BOQNAME('DLQ.session.to.application' ) +
+         BOTHRESH(2) + 
+         MAXMSGL( 104857600 ) + 
+         USAGE( NORMAL )
+		 

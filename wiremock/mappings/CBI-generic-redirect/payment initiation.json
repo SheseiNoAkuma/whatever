@@ -23,7 +23,7 @@
         }
       }
     },
-	"transformers": ["response-template"],
+    "transformers": ["response-template"],
     "headers" : {
       "Content-Type" : "application/json",
       "Date" : "Sat, 16 Nov 2019 09:49:34 GMT"
