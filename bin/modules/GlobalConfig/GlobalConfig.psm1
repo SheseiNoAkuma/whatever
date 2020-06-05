@@ -11,7 +11,6 @@ Function Get-Wiremock {
     Add-Member -InputObject $system -MemberType NoteProperty -Name source -Value "${psd2Path}/psd2-tpp-simulator/src/main/resources/wiremock/mappings"
     Add-Member -InputObject $system -MemberType NoteProperty -Name path -Value "${basePath}/wiremock"
     Add-Member -InputObject $system -MemberType NoteProperty -Name target -Value "${basePath}/wiremock/mappings"
-    Add-Member -InputObject $system -MemberType NoteProperty -Name container -Value "wiremock"
     return $system
 }
 
@@ -21,7 +20,7 @@ Function Get-OraclePsd2 {
     Add-Member -InputObject $system -MemberType NoteProperty -Name source -Value "${psd2path}\psd2-tpp-config\target\*.zip"
     Add-Member -InputObject $system -MemberType NoteProperty -Name path -Value "${basePath}/oraclePsd2"
     Add-Member -InputObject $system -MemberType NoteProperty -Name target -Value "${basePath}/oraclePsd2/target"
-    Add-Member -InputObject $system -MemberType NoteProperty -Name container -Value "oracle"
+    Add-Member -InputObject $system -MemberType NoteProperty -Name container -Value "psd2"
     return $system
 }
 

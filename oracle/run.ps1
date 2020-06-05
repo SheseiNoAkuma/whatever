@@ -1,0 +1,1 @@
+docker run -d -it -p 1521:1521 -e "DB_SID=XE" --name oracle store/oracle/database-enterprise:12.2.0.1-slim

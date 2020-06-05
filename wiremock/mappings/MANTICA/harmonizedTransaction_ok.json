@@ -1,0 +1,44 @@
+{
+  "name" : "harmonized remittance request, returned in 3 languages: it_IT, en_US, fr_FR",
+  "request" : {
+    "urlPattern" : "/harmonizeTransaction",
+    "method" : "POST",
+    "headers" : {
+      "explode" : {
+        "absent" : true
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody": {
+      "transactionId": "{{jsonPath request.body '$.transactionId'}}",
+      "tppId": "{{jsonPath request.body '$.tppId'}}",
+      "bankId": "{{jsonPath request.body '$.bankId'}}",
+      "remittanceInformationUnstructured": "{{jsonPath request.body '$.remittanceInformationUnstructured'}}",
+      "remittanceInformationCode": "{{jsonPath request.body '$.remittanceInformationCode'}}",
+      "remittanceHarmonized": {
+        "locales": [
+          {
+            "code": "it_IT",
+            "value": "Descrizione della categoria bancaria 100 per la banca 101"
+          },
+          {
+            "code": "en_US",
+            "value": "Bank Category 100 Description for Bank 101"
+          },
+          {
+            "code": "fr_FR",
+            "value": "Description de la catégorie de banque 100 pour la banque 101"
+          }
+        ]
+      }
+    },
+    "transformers": ["response-template"],
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date": "{{now format='EEE, d MMM yyyy HH:mm:ss z'}}"
+    }
+  },
+  "persistent" : true
+}

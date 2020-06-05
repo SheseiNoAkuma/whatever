@@ -1,0 +1,71 @@
+{
+  "name" : "harmonized remittance request, returned in 3 languages: it_IT, en_US, fr_FR",
+  "request" : {
+    "urlPattern" : "/harmonizeTransactions",
+    "method" : "POST",
+    "headers" : {
+      "explode" : {
+        "absent" : true
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody": {
+      "transactions": [
+        {
+          "transactionId": "{{jsonPath request.body '$.[0].transactionId'}}",
+          "tppId": "{{jsonPath request.body '$.[0].tppId'}}",
+          "bankId": "{{jsonPath request.body '$.[0].bankId'}}",
+          "remittanceInformationUnstructured": "{{jsonPath request.body '$.[0].remittanceInformationUnstructured'}}",
+          "remittanceInformationCode": "{{jsonPath request.body '$.[0].remittanceInformationCode'}}",
+          "remittanceHarmonized": {
+            "locales": [
+              {
+                "code": "it_IT",
+                "value": "Descrizione della categoria bancaria 100 per la banca 101"
+              },
+              {
+                "code": "en_US",
+                "value": "Bank Category 100 Description for Bank 101"
+              },
+              {
+                "code": "fr_FR",
+                "value": "Description de la catégorie de banque 100 pour la banque 101"
+              }
+            ]
+          }
+        },
+        {
+          "transactionId": "{{jsonPath request.body '$.[1].transactionId'}}",
+          "tppId": "{{jsonPath request.body '$.[1].tppId'}}",
+          "bankId": "{{jsonPath request.body '$.[1].bankId'}}",
+          "remittanceInformationUnstructured": "{{jsonPath request.body '$.[1].remittanceInformationUnstructured'}}",
+          "remittanceInformationCode": "{{jsonPath request.body '$.[1].remittanceInformationCode'}}",
+          "remittanceHarmonized": {
+            "locales": [
+              {
+                "code": "it_IT",
+                "value": "Descrizione della categoria bancaria 100 per la banca 101"
+              },
+              {
+                "code": "en_US",
+                "value": "Bank Category 100 Description for Bank 101"
+              },
+              {
+                "code": "fr_FR",
+                "value": "Description de la catégorie de banque 100 pour la banque 101"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "transformers": ["response-template"],
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date": "{{now format='EEE, d MMM yyyy HH:mm:ss z'}}"
+    }
+  },
+  "persistent" : true
+}

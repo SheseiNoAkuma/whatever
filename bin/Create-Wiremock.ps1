@@ -15,11 +15,7 @@ if ($full){
     Copy-Item $config.source $config.target -Recurse
 }
 
-docker build --tag wiremock:custom .
-
-Remove-DockerContainer -name $config.container
-docker run -p 9999:9999 -d --name $config.container wiremock:custom
-
-Write-Host  "container $($config.container) is ready to go on port 9999" -ForegroundColor Green
+docker-compose up -d
+Write-Host  "container wiremock is ready to go on port 9999" -ForegroundColor Green
 
 Set-Location $initialpath

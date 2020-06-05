@@ -1,0 +1,38 @@
+{
+  "name" : "richiesta di creazione di un pagamento che torna SCA APPROACH=REDIRECT siccome nella risposta non è presente SCA APPROACH ma è presente un updatePsuAuthenticationRedirect nella mappa _links",
+  "request" : {
+    "urlPattern" : "/cbi/pis/2.3.2/payments/(sepa-credit-transfers|instant-sepa-credit-transfers|cross-border-credit-transfers|target-2-payments)",
+    "method" : "POST",
+    "headers": {
+    	"sim1-number": {
+    		"equalTo": "FROM_UPDATE_PSU_AUTHENTICATION_REDIRECT"
+    	}
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody": {
+      "transactionStatus" : "RCVD",
+      "paymentId" : "8fd23013-388e-490d-a5cd-b1cf8193fdb0",
+      "transactionFees" : {
+        "currency" : "EUR",
+        "amount" : "00.50"
+      },
+      "transactionFeeIndicator" : "true",
+      "_links" : {
+        "updatePsuAuthenticationRedirect" : {
+          "href" : "https://scasandbox.bancobpm.it/sca/login.html?idRichiestaSCA=20200505145459626&tipoRisorsa=P&codiceASPSP=05034&scaApproach=fromUpdatePsuAuthenticationRedirect"
+        },
+        "self" : {
+          "href" : "/payments/sepa-credit-transfers/8fd23013-388e-490d-a5cd-b1cf8193fdb0"
+        }
+      }
+    },
+    "transformers": ["response-template"],
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "Sat, 16 Nov 2019 09:49:50 GMT"
+    }
+  },
+  "persistent" : true
+}

@@ -5,3 +5,5 @@ $global:common="D:\git\common-libraries"
 $global:swf="D:\git\swf"
 $global:esmig="D:\git\esmig"
 $global:fin="D:\Progetti\fin\01-Source\01-Source"
+
+Set-Alias -Name compose -Value docker-compose

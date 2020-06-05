@@ -1,0 +1,20 @@
+version: '3'
+services:
+  mq:
+    build: ibmmq/
+    image: ibmcom/mq:custom
+    ports:
+      - "1414:1414"
+      - "9443:9443"
+    environment:
+      - "LICENSE=accept"
+      - "MQ_DEV=true"
+      - "MQ_QMGR_NAME=MQ"
+#  database:
+#    image: oracle/database:12.1.0.2-ee
+#    volumes:
+#      - /home/oracle/oradata:/opt/oracle/oradata # persistent oracle database data.
+#    ports:
+#      - 1521:1521
+#      - 8080:8080
+#      - 5500:5500

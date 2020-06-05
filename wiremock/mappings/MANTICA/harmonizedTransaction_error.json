@@ -1,0 +1,28 @@
+{
+  "name" : "harmonized remittance request ERROR",
+  "request" : {
+    "urlPattern" : "/harmonizeTransaction",
+    "method" : "POST",
+    "headers" : {
+      "explode" : {
+        "equalTo" : "true"
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody": {
+      "transactionId": "{{jsonPath request.body '$.transactionId'}}",
+      "error": {
+        "code": "1234",
+        "message": "One terrible error occurred!"
+      }
+    },
+    "transformers": ["response-template"],
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date": "{{now format='EEE, d MMM yyyy HH:mm:ss z'}}"
+    }
+  },
+  "persistent" : true
+}
