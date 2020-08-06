@@ -5,17 +5,12 @@
     "method" : "GET",
     "headers" : {
       "sim-id" : {
-        "absent" : true
+        "equalTo" : "408"
       }
     }
   },
   "response" : {
-    "status" : 200,
-    "jsonBody": {
-      "transactionStatus" : "ACCP",
-      "scaStatus" : "VERIFIED",
-      "psuAuthenticationStatus" : "AUTHENTICATION_REQUIRED"
-    },
+    "status" : 408,
     "transformers": ["response-template"],
     "headers" : {
       "Content-Type" : "application/json",

@@ -2,7 +2,12 @@
   "name" : "richiesta di creazione di un pagamento",
   "request" : {
     "urlPattern" : "/cbi/pis/2.3.2/payments/(sepa-credit-transfers|instant-sepa-credit-transfers|cross-border-credit-transfers|target-2-payments)",
-    "method" : "POST"
+    "method" : "POST",
+    "headers" : {
+      "sim-id" : {
+        "absent" : true
+      }
+    }
   },
   "response" : {
     "status" : 200,

@@ -1,15 +1,14 @@
 version: '3'
 services:
   mq:
-    build: ibmmq/
-    image: ibmcom/mq:custom
+    image: dkr-registry.tasgroup.it:5000/supportwas/mqseries
+    volumes:
+      - ./ibmmq:/etc/mqm/
     ports:
       - "1414:1414"
-      - "9443:9443"
     environment:
-      - "LICENSE=accept"
-      - "MQ_DEV=true"
-      - "MQ_QMGR_NAME=MQ"
+      - "TZ=Europe/Rome"
+      - "MAXHEAP=2048"
 #  database:
 #    image: oracle/database:12.1.0.2-ee
 #    volumes:

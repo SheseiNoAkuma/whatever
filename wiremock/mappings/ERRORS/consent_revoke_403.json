@@ -1,0 +1,30 @@
+{
+	"name": "consent revoke on error 403",
+	"priority": 0,
+	"request": {
+		"urlPattern": "(.+)",
+		"method": "DELETE",
+		"headers": {
+			"x-request-id": {
+				"equalTo" : "ERROR_403"
+			}
+		}
+	},
+	"response": {
+		"status": 403,
+		"headers": {
+			"Date": "Sat, 16 Nov 2019 10:43:59 GMT"
+		},
+		"jsonBody": {
+			"errorManagement" : {
+				"errorCode" : "PSD2_01.188.A0024",
+				"errorDescription" : "Resource expired"
+			},
+			"tppMessages" : [ {
+				"category" : "ERROR",
+				"code" : "RESOURCE_EXPIRED",
+				"text" : "The addressed resource is associated with the TPP but has expired, not addressable anymore."
+			} ]
+		}
+	}
+}

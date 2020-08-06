@@ -4,7 +4,7 @@
 #$env:PSModulePath
 
 $basePath='D:\github\whatever'
-$psd2Path='D:\git\psd2'
+$psd2Path='D:\Java\git\psd2'
 
 Function Get-Wiremock {
     $system = New-Object -TypeName PSObject

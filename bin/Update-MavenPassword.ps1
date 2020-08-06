@@ -10,8 +10,8 @@ Param(
     [Parameter(Mandatory=$true,ValueFromPipelineByPropertyName,HelpMessage='the password to encrypt')][securestring]$password
 ) 
 
-$encriped = [string](mvn --encrypt-password ([System.Net.NetworkCredential]::new("", $password).Password))
-Write-Host "encripted password value = $encriped"
+$encrypted = [string](mvn --encrypt-password ([System.Net.NetworkCredential]::new("", $password).Password))
+Write-Host "encripted password value = $encrypted"
 
 $settings="$env:USERPROFILE\.m2\settings.xml";
 
@@ -21,7 +21,7 @@ $xml = [xml](Get-Content $settings)
 
 Write-Host "old password was " $xml.settings.servers.server.password[0] -ForegroundColor Magenta 
 foreach ($element in $xml.settings.servers.server) {
-    $element.password = $encriped
+    $element.password = $encrypted
 }
 Write-Host "new password is " $xml.settings.servers.server.password[0] -ForegroundColor Green
 

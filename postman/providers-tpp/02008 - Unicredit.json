@@ -1,0 +1,29 @@
+{
+	"id": "c6fa0d90-97fc-4297-82e5-5af1258516c2",
+	"values": [
+		{
+			"key": "product",
+			"value": "ALL",
+			"enabled": true
+		},
+		{
+			"key": "provider",
+			"value": "UNI-02008",
+			"enabled": true
+		},
+		{
+			"key": "tpp",
+			"value": "03069",
+			"enabled": true
+		},
+		{
+			"key": "paymentProduct",
+			"value": "sepa-credit-transfer",
+			"enabled": true
+		}
+	],
+	"name": "PSD2 Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2020-08-03T09:32:48.087Z",
+	"_postman_exported_using": "Postman/7.29.1"
+}

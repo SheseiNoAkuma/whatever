@@ -1,0 +1,21 @@
+{
+  "name" : "richiesta di creazione di un pagamento",
+  "request" : {
+    "urlPattern" : "/cbi/pis/2.3.2/payments/(sepa-credit-transfers|instant-sepa-credit-transfers|cross-border-credit-transfers|target-2-payments)",
+    "method" : "POST",
+    "headers" : {
+      "sim-id" : {
+        "equalTo" : "401"
+      }
+    }
+  },
+  "response" : {
+    "status" : 401,
+    "transformers": ["response-template"],
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "Sat, 16 Nov 2019 09:49:34 GMT"
+    }
+  },
+  "persistent" : true
+}

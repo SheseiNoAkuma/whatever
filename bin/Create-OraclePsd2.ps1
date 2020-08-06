@@ -7,7 +7,7 @@ $initialpath=Get-Location
 $oracle = Get-OraclePsd2 | Select-Object
 
 #tempo di attesa per lo start di oracle all'interno del container
-$sleep=25
+$sleep=40
 
 Set-Location $oracle.path
 

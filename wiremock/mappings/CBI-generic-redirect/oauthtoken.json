@@ -1,0 +1,23 @@
+{
+	"name": "richiesta del token oauth",
+	"request": {
+		"url": "/cbi/auth/oauth/v2/token",
+		"method": "POST"
+	},
+	"response": {
+		"status": 200,
+		"jsonBody": {
+			"access_token": "f9db5580-a5c4-4163-9ba4-bc4ac8ccf3e8",
+			"token_type": "Bearer",
+			"expires_in": 3600,
+			"scope": "oob"
+		},
+		"transformers": [
+			"response-template"
+		],
+		"headers": {
+			"Content-Type": "application/json"
+		}
+	},
+	"persistent": true
+}
