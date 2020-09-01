@@ -1,6 +1,8 @@
-bin/kubectl.exe
-bin/rancher.exe
+bin/*.exe
 node_modules
 wiremock/wiremock-standalone-2.25.1.jar
 
 target/
+
+.idea
+*.iml

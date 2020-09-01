@@ -1,0 +1,8 @@
+version: '3'
+services:
+  oracle-psd2:
+    build:
+      context: .
+      dockerfile: oracle.Dockerfile
+    ports:
+      - "1521:1521"
