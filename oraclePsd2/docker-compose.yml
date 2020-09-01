@@ -10,12 +10,6 @@ services:
     build:
       context: .
       dockerfile: liquibase.Dockerfile
-    environment:
-      - classpath=/liquibase/lib/ojdbc.jar
-      - url=jdbc:oracle:thin:@oracle-psd2:1521:XE
-      - changeLogFile=/liquibase/changelog/db.changelog-DDL-master.xml
-      - username=OWNER
-      - password=OWNER
-      - generateChangeLog
+    command: --url=jdbc:oracle:thin:@oracle-psd2:1521:XE --classpath=/liquibase/lib/ojdbc.jar --changeLogFile=eu/tasgroup/psd2/db/changelog/db.changelog-DDL-master.xml --username=OWNER --password=OWNER --contexts=owner update -Ddb.owner=OWNER -Ddb.user=OWNER -DtablesTablespaceName=TS_DATA -DindexesTablespaceName=TS_INDEX
     depends_on:
       - oracle-psd2
