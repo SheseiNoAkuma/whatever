@@ -6,3 +6,16 @@ services:
       dockerfile: oracle.Dockerfile
     ports:
       - "1521:1521"
+  liquibase:
+    build:
+      context: .
+      dockerfile: liquibase.Dockerfile
+    environment:
+      - classpath=/liquibase/lib/ojdbc.jar
+      - url=jdbc:oracle:thin:@oracle-psd2:1521:XE
+      - changeLogFile=/liquibase/changelog/db.changelog-DDL-master.xml
+      - username=OWNER
+      - password=OWNER
+      - generateChangeLog
+    depends_on:
+      - oracle-psd2
