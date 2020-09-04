@@ -10,7 +10,16 @@ services:
     build:
       context: .
       dockerfile: liquibase.Dockerfile
-    entrypoint: ["/bin/wait-for-it.sh","oracle-psd2:8080","--timeout=0","--strict", "--", "/liquibase/liquibase" ]
-    command: --url=jdbc:oracle:thin:@oracle-psd2:1521:XE --classpath=/liquibase/lib/ojdbc.jar --changeLogFile=eu/tasgroup/psd2/db/changelog/db.changelog-DDL-master.xml --username=OWNER --password=OWNER --contexts=owner update -Ddb.owner=OWNER -Ddb.user=OWNER -DtablesTablespaceName=TS_DATA -DindexesTablespaceName=TS_INDEX
+    environment:
+      - CONNECTION_STRING=jdbc:oracle:thin:@oracle-psd2:1521:XE
+      - CHANGE_LOG_DDL=eu/tasgroup/psd2/db/changelog/db.changelog-DDL-master.xml
+      - CHANGE_LOG_DML=eu/tasgroup/psd2/db/changelog/db.changelog-DML-master.xml
+      - USERNAME=OWNER
+      - PASSWORD=OWNER
+      - DB_OWNER=OWNER
+      - DB_USER=OWNER
+      - DATA_TABLE_SPACE=TS_DATA
+      - INDEX_TABLE_SPACE=TS_INDEX
+    entrypoint: ["/bin/wait-for-it.sh","oracle-psd2:8080","--timeout=0","--strict", "--", "/liquibase/liquibase-entrypoint.sh" ]
     depends_on:
       - oracle-psd2

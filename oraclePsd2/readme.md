@@ -1,17 +1,9 @@
-### ~~How to build image~~
+### How to shout down the database
 
-~~docker build -t microbo/oracle-xe:11 -f oracle.Dockerfile .~~
+From the current folder run command **docker-compose rm --force**
 
-### ~~How start oracle ~~
-~~docker run -d --name "oraclePsd2" -p 1521:1521 microbo/oracle-xe:11~~
+### How to recreate database
 
-~~default user is OWNER/OWNER~~
+Create a new folder in the current folder named **target**, take **psd2-tpp-config-ci-develop-SNAPSHOT-DB.zip** and unzip it there.
 
-### ~~Build liquibase client~~
-
-~~docker build -t microbo/liquibase -f liquibase.Dockerfile .~~
-
-
-### Run oracle and apply changelog
-
-docker-compose.yml up -d --build
+From the current folder run command **docker-compose up --build -d**
