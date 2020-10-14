@@ -20,6 +20,6 @@ services:
       - DB_USER=OWNER
       - DATA_TABLE_SPACE=TS_DATA
       - INDEX_TABLE_SPACE=TS_INDEX
-    entrypoint: ["/bin/wait-for-it.sh","oracle-psd2:8080","--timeout=0","--strict", "--", "/liquibase/liquibase-entrypoint.sh" ]
+    entrypoint: ["/liquibase/wait-for-it.sh","oracle-psd2:8080","--timeout=0","--strict", "--", "/liquibase/liquibase-entrypoint.sh" ]
     depends_on:
       - oracle-psd2
