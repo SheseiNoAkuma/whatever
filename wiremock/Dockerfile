@@ -5,6 +5,6 @@ FROM openjdk:8-jre-alpine
 # copy mappings into image
 COPY mappings /mappings
 # copy service into image
-COPY wiremock-standalone-2.25.1.jar /wiremock-standalone-2.25.1.jar 
+COPY wiremock-standalone-2.27.2.jar /wiremock-standalone.jar
 # run application with this command line 
-CMD /usr/bin/java -jar ./wiremock-standalone-2.25.1.jar -v --local-response-templating -port 9999
+CMD /usr/bin/java -jar ./wiremock-standalone.jar -v --local-response-templating -port 9999

@@ -1,1 +1,0 @@
-GRANT INSERT,UPDATE,DELETE,SELECT ON ${db.owner}.YWTWCPAE TO ${db.user};

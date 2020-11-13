@@ -1,11 +1,14 @@
 version: '3'
 services:
   oracle-psd2:
-    build:
-      context: .
-      dockerfile: oracle.Dockerfile
+    image: quay.io/maksymbilenko/oracle-xe-11g
+    environment:
+      - ORACLE_DISABLE_ASYNCH_IO=true
+    volumes:
+      - D:\tmp\oracle\init:/docker-entrypoint-initdb.d/
+#      - D:\tmp\oracle\psd2\oradata:/u01/app/oracle # persistent oracle database data.
     ports:
-      - "1521:1521"
+      - 1521:1521
   liquibase:
     build:
       context: .
@@ -14,10 +17,10 @@ services:
       - CONNECTION_STRING=jdbc:oracle:thin:@oracle-psd2:1521:XE
       - CHANGE_LOG_DDL=eu/tasgroup/psd2/db/changelog/db.changelog-DDL-master.xml
       - CHANGE_LOG_DML=eu/tasgroup/psd2/db/changelog/db.changelog-DML-master.xml
-      - USERNAME=OWNER
-      - PASSWORD=OWNER
-      - DB_OWNER=OWNER
-      - DB_USER=OWNER
+      - USERNAME=DB_OWNER
+      - PASSWORD=DB_OWNER
+      - DB_OWNER=DB_OWNER
+      - DB_USER=DB_USER
       - DATA_TABLE_SPACE=TS_DATA
       - INDEX_TABLE_SPACE=TS_INDEX
     entrypoint: ["/liquibase/wait-for-it.sh","oracle-psd2:8080","--timeout=0","--strict", "--", "/liquibase/liquibase-entrypoint.sh" ]
