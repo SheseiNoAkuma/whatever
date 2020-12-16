@@ -1,0 +1,31 @@
+{
+  "name": "Refresh JWT tokens",
+  "priority": 1,
+  "request": {
+    "url": "/profile",
+    "method": "GET",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2V1LnRhc2dyb3VwLnNpbXVsYXRvci8iLCJhdWQiOiJodHRwczovL2FwaS50YXNncm91cC5ldS9hdXRoL3YxLyIsInN1YiI6ImFwcHJvdmVyIiwiaWF0IjoxNDU4Nzg1Nzk2LCJleHAiOjE0NTg4NzIxOTZ9.wEy0gTkj67VGMlXj87ycRp17gswTZqYseDcKLjjgc1Y"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "firstName": "Rocky",
+      "lastName": "Balboa",
+      "role": "APPROVER,other_role",
+      "email": "roky.balboa@ti-spiezzo.in.due",
+      "username": "rocky"
+    },
+    "transformers": [
+      "response-template"
+    ],
+    "headers": {
+      "Content-Type": "application/json",
+      "Date": "{{now format='EEE, dd MMM yyyy HH:mm:ss z'}}"
+    }
+  },
+  "persistent": true
+}

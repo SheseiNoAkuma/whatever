@@ -1,7 +1,7 @@
 {
   "name": "accounts_account7654321_transactions",
   "request": {
-    "urlPattern": "/cbi/ais/2.3.2/accounts/account7654321/transactions(.*)",
+    "urlPattern": "/cbi/ais/2.4.0/accounts/account7654321/transactions(.*)",
     "method": "GET",
     "headers": {
       "aspsp-code": {

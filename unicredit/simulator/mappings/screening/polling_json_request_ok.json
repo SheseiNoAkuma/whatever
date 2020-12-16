@@ -1,0 +1,27 @@
+{
+  "name": "Transaction Polling",
+  "request": {
+    "url": "/v1/polling/transaction/JSON",
+    "method": "POST"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "matchStatus": "Passed",
+      "investigationId": "SystemID?",
+      "sender": "applicationId",
+      "statusComment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "transactionId": "{{jsonPath request.body '$.transactionId'}}",
+      "decisionName": "Nathaniel Gerlach"
+    }
+    ,
+    "transformers": [
+      "response-template"
+    ],
+    "headers": {
+      "Content-Type": "application/json",
+      "Date": "{{now format='EEE, dd MMM yyyy HH:mm:ss z'}}"
+    }
+  },
+  "persistent": true
+}

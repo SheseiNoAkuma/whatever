@@ -1,0 +1,16 @@
+{
+  "name" : "Unauthorized stub",
+  "priority": 99,
+  "request" : {
+    "urlPattern" : "/(profile|auths).*"
+  },
+  "response" : {
+    "status" : 401,
+    "transformers": ["response-template"],
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "{{now format='EEE, dd MMM yyyy HH:mm:ss z'}}"
+    }
+  },
+  "persistent" : true
+}

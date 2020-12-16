@@ -1,0 +1,31 @@
+{
+  "name" : "Transaction Screening - Returned NO_GO for PACS 009 messages",
+  "priority": 1,
+  "request" : {
+    "url" : "/v1/screening/transaction/ENCODED",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : {
+        "expression": "$..messageType",
+        "contains": "pacs.009"
+      }
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody": {
+      "transactionId": "{{jsonPath request.body '$.transactionId'}}",
+      "sender": "{{jsonPath request.body '$.sender'}}",
+      "matchStatus": "Failed",
+      "decisionName": "DECISION_NAME",
+      "statusComment": "STATUS_COMMENT",
+      "investigationId" : "{{randomValue type='UUID'}}"
+    },
+    "transformers": ["response-template"],
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "{{now format='EEE, dd MMM yyyy HH:mm:ss z'}}"
+    }
+  },
+  "persistent" : true
+}

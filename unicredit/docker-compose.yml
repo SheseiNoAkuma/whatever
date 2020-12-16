@@ -28,6 +28,12 @@ services:
     ports:
       - 61616:61616
       - 8161:8161
+  simulator:
+    build:
+      context: ./simulator
+      dockerfile: Dockerfile
+    ports:
+      - 9999:9999
   jboss:
     build:
       context: ./target

@@ -1,0 +1,51 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/chicken-charlie/people"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": [
+      {
+        "name": "Giorgio",
+        "icon": "assets/images/pill.png",
+        "points": 4,
+        "team": "Charlie",
+        "teamIcon": "assets/images/chicken.png"
+      },
+      {
+        "name": "Marco",
+        "icon": "assets/images/cucumber.png",
+        "points": 3,
+        "team": "Charlie",
+        "teamIcon": "assets/images/chicken.png"
+      },
+      {
+        "name": "CristianBe",
+        "icon": "assets/images/pill.png",
+        "points": 4,
+        "team": "Charlie",
+        "teamIcon": "assets/images/chicken.png"
+      },
+      {
+        "name": "CristianBu",
+        "icon": "assets/images/trophy.png",
+        "points": 5,
+        "team": "Charlie",
+        "teamIcon": "assets/images/chicken.png"
+      },
+      {
+        "name": "Claudio",
+        "icon": "assets/images/cucumber.png",
+        "points": 3,
+        "team": "Charlie",
+        "teamIcon": "assets/images/chicken.png"
+      }
+    ],
+    "headers": {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*"
+    }
+  }
+}
+

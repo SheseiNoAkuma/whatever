@@ -6,7 +6,7 @@ services:
       - ORACLE_DISABLE_ASYNCH_IO=true
     volumes:
       - D:\tmp\oracle\init:/docker-entrypoint-initdb.d/
-#      - D:\tmp\oracle\psd2\oradata:/u01/app/oracle # persistent oracle database data.
+      - D:\tmp\oracle\psd2\oradata:/u01/app/oracle # persistent oracle database data.
     ports:
       - 1521:1521
   liquibase:

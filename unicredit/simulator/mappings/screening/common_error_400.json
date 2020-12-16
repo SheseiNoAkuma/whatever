@@ -1,0 +1,29 @@
+{
+  "name": "Transaction Screening Bad request",
+  "priority": 1,
+  "request": {
+    "urlPattern" : "/v1/(screening|polling)/transaction/(JSON|ENCODED)",
+    "method": "POST",
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : {
+        "expression": "$.sender",
+        "contains": "SCREERR0"
+      }
+    } ]
+  },
+  "response": {
+    "status": 400,
+    "jsonBody": {
+      "ErrorCode" : "doruni18ttjgo6tm2tzpa7cp3hi48y5sffoord5tlnio7r82i49dlbbl6urmf58l78",
+      "ErrorMessage" : "Quisquam pariatur exercitationem eveniet nemo rerum eveniet. Rem quia dignissimos est deserunt dolorem. Aut dolorem magnam repellat officia. Fuga aliquid dignissimos natus et alias modi. Accusamus acc"
+    },
+    "transformers": [
+      "response-template"
+    ],
+    "headers": {
+      "Content-Type": "application/json",
+      "Date": "{{now format='EEE, dd MMM yyyy HH:mm:ss z'}}"
+    }
+  },
+  "persistent": true
+}

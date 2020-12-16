@@ -1,0 +1,28 @@
+{
+  "name" : "Generate JWT tokens",
+  "priority": 1,
+  "request" : {
+    "url" : "/auths/token",
+    "method" : "POST",
+    "bodyPatterns" : [
+      {"matchesJsonPath" : "$[?(@.username == 'approver')]"},
+      {"matchesJsonPath" : "$[?(@.password == 'approver')]"},
+      {"matchesJsonPath" : "$.grantType"}
+    ]
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody": {
+      "expiresIn" : 2629800,
+      "accessToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2V1LnRhc2dyb3VwLnNpbXVsYXRvci8iLCJhdWQiOiJodHRwczovL2FwaS50YXNncm91cC5ldS9hdXRoL3YxLyIsInN1YiI6ImFwcHJvdmVyIiwiaWF0IjoxNDU4Nzg1Nzk2LCJleHAiOjE0NTg4NzIxOTZ9.wEy0gTkj67VGMlXj87ycRp17gswTZqYseDcKLjjgc1Y",
+      "tokenType" : "Bearer",
+      "refreshToken" : "Srq2NjM5NzA2OWJjuE7c"
+    },
+    "transformers": ["response-template"],
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "{{now format='EEE, dd MMM yyyy HH:mm:ss z'}}"
+    }
+  },
+  "persistent" : true
+}

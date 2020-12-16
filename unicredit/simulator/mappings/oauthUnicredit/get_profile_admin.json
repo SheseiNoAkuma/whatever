@@ -1,0 +1,31 @@
+{
+  "name": "Refresh JWT tokens",
+  "priority": 1,
+  "request": {
+    "url": "/profile",
+    "method": "GET",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2V1LnRhc2dyb3VwLnNpbXVsYXRvci8iLCJhdWQiOiJodHRwczovL2FwaS50YXNncm91cC5ldS9hdXRoL3YxLyIsInN1YiI6InVzcl8xMjMiLCJpYXQiOjE0NTg3ODU3OTYsImV4cCI6MTQ1ODg3MjE5Nn0.cBYhCNLwP3SuN6vhZ_AKyMydYU3-KXLfcOT8CEf1SmA"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "firstName": "John",
+      "lastName": "Rambo",
+      "role": "ADMINISTRATOR,other_role",
+      "email": "john.rambo@rischiali.it",
+      "username": "rambo"
+    },
+    "transformers": [
+      "response-template"
+    ],
+    "headers": {
+      "Content-Type": "application/json",
+      "Date": "{{now format='EEE, dd MMM yyyy HH:mm:ss z'}}"
+    }
+  },
+  "persistent": true
+}
