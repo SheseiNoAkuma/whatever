@@ -1,0 +1,39 @@
+{
+  "name": "richiesta di creazione di un consenso globale",
+  "request": {
+    "url": "/fab/v1/consents",
+    "method": "POST",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?($.access.allPsd2=='allAccounts')]"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+	  "consentStatus" : "valid",
+	  "consentId" : "{{request.headers.X-Request-ID}}",
+	  "_links" : {
+	    "scaRedirect" : {
+	      "href" : "https://www.google.com?q=OK"
+	    },
+	    "self" : {
+	      "href" : "/v1/consents/{{request.headers.X-Request-ID}}"
+	    },
+	    "status" : {
+	      "href" : "/v1/consents/{{request.headers.X-Request-ID}}/status"
+	    }
+	  }
+	},
+    "transformers": [
+      "response-template"
+    ],
+    "headers": {
+      "Content-Type": "application/json",
+      "Date": "{{now format='EEE, d MMM yyyy HH:mm:ss Z'}}",
+      "ASPSP-SCA-Approach": "REDIRECT"
+    }
+  },
+  "persistent": true
+}

@@ -1,0 +1,39 @@
+{
+	"name": "UNICREDIT richiesta di un consenso onetime",
+	"request": {
+		"url": "/unicredit/hydrogen/v1/consents/",
+		"method": "POST",
+		"headers": {
+			
+		},
+		"bodyPatterns": [
+			{
+				"matchesJsonPath": "$[?($.recurringIndicator==false)]"
+			}
+		]
+	},
+	"response": {
+		"status": 200,
+		"jsonBody": {
+			"consentStatus": "received",
+			"consentId": "onetime-{{randomValue type='UUID'}}",
+			"_links": {
+				"scaRedirect": {
+					"href": "https://authorization.api-sandbox.unicredit.eu:8403/sandbox/psd2/bg/hydrogen/loginPSD2_BG.html?consentId=39c0f160-732b-4dc5-8531-b3bf2f9b36c8&correlationId=XDPDP0&authorisationId=39c0f160-732b-4dc5-8531-b3bf2f9b36c8&country=IT"
+				},
+				"scaStatus": {
+					"href": "https://api-sandbox.unicredit.it/hydrogen/v1/consents/39c0f160-732b-4dc5-8531-b3bf2f9b36c8/authorisations/39c0f160-732b-4dc5-8531-b3bf2f9b36c8"
+				}
+			}
+		},
+		"transformers": [
+			"response-template"
+		],
+		"headers": {
+			"ASPSP-SCA-Approach": "REDIRECT",
+			"Content-Type": "application/json",
+			"Date": "Tue, 14 Jan 2020 10:43:41 GMT"
+		}
+	},
+	"persistent": true
+}

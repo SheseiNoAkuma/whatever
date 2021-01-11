@@ -1,0 +1,54 @@
+{
+  "name": "richiesta dei conti di un consenso globale",
+  "request": {
+    "url": "/fab/v1/accounts?withBalance=true",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+	  "accounts" : [ {
+	  	"resourceId" : "account-1{{now format='HHmmss'}}",
+	    "iban" : "IT39A0339512900052465064448",
+	    "currency" : "EUR",
+	    "name" : "TEST DEMOUNO {{randomValue type='UUID'}}",
+	    "_links" : {
+	      "account" : {
+	        "href" : "/v1/accounts/account-1{{now format='HHmmss'}}"
+	      },
+	      "balances" : {
+	        "href" : "/v1/accounts/account-1{{now format='HHmmss'}}/balances"
+	      },
+	      "transactions" : {
+	        "href" : "/v1/accounts/account-1{{now format='HHmmss'}}/transactions"
+	      }
+	    }
+	  },
+	  {
+	  	"resourceId" : "account-2{{now format='HHmmss'}}",
+	    "iban" : "IT39A0339512900052465504849",
+	    "currency" : "EUR",
+	    "name" : "TEST DEMOUNO {{randomValue type='UUID'}}",
+	    "_links" : {
+	      "account" : {
+	        "href" : "/v1/accounts/account-2{{now format='HHmmss'}}"
+	      },
+	      "balances" : {
+	        "href" : "/v1/accounts/account-2{{now format='HHmmss'}}/balances"
+	      },
+	      "transactions" : {
+	        "href" : "/v1/accounts/account-2{{now format='HHmmss'}}/transactions"
+	      }
+	    }
+	  } ]
+	},
+    "transformers": [
+      "response-template"
+    ],
+    "headers": {
+      "Content-Type": "application/json",
+      "Date": "{{now format='EEE, d MMM yyyy HH:mm:ss Z'}}"
+    }
+  },
+  "persistent": true
+}

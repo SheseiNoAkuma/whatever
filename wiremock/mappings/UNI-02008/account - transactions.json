@@ -1,0 +1,181 @@
+{
+	"name": "accounts_account7654321_transactions",
+	"request": {
+		"urlPattern": "/unicredit/hydrogen/v1/accounts/ciccio/transactions(.*)",
+		"method": "GET",
+		"headers": {
+			"Consent-ID": {
+				"matches": "recurrent-(.*)"
+			}
+		}
+	},
+	"response": {
+		"status": 200,
+		"jsonBody": {
+			"account": {
+				"iban": "IT77A0200805351000105924798",
+				"currency": "EUR"
+			},
+			"transactions": {
+				"booked": [
+					{
+						"transactionId": "1234567890123456",
+						"endToEndId": "AAA10000234567890123456",
+						"bookingDate": "2019-09-28",
+						"valueDate": "2019-09-29",
+						"transactionAmount": {
+							"currency": "EUR",
+							"amount": "180.12"
+						},
+						"creditorName": " Ma******ssi",
+						"creditorAccount": {
+							"iban": "IT77A0200805351000105924798",
+							"currency": "EUR"
+						},
+						"debtorName": "Our******mer",
+						"debtorAccount": {
+							"iban": "IT18L0**************9486679",
+							"currency": "EUR"
+						},
+						"remittanceInformationUnstructured": "Lorem ipsum d*************************************************************************************************************aliquyam erat"
+					},
+					{
+						"transactionId": "3456789012345612",
+						"endToEndId": "BBB30000456789012345612",
+						"bookingDate": "2019-09-02",
+						"valueDate": "2019-09-02",
+						"transactionAmount": {
+							"currency": "EUR",
+							"amount": "18119.12"
+						},
+						"creditorName": "Ma******ssi",
+						"creditorAccount": {
+							"iban": "IT18L0**************9486580",
+							"currency": "EUR"
+						},
+						"debtorName": "du******res",
+						"debtorAccount": {
+							"iban": "IT54R************456111",
+							"currency": "EUR"
+						},
+						"remittanceInformationUnstructured": "sed diam**************************************************************yam erat"
+					},
+					{
+						"transactionId": "5678901234561234",
+						"endToEndId": "CCC50000678901234561234",
+						"bookingDate": "2019-09-08",
+						"valueDate": "2019-09-08",
+						"transactionAmount": {
+							"currency": "EUR",
+							"amount": "119.12"
+						},
+						"creditorName": "Ma******ssi",
+						"creditorAccount": {
+							"iban": "IT77A0200805351000105924798",
+							"currency": "EUR"
+						},
+						"debtorName": "du******res",
+						"debtorAccount": {
+							"iban": " IT49************456785",
+							"currency": "EUR"
+						},
+						"remittanceInformationUnstructured": "Stet cl****************************************************m ipsum"
+					},
+					{
+						"transactionId": "7890123456123456",
+						"endToEndId": "DDD70000890123456123456",
+						"creditorId": "AT94ZZZ00000012345",
+						"bookingDate": "2019-09-13",
+						"valueDate": "2019-09-13",
+						"transactionAmount": {
+							"currency": "EUR",
+							"amount": "472.96"
+						},
+						"creditorName": "Ma******ssi",
+						"creditorAccount": {
+							"iban": "IT77A0200805351000105924798",
+							"currency": "EUR"
+						},
+						"debtorName": "Our******mer",
+						"debtorAccount": {
+							"iban": "DE1250***********89890",
+							"currency": "EUR"
+						},
+						"remittanceInformationUnstructured": "Ut enim a**********************************************************************aboriosam"
+					},
+					{
+						"transactionId": "9012345612345678",
+						"endToEndId": "EEE90000012345612345678",
+						"mandateId": "87654321",
+						"creditorId": "DE94ZZZ000000234567",
+						"bookingDate": "2019-09-25",
+						"valueDate": "2019-09-25",
+						"transactionAmount": {
+							"currency": "EUR",
+							"amount": "21.80"
+						},
+						"creditorName": "Ma******ssi",
+						"creditorAccount": {
+							"iban": "IT18L0**************9486580",
+							"currency": "EUR"
+						},
+						"debtorName": "Our******mer",
+						"debtorAccount": {
+							"iban": "DE1250***********56780",
+							"currency": "EUR"
+						},
+						"remittanceInformationUnstructured": "Et harum q***************************************************************************uta nobis"
+					},
+					{
+						"transactionId": "9112345612345678",
+						"endToEndId": "FFF90000112345612345678",
+						"mandateId": "86101000320",
+						"bookingDate": "2019-10-05",
+						"valueDate": "2019-10-05",
+						"transactionAmount": {
+							"currency": "EUR",
+							"amount": "2000.00"
+						},
+						"creditorName": "Ma******ssi",
+						"creditorAccount": {
+							"iban": "IT77A0200805351000105924798",
+							"currency": "EUR"
+						},
+						"debtorName": "Our******mer",
+						"debtorAccount": {
+							"iban": "IT33L0**************9485321",
+							"currency": "EUR"
+						},
+						"remittanceInformationUnstructured": "CMS CLT********************************************************,00 EUR"
+					},
+					{
+						"transactionId": "5678901234567890",
+						"endToEndId": "CCC50000678901234567890",
+						"bookingDate": "2019-10-08",
+						"valueDate": "2019-10-08",
+						"transactionAmount": {
+							"currency": "EUR",
+							"amount": "9269.12"
+						},
+						"creditorName": "Ma******ssi",
+						"creditorAccount": {
+							"iban": "IT77A0200805351000105924798",
+							"currency": "EUR"
+						},
+						"debtorName": "A****ro",
+						"debtorAccount": {
+							"iban": "IT54M0**************9486444",
+							"currency": "EUR"
+						},
+						"remittanceInformationUnstructured": "Sed ut *************************************************ptatem"
+					}
+				]
+			}
+		},
+		"headers": {
+			"Content-Type": "application/json",
+			"Date": "Sat, 16 Nov 2019 10:44:01 GMT"
+		}
+	},
+	"persistent": true
+}

@@ -1,0 +1,36 @@
+{
+  "name": "richiesta dello stato di un consenso globale",
+  "request": {
+    "urlPattern": "/fab/v1/consents/(.*)",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+	  "access" : {
+	    "accounts" : [ ],
+	    "balances" : [ ],
+	    "transactions" : [ ],
+	    "allPsd2" : "allAccounts"
+	  },
+	  "recurringIndicator" : true,
+	  "validUntil" : "{{now offset='90 days' format='yyyy-MM-dd'}}",
+	  "frequencyPerDay" : 4,
+	  "lastActionDate" : "{{now format='yyyy-MM-dd'}}",
+	  "consentStatus" : "valid",
+	  "_links" : {
+	    "account" : {
+	      "href" : "/v1/accounts"
+	    }
+	  }
+	},
+    "transformers": [
+      "response-template"
+    ],
+    "headers": {
+      "Content-Type": "application/json",
+      "Date": "{{now format='EEE, d MMM yyyy HH:mm:ss Z'}}"
+    }
+  },
+  "persistent": true
+}

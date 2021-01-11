@@ -1,0 +1,5 @@
+{
+  "whatever": true,
+  "else": ["else", "where"],
+  "one-more": "more"
+}

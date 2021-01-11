@@ -1,0 +1,15 @@
+{
+  "name": "richiesta di cancellazione di un consenso globale",
+  "request": {
+    "urlPattern": "/fab/v1/consents/(.*)",
+    "method": "DELETE"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json",
+      "Date": "{{now format='EEE, d MMM yyyy HH:mm:ss Z'}}"
+    }
+  },
+  "persistent": true
+}

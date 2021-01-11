@@ -1,0 +1,36 @@
+{
+	"name": "richiesta di un consenso ricorrente",
+	"request": {
+		"url": "/unicredit/hydrogen/v1/consents/",
+		"method": "POST",
+		"bodyPatterns": [
+			{
+				"matchesJsonPath": "$[?($.recurringIndicator==true)]"
+			}
+		]
+	},
+	"response": {
+		"status": 200,
+		"jsonBody": {
+			"consentStatus": "received",
+			"consentId": "recurrent-{{randomValue type='UUID'}}",
+			"_links": {
+				"scaRedirect": {
+					"href": "https://authorization.api-sandbox.unicredit.eu:8403/sandbox/psd2/bg/hydrogen/loginPSD2_BG.html?consentId=0b23a43b-60bf-4ad4-a68d-54717579b0bd&correlationId=GAN2M7&authorisationId=0b23a43b-60bf-4ad4-a68d-54717579b0bd&country=IT"
+				},
+				"scaStatus": {
+					"href": "https://api-sandbox.unicredit.it/hydrogen/v1/consents/0b23a43b-60bf-4ad4-a68d-54717579b0bd/authorisations/0b23a43b-60bf-4ad4-a68d-54717579b0bd"
+				}
+			}
+		},
+		"transformers": [
+			"response-template"
+		],
+		"headers": {
+			"ASPSP-SCA-Approach": "REDIRECT",
+			"Content-Type": "application/json",
+			"Date": "Sat, 16 Nov 2019 09:49:34 GMT"
+		}
+	},
+	"persistent": true
+}

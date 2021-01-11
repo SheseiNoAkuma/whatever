@@ -1,0 +1,28 @@
+{
+	"name": "stato di un consenso onetime",
+	"request": {
+		"urlPattern": "/unicredit/hydrogen/v1/consents/onetime-(.*)",
+		"method": "GET"
+	},
+	"response": {
+		"status": 200,
+		"jsonBody": {
+			"access": {
+				"accounts": []
+			},
+			"recurringIndicator": false,
+			"validUntil": "{{now offset='1 days' format='yyyy-MM-dd'}}",
+			"frequencyPerDay": 1,
+			"consentStatus": "valid",
+			"lastActionDate": "{{now format='yyyy-MM-dd'}}"
+		},
+		"transformers": [
+			"response-template"
+		],
+		"headers": {
+			"Content-Type": "application/json",
+			"Date": "Sat, 16 Nov 2019 10:43:41 GMT"
+		}
+	},
+	"persistent": true
+}

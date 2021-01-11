@@ -1,0 +1,56 @@
+{
+  "name": "richiesta delle carte di un consenso globale",
+  "request": {
+    "url": "/fab/v1/card-accounts",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+	  "cardAccounts" : [ {
+	    "resourceId" : "card-1{{now format='HHmmss'}}",
+	    "maskedPan" : "{{randomValue length=16 type='NUMERIC'}}",
+	    "currency" : "EUR",
+	    "name" : "TEST DEMOUNO CARTE 1{{randomValue type='UUID'}}",
+	    "product" : "electa",
+	    "_links" : {
+	      "account" : {
+	        "href" : "/card-accounts/card-1{{now format='HHmmss'}}"
+	      },
+	      "balances" : {
+	        "href" : "/card-accounts/card-1{{now format='HHmmss'}}/balances"
+	      },
+	      "transactions" : {
+	        "href" : "/card-accounts/card-1{{now format='HHmmss'}}/transactions"
+	      }
+	    }
+	  },
+	  {
+	    "resourceId" : "card-2{{now format='HHmmss'}}",
+	    "maskedPan" : "{{randomValue length=16 type='NUMERIC'}}",
+	    "currency" : "EUR",
+	    "name" : "TEST DEMOUNO CARTE 2{{randomValue type='UUID'}}",
+	    "product" : "electa",
+	    "_links" : {
+	      "account" : {
+	        "href" : "/card-accounts/card-2{{now format='HHmmss'}}"
+	      },
+	      "balances" : {
+	        "href" : "/card-accounts/card-2{{now format='HHmmss'}}/balances"
+	      },
+	      "transactions" : {
+	        "href" : "/card-accounts/card-2{{now format='HHmmss'}}/transactions"
+	      }
+	    }
+	  } ]
+	},
+    "transformers": [
+      "response-template"
+    ],
+    "headers": {
+      "Content-Type": "application/json",
+      "Date": "{{now format='EEE, d MMM yyyy HH:mm:ss Z'}}"
+    }
+  },
+  "persistent": true
+}

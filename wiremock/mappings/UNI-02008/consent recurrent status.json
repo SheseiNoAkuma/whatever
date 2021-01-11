@@ -1,0 +1,42 @@
+{
+	"name": "stato di un consenso ricorrente",
+	"request": {
+		"urlPattern": "/unicredit/hydrogen/v1/consents/recurrent-(.*)",
+		"method": "GET"
+	},
+	"response": {
+		"status": 200,
+		"jsonBody": {
+			"access": {
+				"accounts": [
+					{
+						"iban": "IT77A0200805351000105924798"
+					}
+				],
+				"balances": [
+					{
+						"iban": "IT77A0200805351000105924798"
+					}
+				],
+				"transactions": [
+					{
+						"iban": "IT77A0200805351000105924798"
+					}
+				]
+			},
+			"recurringIndicator": true,
+			"validUntil": "2020-11-04",
+			"frequencyPerDay": 4,
+			"consentStatus": "valid",
+			"lastActionDate": "2019-11-05"
+		},
+		"transformers": [
+			"response-template"
+		],
+		"headers": {
+			"Content-Type": "application/json",
+			"Date": "Sat, 16 Nov 2019 10:43:41 GMT"
+		}
+	},
+	"persistent": true
+}

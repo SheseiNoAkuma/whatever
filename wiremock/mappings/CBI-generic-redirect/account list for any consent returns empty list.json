@@ -1,0 +1,28 @@
+{
+  "name": "account list for any consent",
+  "priority": 1,
+  "request": {
+    "url": "/cbi/ais/2.3.2/accounts?with_balance=false",
+    "method": "GET",
+    "headers": {
+      "aspsp-code": {
+        "matches": ".*"
+      },
+      "x-request-id": {
+        "equalTo": "empty-list"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "accounts": [
+      ]
+    },
+    "headers": {
+      "Content-Type": "application/json",
+      "Date": "Sat, 16 Nov 2019 10:43:47 GMT"
+    }
+  },
+  "persistent": true
+}

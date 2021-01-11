@@ -7,4 +7,4 @@ COPY mappings /mappings
 # copy service into image
 COPY wiremock-standalone-2.27.2.jar /wiremock-standalone.jar
 # run application with this command line 
-CMD /usr/bin/java -jar ./wiremock-standalone.jar -v --local-response-templating -port 9999
+CMD /usr/bin/java -jar ./wiremock-standalone.jar -v --local-response-templating -port 8088

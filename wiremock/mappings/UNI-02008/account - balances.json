@@ -1,0 +1,46 @@
+{
+	"name": "Balances",
+	"request": {
+		"url": "/unicredit/hydrogen/v1/accounts/ciccio/balances",
+		"method": "GET",
+		"headers": {
+			"Consent-ID": {
+				"matches": "recurrent-(.*)"
+			}
+		}
+	},
+	"response": {
+		"status": 200,
+		"jsonBody": {
+			"account": {
+				"iban": "IT77A0200805351000105924798",
+				"currency": "EUR"
+			},
+			"balances": [
+				{
+					"balanceAmount": {
+						"currency": "EUR",
+						"amount": "145612.78"
+					},
+					"balanceType": "expected",
+					"lastChangeDateTime": "2019-10-14T09:00:00Z",
+					"referenceDate": "2019-10-14"
+				},
+				{
+					"balanceAmount": {
+						"currency": "EUR",
+						"amount": "256723.89"
+					},
+					"balanceType": "interimAvailable",
+					"lastChangeDateTime": "2019-10-13T20:00:00Z",
+					"referenceDate": "2019-10-13"
+				}
+			]
+		},
+		"headers": {
+			"Content-Type": "application/json",
+			"Date": "Sat, 16 Nov 2019 10:43:59 GMT"
+		}
+	},
+	"persistent": true
+}

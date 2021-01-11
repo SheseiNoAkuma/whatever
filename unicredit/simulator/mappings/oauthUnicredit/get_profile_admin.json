@@ -17,7 +17,10 @@
       "lastName": "Rambo",
       "role": "ADMINISTRATOR,other_role",
       "email": "john.rambo@rischiali.it",
-      "username": "rambo"
+      "username": "rambo",
+      "department": "defence",
+      "groups": ["one", "two"],
+      "expirationDate": "2050-01-01"
     },
     "transformers": [
       "response-template"

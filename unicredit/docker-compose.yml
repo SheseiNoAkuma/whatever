@@ -32,8 +32,9 @@ services:
     build:
       context: ./simulator
       dockerfile: Dockerfile
+    container_name: rest-simulator
     ports:
-      - 9999:9999
+      - 8088:8088
   jboss:
     build:
       context: ./target

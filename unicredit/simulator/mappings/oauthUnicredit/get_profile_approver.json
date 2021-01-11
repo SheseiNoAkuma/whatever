@@ -17,7 +17,10 @@
       "lastName": "Balboa",
       "role": "APPROVER,other_role",
       "email": "roky.balboa@ti-spiezzo.in.due",
-      "username": "rocky"
+      "username": "rocky",
+      "department": "defence",
+      "groups": ["one", "two"],
+      "expirationDate": "2050-01-01"
     },
     "transformers": [
       "response-template"

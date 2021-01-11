@@ -1,0 +1,39 @@
+{
+	"name": "account list for any consent",
+	
+	"request": {
+		"url": "/unicredit/hydrogen/v1/accounts/",
+		"method": "GET",
+		"headers": {
+			"Consent-ID": {
+				"matches": "onetime-(.*)"
+			}
+		}
+	},
+	"response": {
+		"status": 200,
+		"jsonBody": {
+			"accounts": [
+				{
+					"resourceId": "8ad1d90488e52f05e43a5f453b29d4805ea813cc1a5203f4cfdb74b49dc78f63f6cf7c777bfd75e9853bc58910761108",
+					"_links": {
+						"balances": {
+							"href": "/v1/accounts/8ad1d90488e52f05e43a5f453b29d4805ea813cc1a5203f4cfdb74b49dc78f63f6cf7c777bfd75e9853bc58910761108/balances"
+						},
+						"transactions": {
+							"href": "/v1/accounts/8ad1d90488e52f05e43a5f453b29d4805ea813cc1a5203f4cfdb74b49dc78f63f6cf7c777bfd75e9853bc58910761108/transactions"
+						}
+					},
+					"iban": "IT77A0200805351000105924798",
+					"name": "TEAMSYSTEM PAYMENTS HOLDCO SRL",
+					"currency": "EUR"
+				}
+			]
+		},
+		"headers": {
+			"Content-Type": "application/json",
+			"Date": "Sat, 16 Nov 2019 10:43:47 GMT"
+		}
+	},
+	"persistent": true
+}
