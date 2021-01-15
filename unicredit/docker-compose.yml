@@ -35,19 +35,31 @@ services:
     container_name: rest-simulator
     ports:
       - 8088:8088
-  jboss:
+  engine:
     build:
-      context: ./target
+      context: ./target/engine
       dockerfile: Dockerfile
     env_file:
-      - file.env
+      - engine.env
     environment:
       DEBUG: "true"
       GC_MAX_METASPACE_SIZE: 1024
     ports:
       - 9990:9990
+      - 8788:8787
+  monitor:
+    build:
+      context: ./target/monitor
+      dockerfile: Dockerfile
+    env_file:
+      - monitor.env
+    environment:
+      DEBUG: "true"
+      GC_MAX_METASPACE_SIZE: 1024
+    ports:
+      - 9991:9990
       - 8080:8080
-      - 8787:8787
+      - 8788:8787
     depends_on:
       - database
       - mq
