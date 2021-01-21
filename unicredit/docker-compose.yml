@@ -12,8 +12,8 @@ services:
     environment:
       - ORACLE_DISABLE_ASYNCH_IO=true
     volumes:
-      - D:\tmp\oracle\init:/docker-entrypoint-initdb.d/
-      - D:\tmp\oracle\unicredit\oradata:/u01/app/oracle # persistent oracle database data.
+      - D:\Progetti\docker\openshiftolo\database\init:/docker-entrypoint-initdb.d/
+      - D:\Progetti\docker\openshiftolo\database\data:/u01/app/oracle # persistent oracle database data.
 #      - D:\tmp\oracle\unicredit\scripts\db-script:/opt/db/config
     ports:
       - 1521:1521
@@ -29,6 +29,7 @@ services:
       - 61616:61616
       - 8161:8161
   simulator:
+    image: gitlab.int.master.lan:5005/netgat/fin/fin_simulator:latest
     build:
       context: ./simulator
       dockerfile: Dockerfile
@@ -36,8 +37,9 @@ services:
     ports:
       - 8088:8088
   engine:
+    image: gitlab.int.master.lan:5005/netgat/fin/fin-unicredit-engine
     build:
-      context: ./target/engine
+      context: ./engine/target
       dockerfile: Dockerfile
     env_file:
       - engine.env
@@ -46,10 +48,19 @@ services:
       GC_MAX_METASPACE_SIZE: 1024
     ports:
       - 9990:9990
-      - 8788:8787
+      - 8787:8787
+      - 8081:8080
+    volumes:
+      - ./engine/target/deployments:/opt/eap/standalone/deployments/
+    depends_on:
+      - database
+      - artemis
+      - simulator
+      - mq
   monitor:
+    image: gitlab.int.master.lan:5005/netgat/fin/fin-unicredit-monitor
     build:
-      context: ./target/monitor
+      context: ./monitor/target
       dockerfile: Dockerfile
     env_file:
       - monitor.env
@@ -62,5 +73,8 @@ services:
       - 8788:8787
     depends_on:
       - database
-      - mq
       - artemis
+      - simulator
+      - mq
+    volumes:
+      - ./monitor/target/deployments:/opt/eap/standalone/deployments/
