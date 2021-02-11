@@ -1,0 +1,108 @@
+version: '3.3'
+services:
+  dozzle:
+    container_name: dozzle
+    image: amir20/dozzle:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 8888:8080
+  mq:
+    image: gitlab.int.master.lan:5005/netgat/fin/fin-unicredit-ibmmq:dev
+    ports:
+      - "1414:1414"
+    environment:
+      - "TZ=Europe/Rome"
+      - "MAXHEAP=2048"
+  database:
+    build:
+      context: .
+      dockerfile: ./config/database/database.Dockerfile
+    environment:
+      - ORACLE_DISABLE_ASYNCH_IO=true
+    ports:
+      - 1521:1521
+    # https://docs.docker.com/engine/reference/builder#healthcheck
+    healthcheck:
+      test: ["CMD", "/healthcheck/check_database_is_ready.sh", "/healthcheck/liquibase_do_your_dirty_work_now"]
+      interval: 10s
+      timeout: 10s
+      retries: 18
+  liquibase:
+    build:
+      context: .
+      dockerfile: ./config/liquibase/liquibase.Dockerfile
+    environment:
+      - CONNECTION_STRING_OWNER=jdbc:oracle:thin:@database:1521/XE
+      - CHANGE_LOG_DDL_OWNER=master_changelog_owner.xml
+      - DB_OWNER_USERNAME=DB_OWNER
+      - DB_OWNER_PASSWORD=DB_OWNER
+      - CONNECTION_STRING_USER=jdbc:oracle:thin:@database:1521/XE
+      - CHANGE_LOG_DDL_USER=master_changelog_user.xml
+      - DB_USER_USERNAME=DB_USER
+      - DB_USER_PASSWORD=DB_USER
+      - DATA_TABLE_SPACE=TS_DATA
+      - INDEX_TABLE_SPACE=TS_INDEX
+      - DB_OWNER=DB_OWNER
+      - DB_USER=DB_USER
+      - CONTEXTS=Anagrafiche_BIC_DIRECTORY,Anagrafiche_COUNTRY,Anagrafiche_CURRENCY,DriverCommon_DUPLICATION_CHECK,CommonMonitor_J0TDOMAIN,DriverCommon_J0TCURRENT_REVISION,CommonMonitor_J0TGROU_EVID,CommonMonitor_J0TGROU_EVID_REL_WITH_TOPICS,DriverCommon_J0TMQDUMPER,CommonMonitor_J0TORGANIZATION,DriverCommon_J0TPARTICIPANT_NEW,CommonMonitor_J0TREQUEST_TYPE,DriverCommon_J0TRESOURCES_ZIP,CommonAdmin_J0TTEMPLATE,CommonMonitor_J0TTOPIC,CommonMonitor_J0TTSINP,CommonMonitor_J0TTSINS,CommonMonitor_J0TTSISR,CommonMonitor_J0TTSOUS,CommonMonitor_J0TTSOUT,CommonMonitor_J0TTSRTS,CommonMonitor_J0TTSSTA,CommonMonitor_J0TTTRSZ,DriverCommon_J0TWEB_REPORT,DriverCommon_J1TWORKING_PROCESS,DriverCommon_JETNETWORK_MESSAGE_SUSP,user_profiler_ROLE,DriverCommon_YWTWIBAP
+    depends_on:
+      database:
+        condition: service_healthy
+  artemis:
+    image: dkr-registry.tasgroup.it/redhat/amq-broker:7.6
+    environment:
+      AMQ_USER: admin
+      AMQ_PASSWORD: admin
+      AMQ_TRANSPORTS: CORE
+      AMQ_QUEUES: MSS.MESSAGEAMQ01.TO.BOA, MSS.MESSAGEAMQ01.FROM.BOA, MSS.MESSAGEAMQ01.REPLY.BOA, MSS.MESSAGEAMQ02.TO.BOA, MSS.MESSAGEAMQ02.FROM.BOA, MSS.MESSAGEAMQ02.REPLY.BOA, MSS.MESSAGEAMQ03.TO.BOA, MSS.MESSAGEAMQ03.FROM.BOA, MSS.MESSAGEAMQ03.REPLY.BOA, MSS.MESSAGEAMQ04.TO.BOA, MSS.MESSAGEAMQ04.FROM.BOA, MSS.MESSAGEAMQ04.REPLY.BOA, MSS.MESSAGEAMQ05.TO.BOA, MSS.MESSAGEAMQ05.FROM.BOA, MSS.MESSAGEAMQ05.REPLY.BOA, MSS.MESSAGEAMQ06.TO.BOA, MSS.MESSAGEAMQ06.FROM.BOA, MSS.MESSAGEAMQ06.REPLY.BOA, MSS.MESSAGEAMQ07.TO.BOA, MSS.MESSAGEAMQ07.FROM.BOA, MSS.MESSAGEAMQ07.REPLY.BOA, MSS.MESSAGEAMQ08.TO.BOA, MSS.MESSAGEAMQ08.FROM.BOA, MSS.MESSAGEAMQ08.REPLY.BOA, MSS.MESSAGEAMQ09.TO.BOA, MSS.MESSAGEAMQ09.FROM.BOA, MSS.MESSAGEAMQ09.REPLY.BOA, MSS.MESSAGEAMQ10.TO.BOA, MSS.MESSAGEAMQ10.FROM.BOA, MSS.MESSAGEAMQ10.REPLY.BOA,
+      AMQ_ADDRESSES: FinConfigurationTopic
+    ports:
+      - 61616:61616
+      - 8161:8161
+  simulator:
+    image: gitlab.int.master.lan:5005/netgat/fin/fin_simulator:latest
+    build:
+      context: ./simulator
+      dockerfile: Dockerfile
+    container_name: rest-simulator
+    ports:
+      - 8088:8088
+  engine:
+    image: gitlab.int.master.lan:5005/netgat/fin/fin-unicredit-engine
+    build:
+      context: ./target/engine
+      dockerfile: Dockerfile
+    env_file:
+      - engine.env
+    environment:
+      DEBUG: "true"
+      GC_MAX_METASPACE_SIZE: 1024
+    ports:
+      - 9990:9990
+      - 8787:8787
+      - 8081:8080
+    volumes:
+      - ./target/engine/deployments:/opt/eap/standalone/deployments/
+    depends_on:
+      database:
+        condition: service_healthy
+  monitor:
+    image: gitlab.int.master.lan:5005/netgat/fin/fin-unicredit-monitor
+    build:
+      context: ./target/monitor
+      dockerfile: Dockerfile
+    env_file:
+      - monitor.env
+    environment:
+      DEBUG: "true"
+      GC_MAX_METASPACE_SIZE: 1024
+    ports:
+      - 9991:9990
+      - 8080:8080
+      - 8788:8787
+    volumes:
+      - ./target/monitor/deployments:/opt/eap/standalone/deployments/
+    depends_on:
+      database:
+        condition: service_healthy
