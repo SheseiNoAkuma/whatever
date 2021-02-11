@@ -15,11 +15,11 @@
     "jsonBody": {
       "firstName": "John",
       "lastName": "Rambo",
-      "role": "ADMINISTRATOR,other_role",
+      "role": "",
       "email": "john.rambo@rischiali.it",
       "username": "rambo",
       "department": "defence",
-      "groups": ["one", "two"],
+      "groups": ["ADMINISTRATOR", "other_role"],
       "expirationDate": "2050-01-01"
     },
     "transformers": [

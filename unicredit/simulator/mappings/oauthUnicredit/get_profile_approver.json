@@ -15,11 +15,11 @@
     "jsonBody": {
       "firstName": "Rocky",
       "lastName": "Balboa",
-      "role": "APPROVER,other_role",
+      "role": ",",
       "email": "roky.balboa@ti-spiezzo.in.due",
       "username": "rocky",
       "department": "defence",
-      "groups": ["one", "two"],
+      "groups": ["APPROVER", "other_role"],
       "expirationDate": "2050-01-01"
     },
     "transformers": [
