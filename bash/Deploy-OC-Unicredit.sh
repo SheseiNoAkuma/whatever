@@ -59,4 +59,4 @@ oc login https://api.os4.dev.int.master.lan:6443 --token="$TOKEN_OC_UNI" --insec
 
 oc apply -f .
 
-oc rollout restart deployment/ngfin
+oc rollout restart deployment/ngfin-engine
