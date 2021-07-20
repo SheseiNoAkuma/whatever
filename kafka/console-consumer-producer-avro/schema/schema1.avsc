@@ -1,0 +1,43 @@
+{
+  "name": "Customer",
+  "namespace": "eu.micro",
+  "type": "record",
+  "doc": "my first avro schema representing a customer",
+  "fields": [
+    {
+      "name": "first_name",
+      "type": "string",
+      "doc": "customer name"
+    },
+    {
+      "name": "last_name",
+      "type": "string",
+      "doc": "customer name"
+    },
+    {
+      "name": "middle_name",
+      "type": ["null", "string"],
+      "doc": "optional middle name",
+      "default": null
+    },
+    {
+      "name": "age",
+      "type": "int"
+    },
+    {
+      "name": "height",
+      "type": "float",
+      "doc": "height in cm"
+    },
+    {
+      "name": "weight",
+      "type": "float",
+      "doc": "weight in kg"
+    },
+    {
+      "name": "email_enabled",
+      "type": "boolean",
+      "default": true
+    }
+  ]
+}

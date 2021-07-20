@@ -1,0 +1,625 @@
+{
+	"info": {
+		"_postman_id": "55aa959d-7195-492e-8574-5973886066b6",
+		"name": "kafka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "topic - producer - consumer",
+			"item": [
+				{
+					"name": "Get a list of topics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/topics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"topics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get info about one topic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/topics/{{topic}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"topics",
+								"{{topic}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "produce a message with JSON data",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.kafka.json.v2+json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"records\":[\n        {\"value\":{\"name\": \"whatever\"}}\n        ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8082/topics/{{topic}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"topics",
+								"{{topic}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create a consumer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.kafka.v2+json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.kafka.v2+json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"my_consumer_instance\", \"format\": \"json\", \"auto.offset.reset\": \"earliest\"}"
+						},
+						"url": {
+							"raw": "http://localhost:8082/consumers/{{consumer}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"consumers",
+								"{{consumer}}"
+							]
+						},
+						"description": "Create a consumer for JSON data, starting at the beginning of the topic's\nlog. The consumer group is called \"my_json_consumer\" and the instance is \"my_consumer_instance\"."
+					},
+					"response": []
+				},
+				{
+					"name": "subscribe consumer to a topic",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.kafka.v2+json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"topics\":[\"{{topic}}\"]}"
+						},
+						"url": {
+							"raw": "http://localhost:8082/consumers/my_json_consumer/instances/{{consumer-instance}}/subscription",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"consumers",
+								"my_json_consumer",
+								"instances",
+								"{{consumer-instance}}",
+								"subscription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consume messages",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.kafka.json.v2+json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8082/consumers/{{consumer}}/instances/{{consumer-instance}}/records",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"consumers",
+								"{{consumer}}",
+								"instances",
+								"{{consumer-instance}}",
+								"records"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "close the consumer with a DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.kafka.v2+json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8082/consumers/{{consumer}}/instances/{{consumer-instance}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"consumers",
+								"{{consumer}}",
+								"instances",
+								"{{consumer-instance}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "connectors",
+			"item": [
+				{
+					"name": "list all available connectors plugin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/connector-plugins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"connector-plugins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list all connectors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/connectors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"connectors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create connector (FileStreamSinkConnector)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"local-file-source\",\n    \"config\": {\n        \"connector.class\": \"FileStreamSource\",\n        \"tasks.max\": 1,\n        \"file\": \"/input/input.txt\",\n        \"topic\": \"file-stream-topic\", \n        \"key.converter\": \"org.apache.kafka.connect.storage.StringConverter\", \n        \"value.converter\": \"org.apache.kafka.connect.storage.StringConverter\"\n\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/connectors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"connectors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create connector (FileStreamSinkConnector)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"local-file-sink\",\n    \"config\": {\n        \"connector.class\": \"FileStreamSinkConnector\",\n        \"tasks.max\": 1,\n        \"file\": \"/input/output.txt\",\n        \"topics\": \"file-stream-topic\", \n        \"key.converter\": \"org.apache.kafka.connect.storage.StringConverter\", \n        \"value.converter\": \"org.apache.kafka.connect.storage.StringConverter\"\n\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/connectors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"connectors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get specific connector details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/connectors/local-file-source",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"connectors",
+								"local-file-source"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get specific connector configuration",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/connectors/local-file-source/config",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"connectors",
+								"local-file-source",
+								"config"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update specific connector configuration",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"connector.class\": \"FileStreamSource\",\n    \"file\": \"/input/input.txt\",\n    \"tasks.max\": \"2\",\n    \"name\": \"local-file-source\",\n    \"topic\": \"file-stream-topic\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/connectors/local-file-source/config",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"connectors",
+								"local-file-source",
+								"config"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get specific connector status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/connectors/local-file-source/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"connectors",
+								"local-file-source",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete specific connector",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/connectors/local-file-source",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"connectors",
+								"local-file-source"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "schema registry",
+			"item": [
+				{
+					"name": "get configuration",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/config",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"config"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update configuration",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.schemaregistry.v1+json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"compatibility\": \"FULL\"}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/config",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"config"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all schemas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/schemas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"schemas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get schema by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/schemas/ids/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"schemas",
+								"ids",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get schema version by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/schemas/ids/1/versions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"schemas",
+								"ids",
+								"1",
+								"versions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get subjects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/subjects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"subjects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get subjects's versions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/subjects/avro-customer-value/versions/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"subjects",
+								"avro-customer-value",
+								"versions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get subjects's specific version",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/subjects/avro-customer-value/versions/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"subjects",
+								"avro-customer-value",
+								"versions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "topic",
+			"value": "rest-topic"
+		},
+		{
+			"key": "consumer",
+			"value": "my_json_consumer"
+		},
+		{
+			"key": "consumer-instance",
+			"value": "my_consumer_instance"
+		}
+	]
+}
