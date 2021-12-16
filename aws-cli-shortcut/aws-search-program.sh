@@ -44,15 +44,22 @@ echo "--------------search completed--------------"
 #kpi in production
 
 #Production
-#XML 
-#aws s3 ls "s3://cbportal-prod-mp/" --recursive --profile generali-eks --region eu-west-1 | grep 46066
+#XML Ingestion
+#aws s3 ls "s3://cbportal-prod-ingestion-mp/" --recursive --profile generali-eks --region eu-west-1 | grep 41159
+#XML
+#aws s3 ls "s3://cbportal-prod-mp/" --recursive --profile generali-eks --region eu-west-1 | grep 41159
 #xml -> JSON
-#aws s3 ls "s3://cbportal.prod.mp.aggregations/" --recursive --profile generali-eks --region eu-west-1 | grep 41956
+#aws s3 ls "s3://cbportal.prod.mp.aggregations/" --recursive --profile generali-eks --region eu-west-1 | grep 41159
 
 #aggregated
-#aws s3 ls "s3://cbportal.prod.kpi.aggregations/" --recursive --profile generali-eks --region eu-west-1 | grep 41129
+#aws s3 ls "s3://cbportal.prod.kpi.aggregations/" --recursive --profile generali-eks --region eu-west-1 | grep 40504
+#KPI splitter
+#aws s3 ls "s3://cbportal.prod.kpi.splitter/" --recursive --profile generali-eks --region eu-west-1 | grep 41159
 
-
+#Hi claudiamiliziano
+ #Yes it's feasible we need to change the logic of displaying this box. So please if Marco Righi
+ # or someone else can give us JSON of client which have two programs because all of them that we have currently
+ # have only one program(Property or Casualty). I need that for testing. Thanks
 
 # -------------------------------
 
