@@ -23,7 +23,9 @@ uat-mp-emission
 mp-aggregations
 
 #mp aggregation in prod
-aws logs filter-log-events --log-group-name /aws/lambda/mp-aggregations --start-time 1630627200 --filter-pattern "46183"  --profile generali-eks --region eu-west-1
+aws logs filter-log-events --log-group-name /aws/lambda/mp-aggregations --start-time 1639476000 --filter-pattern "null"  --profile generali-eks --region eu-west-1
 
-aws lambda list-functions --function-version ALL --profile generali-eks --region eu-west-1 --output text --query "Functions[?Runtime=='java8'].FunctionArn"
+aws logs filter-log-events --log-group-name /aws/lambda/uat-mp-aggregations --start-time 1639476000 --end-time 1639490400 --filter-pattern "null"  --profile generali-eks --region eu-west-1
 
+
+aws logs filter-log-events --log-group-name /aws/lambda/prod-mp-onload --start-time 1647993600000 --filter-pattern "38212"  --profile generali-eks --region eu-west-1
